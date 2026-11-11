@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T14:31:14Z",
+ "generated": "2026-11-11T14:38:25Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -22,7 +22,7 @@
     "No write/merge endpoints",
     "Stale detection works"
    ],
-   "last_test": "PASS: test_mc.py 5/5",
+   "last_test": null,
    "last_review": null,
    "issue": null
   },
@@ -479,7 +479,7 @@
     "Lead reviews the architecture before any implementation"
    ],
    "last_test": null,
-   "last_review": null,
+   "last_review": "Revise: Revise (justified revisions authorized, docs only): architecture 4fbfd8c is adequate as a first-order ring+torsion+brush structure but lacks a fourth (apparent) radius and any distributed pat…",
    "issue": 6
   }
  ],
@@ -684,7 +684,7 @@
    "role": "Gainesville Raceway environment + reusable dragstrip pipeline (lead of stream)",
    "status": "Waiting for input",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-11T14:25:00+00:00",
    "current_task": "GNV-S2",
    "note": "Stage 2 evidence pushed (342f7a6); awaiting Lead review; Stage 3 not started",
@@ -701,6 +701,48 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T14:34:29+00:00",
+   "kind": "review",
+   "agent": "independent evaluator (Lead-dispatched), architecture vs Hallum evidence",
+   "task": "T-1",
+   "text": "Revise: Revise (justified revisions authorized, docs only): architecture 4fbfd8c is adequate as a first-order ring+torsion+brush structure but lacks a fourth (…"
+  },
+  {
+   "time": "2026-11-11T14:34:29+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:34:29+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "T-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:33:02+00:00",
+   "kind": "note",
+   "agent": "lead",
+   "task": "T-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:33:02+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:33:02+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "T-1",
+   "text": null
+  },
   {
    "time": "2026-11-11T14:26:50+00:00",
    "kind": "handoff",
@@ -1063,34 +1105,6 @@
    "kind": "message",
    "agent": "lead",
    "task": "UNIT-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T13:17:36+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "ENG-27",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T13:17:36+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "IND-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T13:17:32+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "CAR-LT",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T13:17:32+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "CAR-LT",
    "text": null
   }
  ],
