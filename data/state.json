@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T15:21:26Z",
+ "generated": "2026-11-11T15:28:37Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -453,7 +453,7 @@
     "G4: comparative traces + regression (native, Editor, PIE) + recommendation; owner approval before default/merge",
     "SampleReplays files and cache untouched"
    ],
-   "last_test": "PASS: Lead independent build+run at Engine e145b8a (strict C++17 /W4 scratch project outside the worktree): passes; observed order 1.02/1.04 final speed, 0.84/0.90 clutch energy; coupled ledger resid…",
+   "last_test": "PASS: 20 test groups pass (scratch build); order asserted >=0.7; reversal vs independent numeric reference; implicit thermal bounded to dt=1e6; spec validation.",
    "last_review": "Revise: G1 code+tests ACCEPT with must-fix items (huge-dt thermal stability and multi-step test, muStatic<muKinetic guard, closed-form reversal test, tautology at test:136, assert convergence order);…",
    "issue": 45
   },
@@ -517,10 +517,10 @@
    "role": "A Engine and Clutch",
    "status": "Waiting for input",
    "process_state": "Alive",
-   "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T15:10:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T15:20:00+00:00",
    "current_task": "CL-1",
-   "note": "clutch side of INTERFACE_CLUTCH_TIRE CONFIRMED + proposals for open decisions 1-4 in docs/CLUTCH_TOPFUEL_INTERFACE.md Sec 6 (e145b8a). No c…",
+   "note": "re-check must-fix items 1-4 done 0b2fde6; awaiting quick re-check",
    "assigned_tasks": [
     "CL-1"
    ],
@@ -545,7 +545,7 @@
    "role": "C Tire and Track Physics",
    "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-11T15:20:00+00:00",
    "current_task": "T-1",
    "note": "Phase 1 + R-15 committed; awaiting Lead direction for R-16/R-18/R-19 and experimental model",
@@ -684,7 +684,7 @@
    "role": "Gainesville Raceway environment + reusable dragstrip pipeline (lead of stream)",
    "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-11T15:20:00+00:00",
    "current_task": "GNV-S2",
    "note": "ack REVISE-STAGE-2: working items 1-8",
@@ -701,6 +701,41 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T15:27:22+00:00",
+   "kind": "note",
+   "agent": "lead",
+   "task": "T-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:27:22+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "T-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:25:39+00:00",
+   "kind": "progress",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:24:53+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:24:53+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "CL-1",
+   "text": "PASS: 20 test groups pass (scratch build); order asserted >=0.7; reversal vs independent numeric reference; implicit thermal bounded to dt=1e6; spec validation."
+  },
   {
    "time": "2026-11-11T15:20:25+00:00",
    "kind": "handoff",
@@ -1084,34 +1119,6 @@
    "kind": "task",
    "agent": "tire",
    "task": "T-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:06:13+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:05:48+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "TIRE-RR",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:05:48+00:00",
-   "kind": "review",
-   "agent": "independent adversarial reviewer #2 (Lead-dispatched)",
-   "task": "TIRE-RR",
-   "text": "Revise: Revise (not accepted yet): headline numbers CONFIRMED vs 7E csv (R_roll 0.3912 min, 0.5378 max/0.5348 line, ratio 1.37; revs 96.1/100.0/100.1; 3.20 fin…"
-  },
-  {
-   "time": "2026-11-11T14:05:48+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "CAR-LT",
    "text": null
   }
  ],
