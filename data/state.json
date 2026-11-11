@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T15:57:21Z",
+ "generated": "2026-11-11T16:04:33Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -123,7 +123,7 @@
     "Close-up screenshots"
    ],
    "last_test": "PASS: Lead PIE on tree branch dea7fb3 in Lead scratch worktree: PLAYTEST PASSED, full procedure, ET 4.579 s, trap 335.6 mph (matches main e045f99); turn-around failure not reproduced; incremental Edi…",
-   "last_review": "Accept: Accept (scope clean, tree sequence correct, read-only on sim); merge held for Lead PIE on branch vs main; housekeeping: selftest comment, evidence logs",
+   "last_review": "Accept: v3 diff is 2 constants (lens step 0.44->0.36, groove ring 0.50->0.58) in OxcartTrackTree.cpp only; selftest 175/0, Editor build OK; night close-up shows distinct groove ring, lit lens not blo…",
    "issue": null
   },
   {
@@ -478,7 +478,7 @@
     "Isolated rig with measurable acceptance criteria; clutch-tire interface defined as a document",
     "Lead reviews the architecture before any implementation"
    ],
-   "last_test": "PASS: R-12..R-14 stepped torque full-rate: road-clamped torsion mode (peak 80.0 ms vs 82.4 predicted; overshoot 1.93 vs 1.89); apparent axle radius 2.3 in at 54 ms rising to 16 in at 1 s, windup-domi…",
+   "last_test": "PASS: R-16 tread string: tension rises by Fx along patch; compression iff Fx>2pwR; criterion 1.30/1.12/0.98/0.87 at 6/7/8/9 psi for 22 kN/tire; boundary condition unknown so no direction of strain ef…",
    "last_review": "Accept: Accept Phase 1 + R-15 as numerical-correctness evidence: new files only (no Source changes), deterministic, 7E replay matches the car's own tire (R_kin min 0.3910 m), four-radius identity clo…",
    "issue": 6
   }
@@ -543,12 +543,12 @@
   {
    "id": "tire",
    "role": "C Tire and Track Physics",
-   "status": "Running",
+   "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Connected",
-   "last_heartbeat": "2026-11-11T15:50:00+00:00",
+   "connection_state": "Stale",
+   "last_heartbeat": "2026-11-11T15:55:00+00:00",
    "current_task": "T-1",
-   "note": "R-18/R-19 committed; INTERFACE_CLUTCH_TIRE: tire side confirmed as written (variables 6-12,15; R_app diagnostics only); proceeding to R-12.…",
+   "note": "items 1-3 committed; awaiting Lead milestone review before hysteresis/hop/shake tests and experimental model",
    "assigned_tasks": [
     "TIRE-RR",
     "T-1"
@@ -589,9 +589,9 @@
    "status": "Completed",
    "process_state": "Alive",
    "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T15:30:00+00:00",
+   "last_heartbeat": "2026-11-11T15:55:00+00:00",
    "current_task": "TREE-1",
-   "note": "TREE-1 housekeeping pushed 5a89d500a54e22feb99d719d05fe569c8680a3eb",
+   "note": "TREE-1 v3 pushed",
    "assigned_tasks": [
     "TREE-1"
    ],
@@ -616,7 +616,7 @@
    "role": "H UI/UX (UMG/Slate)",
    "status": "Blocked",
    "process_state": "Alive",
-   "connection_state": "Stale",
+   "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-11T15:30:00+00:00",
    "current_task": "UI-1",
    "note": "eea48ff pushed; garage seen on screen once; remaining checks need a person or larger render window",
@@ -700,6 +700,41 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T16:01:41+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T16:01:40+00:00",
+   "kind": "review",
+   "agent": "lead",
+   "task": "TREE-1",
+   "text": "Accept: v3 diff is 2 constants (lens step 0.44->0.36, groove ring 0.50->0.58) in OxcartTrackTree.cpp only; selftest 175/0, Editor build OK; night close-up show…"
+  },
+  {
+   "time": "2026-11-11T15:59:01+00:00",
+   "kind": "handoff",
+   "agent": "tree",
+   "task": "TREE-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:58:25+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "T-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:58:24+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "T-1",
+   "text": "PASS: R-16 tread string: tension rises by Fx along patch; compression iff Fx>2pwR; criterion 1.30/1.12/0.98/0.87 at 6/7/8/9 psi for 22 kN/tire; boundary condit…"
+  },
   {
    "time": "2026-11-11T15:55:51+00:00",
    "kind": "handoff",
@@ -1084,41 +1119,6 @@
    "agent": null,
    "task": "CL-1",
    "text": "PASS: Isolated clutch tests pass (scratch build; CR pending for ctest). Mutation checks catch swapped lever (5 fails) and disc factor (4). Observed order ~1.0…"
-  },
-  {
-   "time": "2026-11-11T14:50:21+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:50:21+00:00",
-   "kind": "test",
-   "agent": "lead",
-   "task": "CL-1",
-   "text": "PASS: Lead independent build+run at Engine b2efc73 (+working tree identical): strict C++17 /W4 scratch project outside every worktree: 'ClutchTopFuel tests pas…"
-  },
-  {
-   "time": "2026-11-11T14:46:34+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "T-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:44:39+00:00",
-   "kind": "review",
-   "agent": "independent reviewer (Lead-dispatched), G0 rev3 + G1",
-   "task": "CL-1",
-   "text": "Revise: REVISE-G0 (force balance, Hi/Lo, tags, register, no speed ramp resolved; inertia values, staging mode, compliance, stability wording, SAE page refs ope…"
-  },
-  {
-   "time": "2026-11-11T14:44:39+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "CL-1",
-   "text": null
   }
  ],
  "approvals": [],
