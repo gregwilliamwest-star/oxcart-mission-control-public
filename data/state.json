@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T12:37:57Z",
+ "generated": "2026-11-11T12:45:07Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -170,9 +170,9 @@
    "id": "UNIT-1",
    "title": "Centralized US-customary unit conversion and formatting",
    "description": "OxcartUnits helper + tests (mph, ft, in, lb, lb-ft, hp, psi, F, US gal, inHg); SI stays internal.",
-   "status": "Review",
+   "status": "Ready to Merge",
    "priority": "P0",
-   "progress_pct": 80,
+   "progress_pct": 95,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "units",
    "branch": "feature/units-imperial",
@@ -180,7 +180,7 @@
    "acceptance_criteria": [
     "Round-trip and rounding tests pass"
    ],
-   "last_test": "PASS: Oxcart_units pass; Build-Native 23/23 (units first run failed on degree format, fixed, re-run units pass; other 22 passed pre-fix, unaffected: header only included by test_units)",
+   "last_test": "PASS: Lead independent Build-Native at 1722d98 in Lead scratch worktree: 100% tests passed, 23/23 (22 baseline + Oxcart_units), exit 0, 519 s; log <path>",
    "last_review": "Accept: Accept (hand review of 1722d98): all earlier findings fixed, scope = 5 files incl. [redacted] Not verified by reviewer: build/ctest; Lead running Build-Native. [redacted] pin 1.005 rounding",
    "issue": 21
   },
@@ -649,6 +649,20 @@
  ],
  "events": [
   {
+   "time": "2026-11-11T12:40:44+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "UNIT-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T12:40:43+00:00",
+   "kind": "test",
+   "agent": "lead",
+   "task": "UNIT-1",
+   "text": "PASS: Lead independent Build-Native at 1722d98 in Lead scratch worktree: 100% tests passed, 23/23 (22 baseline + Oxcart_units), exit 0, 519 s; log <path>"
+  },
+  {
    "time": "2026-11-11T12:22:48+00:00",
    "kind": "task",
    "agent": null,
@@ -1053,20 +1067,6 @@
    "agent": "lead",
    "task": "GNV-S1",
    "text": "Accept: Accept with housekeeping: visual QA mirror defect found and corrected (before/after inspected); config schema validates; no Gainesville hardcoding in s…"
-  },
-  {
-   "time": "2026-11-11T10:17:01+00:00",
-   "kind": "test",
-   "agent": "lead",
-   "task": "GNV-S1",
-   "text": "PASS: Lead independent re-run at 80072c4 in a clean Lead checkout: Run-Stage1.ps1 twice; run A Unreal assets 0->13, run B 13->13; all 13 mesh bounds/UV extents…"
-  },
-  {
-   "time": "2026-11-11T09:23:23+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "GNV-S7",
-   "text": null
   }
  ],
  "approvals": [],
@@ -1091,10 +1091,11 @@
   ],
   "Review": [
    "TREE-1",
-   "UNIT-1",
    "SB-1"
   ],
-  "Ready to Merge": [],
+  "Ready to Merge": [
+   "UNIT-1"
+  ],
   "Done": [
    "ENG-27",
    "GNV-S1"
