@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T17:49:04Z",
+ "generated": "2026-11-11T17:56:14Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -46,7 +46,7 @@
     "Experiment documented with diagnostics"
    ],
    "last_test": "PASS: Lead verified Engine commit 02bfb2c (docs only): single file docs/TOPFUEL_2026_STAGE2_7_ENG27_FITPOINT.md; nothing staged; 8 SampleReplays still deleted+unstaged and in no commit; build.stale-c…",
-   "last_review": "Accept: Accept as RESEARCH. Scope clean (one new doc, no code). Corrections: cite Nhra2026.h:64 for the 7,950 rpm fit; 0.48 eta_ind repeats Stage 2.5 (not new); the 0.90 driveline efficiency (Vehicle…",
+   "last_review": null,
    "issue": null
   },
   {
@@ -307,8 +307,8 @@
     "Stage 1 REQUIRES repeatable, UNATTENDED generation and import: one command (no manual clicks) runs Blender generation, export and Unreal import; a SECOND execution of the same command must not duplicate assets (show before/after asset counts or listings and a…",
     "Stage 1 visual QA: inspect the actual rendered image and record at least one identified deficiency and the correction made (before/after images and a short note); 'an image was generated' is not sufficient"
    ],
-   "last_test": "PASS: Lead independent re-run at 80072c4 in a clean Lead checkout: Run-Stage1.ps1 twice; run A Unreal assets 0->13, run B 13->13; all 13 mesh bounds/UV extents identical between runs and the first 3…",
-   "last_review": "Accept: Accept with housekeeping: visual QA mirror defect found and corrected (before/after inspected); config schema validates; no Gainesville hardcoding in shared scripts; Indy untouched. Stage 2 h…",
+   "last_test": null,
+   "last_review": null,
    "issue": 38
   },
   {
@@ -515,12 +515,12 @@
   {
    "id": "engine",
    "role": "A Engine and Clutch",
-   "status": "Waiting for input",
+   "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-11T16:10:00+00:00",
-   "current_task": "CL-1",
-   "note": "public-data stage committed ef8e158; awaiting Lead review",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T17:50:00+00:00",
+   "current_task": "CL-1-CR2",
+   "note": "READY TO COMMIT: docs/requests/CL-1-CR2.md rev 2 only (docs, explicit pathspec, own branch, no push).",
    "assigned_tasks": [
     "CL-1"
    ],
@@ -529,12 +529,12 @@
   {
    "id": "car",
    "role": "B Car Physics",
-   "status": "Running",
+   "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-11T15:45:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T17:50:00+00:00",
    "current_task": "CAR-LT",
-   "note": "building editor so the game can be opened (user request)",
+   "note": "CAR-LT follow-ups done, 270b8ed pushed; awaiting Lead",
    "assigned_tasks": [
     "CAR-LT"
    ],
@@ -543,12 +543,12 @@
   {
    "id": "tire",
    "role": "C Tire and Track Physics",
-   "status": "Idle",
+   "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-11T16:00:00+00:00",
+   "connection_state": "Stale",
+   "last_heartbeat": "2026-11-11T17:45:00+00:00",
    "current_task": "T-1",
-   "note": "milestone: items 1-4 + experimental BDF2 integrator committed; need decision on pressure-distribution path (needs footprint/stiffness data)",
+   "note": "Inbox read (3 msgs). Plan: experimental tire only, rig-isolated. A (now): four-radii + hub-height/force-arm note (CAR-LT: hub from R0, arm…",
    "assigned_tasks": [
     "TIRE-RR",
     "T-1"
@@ -574,10 +574,10 @@
    "role": "E Indianapolis Venue",
    "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-11T13:20:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T17:50:00+00:00",
    "current_task": "IND-1",
-   "note": "paused by owner; work preserved; NOTE branch feature/indy-starting-line c3562f0 was pushed before the stop arrived",
+   "note": "paused; checking inbox only",
    "assigned_tasks": [
     "IND-1"
    ],
@@ -588,10 +588,10 @@
    "role": "F Christmas Tree",
    "status": "Completed",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-11T15:55:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T17:50:00+00:00",
    "current_task": "TREE-1",
-   "note": "TREE-1 v3 pushed",
+   "note": "[redacted] TREE-1 v3 f6148d6 awaiting integration.",
    "assigned_tasks": [
     "TREE-1"
    ],
@@ -600,12 +600,12 @@
   {
    "id": "camera",
    "role": "G Camera and Presentation",
-   "status": "Waiting for input",
+   "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-11T13:10:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T17:55:00+00:00",
    "current_task": "CAM-1",
-   "note": "plan committed; holding for Lead confirmation that UI-1 pawn hunk is integrated",
+   "note": "implementing CAM-1 per Lead GO (stacked on ui-garage); new files written, running Build-Native",
    "assigned_tasks": [
     "CAM-1"
    ],
@@ -616,10 +616,10 @@
    "role": "H UI/UX (UMG/Slate)",
    "status": "Blocked",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-11T15:30:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T17:50:00+00:00",
    "current_task": "UI-1",
-   "note": "eea48ff pushed; garage seen on screen once; remaining checks need a person or larger render window",
+   "note": "ack: eea48ff accepted; [redacted] Remaining: person-run 1920x1080/2560x1080 + mouse/keyboard/gamepad + rollout check; no pawn changes pendi…",
    "assigned_tasks": [
     "UI-1"
    ],
@@ -684,10 +684,10 @@
    "role": "Gainesville Raceway environment + reusable dragstrip pipeline (lead of stream)",
    "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-11T16:05:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T17:50:00+00:00",
    "current_task": "GNV-S3",
-   "note": "chunk1 pushed 52930c8; next: detailed surfaces/markings/barriers/lighting, rendered PIE",
+   "note": "ack: overlay z options + rendered tour; [redacted]",
    "assigned_tasks": [
     "GNV-ENV-1",
     "GNV-S3",
@@ -700,6 +700,125 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T17:55:22+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:55:22+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:55:22+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:55:01+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "CL-1-CR2",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:54:12+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "CAR-LT",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:51:49+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:51:49+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:51:48+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:51:48+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:51:48+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:51:48+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:51:48+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:51:48+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:50:57+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:49:18+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:49:18+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:49:18+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
   {
    "time": "2026-11-11T17:37:52+00:00",
    "kind": "note",
@@ -1000,125 +1119,6 @@
    "agent": null,
    "task": "GNV-S2",
    "text": null
-  },
-  {
-   "time": "2026-11-11T15:39:18+00:00",
-   "kind": "review",
-   "agent": "lead",
-   "task": "GNV-S2",
-   "text": "Accept: ACCEPT Stage 2 (estimate-grade): all 8 corrections verified; datum decisions A/B documented; Stage 3 authorized treating everything as ESTIMATE, no VER…"
-  },
-  {
-   "time": "2026-11-11T15:39:18+00:00",
-   "kind": "test",
-   "agent": "lead",
-   "task": "GNV-S2",
-   "text": "PASS: Lead re-check of Stage 2 revision bde1e43: NAIP catalog items m_2908214_se_17_030_20230126 / m_2908222_ne_17_030_20230126 (acq 2023-01-26) recorded; regi…"
-  },
-  {
-   "time": "2026-11-11T15:39:18+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "GNV-S3",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T15:38:29+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T15:38:29+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "CL-1",
-   "text": "PASS: clutch_study compare+sweep run (scratch build); step check 0.25/0.5/4.17 ms identical; sensitivity table + traces committed. Plant has no tire: structure…"
-  },
-  {
-   "time": "2026-11-11T15:35:35+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "visuals",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T15:35:20+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T15:35:20+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "GNV-ENV-1",
-   "text": "PASS: Stage2 revision items 1-8: NAIP item/date recorded, uniform register JSON+md, generator de-hardcoded, Run-Geo reproduces identical hashes, establishing o…"
-  },
-  {
-   "time": "2026-11-11T15:34:36+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T15:32:52+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T15:32:28+00:00",
-   "kind": "review",
-   "agent": "lead",
-   "task": "CL-1",
-   "text": "Accept: G0 ACCEPT and G1 ACCEPT for the ISOLATED model (0b2fde6): all must-fix items verified; stale doc text purged; interface owners and common-step policy d…"
-  },
-  {
-   "time": "2026-11-11T15:32:28+00:00",
-   "kind": "test",
-   "agent": "lead",
-   "task": "CL-1",
-   "text": "PASS: Lead independent build+run at Engine 0b2fde6 (strict C++17 /W4 scratch project outside the worktree): passes; order 1.02/1.04 and 0.84/0.90 asserted >= 0…"
-  },
-  {
-   "time": "2026-11-11T15:32:27+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T15:32:03+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "UI-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T15:31:20+00:00",
-   "kind": "handoff",
-   "agent": "tree",
-   "task": "TREE-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T15:30:11+00:00",
-   "kind": "review",
-   "agent": "lead",
-   "task": "T-1",
-   "text": "Accept: Accept Phase 1 + R-15 as numerical-correctness evidence: new files only (no Source changes), deterministic, 7E replay matches the car's own tire (R_kin…"
-  },
-  {
-   "time": "2026-11-11T15:30:11+00:00",
-   "kind": "test",
-   "agent": "lead",
-   "task": "T-1",
-   "text": "PASS: Lead independent build+run of the Tire rig at 5e1f0f1 (scratch CMake project outside every worktree; existing oxcart_sim sources unchanged + rig, Release…"
   }
  ],
  "approvals": [],
