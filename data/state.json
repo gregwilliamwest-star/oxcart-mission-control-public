@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T16:04:33Z",
+ "generated": "2026-11-11T16:11:43Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -163,7 +163,7 @@
     "Garage usable with mouse, keyboard, gamepad"
    ],
    "last_test": "PASS: Build-Native 23/23, Build-Editor Succeeded (incl. SOxcartGarage), PIE (headless) pass by prior session; Slate garage NOT seen on screen",
-   "last_review": "Revise: independent review: model connected to Setup and no physics edits; revise: use central units helper, no SI help text, display-unit steps, register test, EndPlay Hide, on-screen focus/clipping…",
+   "last_review": null,
    "issue": 18
   },
   {
@@ -285,7 +285,7 @@
     "Stage 1 visual QA: inspect the actual rendered image and record at least one identified deficiency and the correction made (before/after images and a short note); 'an image was generated' is not sufficient",
     "Stage 2 gate: documented real-world coordinate system for Gainesville Raceway covering track orientation (bearing), starting-line position, lane geometry and major facility landmarks, each marked VERIFIED or ESTIMATE with source; Lead verifies this before Sta…"
    ],
-   "last_test": "PASS: Stage2 revision items 1-8: NAIP item/date recorded, uniform register JSON+md, generator de-hardcoded, Run-Geo reproduces identical hashes, establishing overview+watermark, pyc removed. Not run:…",
+   "last_test": "PASS: Stage3 chunk1: own level DragStrip_GainesvilleRaceway builds via Run-Level; PIE (-nullrhi, logic only) PASSED: 660ft 3.141s/276.6mph, 1320ft 4.578s/337mph. No rendered PIE, no photoreal detail…",
    "last_review": null,
    "issue": 37
   },
@@ -453,7 +453,7 @@
     "G4: comparative traces + regression (native, Editor, PIE) + recommendation; owner approval before default/merge",
     "SampleReplays files and cache untouched"
    ],
-   "last_test": "PASS: clutch_study compare+sweep run (scratch build); step check 0.25/0.5/4.17 ms identical; sensitivity table + traces committed. Plant has no tire: structure comparison only.",
+   "last_test": "PASS: 24 test groups pass (scratch build, mutation-checked); public rig R0/R1/R2 run; defaults bit-identical (study outputs unchanged).",
    "last_review": "Accept: G0 ACCEPT and G1 ACCEPT for the ISOLATED model (0b2fde6): all must-fix items verified; stale doc text purged; interface owners and common-step policy documented; no shared files touched; Samp…",
    "issue": 45
   },
@@ -478,7 +478,7 @@
     "Isolated rig with measurable acceptance criteria; clutch-tire interface defined as a document",
     "Lead reviews the architecture before any implementation"
    ],
-   "last_test": "PASS: R-16 tread string: tension rises by Fx along patch; compression iff Fx>2pwR; criterion 1.30/1.12/0.98/0.87 at 6/7/8/9 psi for 22 kN/tire; boundary condition unknown so no direction of strain ef…",
+   "last_test": "PASS: item 4 + experimental integrator: BDF2 order 2.32, decay error -0.49% at h=1/960 (BE +40%); shake amplitude BDF2 0.3% spread vs BE 48%; legacy tire shake amplitude 7% below converged at product…",
    "last_review": "Accept: Accept Phase 1 + R-15 as numerical-correctness evidence: new files only (no Source changes), deterministic, 7E replay matches the car's own tire (R_kin min 0.3910 m), four-radius identity clo…",
    "issue": 6
   }
@@ -515,12 +515,12 @@
   {
    "id": "engine",
    "role": "A Engine and Clutch",
-   "status": "Running",
+   "status": "Waiting for input",
    "process_state": "Alive",
    "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T15:45:00+00:00",
+   "last_heartbeat": "2026-11-11T16:10:00+00:00",
    "current_task": "CL-1",
-   "note": "owner directive: public-data clutch reconstruction; researching Electrimotion/Boninfante/HotRod + digitizing SAE Fig 5/6; isolated rig only",
+   "note": "public-data stage committed ef8e158; awaiting Lead review",
    "assigned_tasks": [
     "CL-1"
    ],
@@ -546,9 +546,9 @@
    "status": "Idle",
    "process_state": "Alive",
    "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T15:55:00+00:00",
+   "last_heartbeat": "2026-11-11T16:00:00+00:00",
    "current_task": "T-1",
-   "note": "items 1-3 committed; awaiting Lead milestone review before hysteresis/hop/shake tests and experimental model",
+   "note": "milestone: items 1-4 + experimental BDF2 integrator committed; need decision on pressure-distribution path (needs footprint/stiffness data)",
    "assigned_tasks": [
     "TIRE-RR",
     "T-1"
@@ -670,7 +670,7 @@
    "role": "Visual Fidelity / Photorealism",
    "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Stale",
+   "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-11T15:35:00+00:00",
    "current_task": "V-1",
    "note": "V-1 handoff posted, awaiting Lead diff review; not pushed",
@@ -684,10 +684,10 @@
    "role": "Gainesville Raceway environment + reusable dragstrip pipeline (lead of stream)",
    "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T15:45:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T16:05:00+00:00",
    "current_task": "GNV-S3",
-   "note": "ack Stage 3 authorized; surveying level/PIE tooling",
+   "note": "chunk1 pushed 52930c8; next: detailed surfaces/markings/barriers/lighting, rendered PIE",
    "assigned_tasks": [
     "GNV-ENV-1",
     "GNV-S3",
@@ -700,6 +700,69 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T16:11:39+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T16:11:39+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "CL-1",
+   "text": "PASS: 24 test groups pass (scratch build, mutation-checked); public rig R0/R1/R2 run; defaults bit-identical (study outputs unchanged)."
+  },
+  {
+   "time": "2026-11-11T16:08:40+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T16:08:39+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "GNV-ENV-1",
+   "text": "PASS: Stage3 chunk1: own level DragStrip_GainesvilleRaceway builds via Run-Level; PIE (-nullrhi, logic only) PASSED: 660ft 3.141s/276.6mph, 1320ft 4.578s/337mp…"
+  },
+  {
+   "time": "2026-11-11T16:08:08+00:00",
+   "kind": "note",
+   "agent": "lead",
+   "task": "V-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T16:08:08+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T16:04:58+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "visuals",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T16:04:39+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "T-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T16:04:39+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "T-1",
+   "text": "PASS: item 4 + experimental integrator: BDF2 order 2.32, decay error -0.49% at h=1/960 (BE +40%); shake amplitude BDF2 0.3% spread vs BE 48%; legacy tire shake…"
+  },
   {
    "time": "2026-11-11T16:01:41+00:00",
    "kind": "message",
@@ -1049,76 +1112,6 @@
    "agent": null,
    "task": "CAR-LT",
    "text": null
-  },
-  {
-   "time": "2026-11-11T15:10:28+00:00",
-   "kind": "note",
-   "agent": "lead",
-   "task": "CAR-LT",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T15:01:17+00:00",
-   "kind": "review",
-   "agent": "independent reviewer (Lead-dispatched), architecture r2 79949af",
-   "task": "T-1",
-   "text": "Accept: ACCEPT for implementation: NO FUNDAMENTAL BLOCKER. Verified by hand: apparent-radius identity, wrinkle table, momentum table (Tire right, relayed 0.4/4…"
-  },
-  {
-   "time": "2026-11-11T15:01:17+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "T-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:59:51+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "T-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:59:41+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "CAR-LT",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:59:41+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:59:41+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "T-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:54:40+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:54:10+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:54:10+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "CL-1",
-   "text": "PASS: Isolated clutch tests pass (scratch build; CR pending for ctest). Mutation checks catch swapped lever (5 fails) and disc factor (4). Observed order ~1.0…"
   }
  ],
  "approvals": [],
