@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T12:20:34Z",
+ "generated": "2026-11-11T12:27:44Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -13,7 +13,7 @@
     "area:lead",
     "area:process"
    ],
-   "updated": "2026-11-10T11:03:44Z",
+   "updated": "2026-11-11T12:21:49Z",
    "description": "Maintain operating model, board, GitHub record, session continuity.",
    "acceptance_criteria": [
     "Operating model doc merged; Mission Control verified each session; Issues/Project current"
