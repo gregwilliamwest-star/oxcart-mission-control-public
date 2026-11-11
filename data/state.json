@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T14:02:56Z",
+ "generated": "2026-11-11T14:10:07Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -65,7 +65,7 @@
     "Revs per 1,000 ft check"
    ],
    "last_test": "PASS: Build-Native: 22/22 CTest passed on review branch (docs only; no source changed). Editor build/PIE not run: no Unreal code changed.",
-   "last_review": "Revise: Revise (minor): arithmetic slips in 3.4, growth time 3.7 vs 3.96 s, R_roll vs R0 hub-height error in section 8; code facts and the 104.3 revs recompute confirmed; docs only, no production cha…",
+   "last_review": "Revise: Revise (not accepted yet): headline numbers CONFIRMED vs 7E csv (R_roll 0.3912 min, 0.5378 max/0.5348 line, ratio 1.37; revs 96.1/100.0/100.1; 3.20 final drive; 0.07 s correctly first-order);…",
    "issue": null
   },
   {
@@ -285,7 +285,7 @@
     "Stage 1 visual QA: inspect the actual rendered image and record at least one identified deficiency and the correction made (before/after images and a short note); 'an image was generated' is not sufficient",
     "Stage 2 gate: documented real-world coordinate system for Gainesville Raceway covering track orientation (bearing), starting-line position, lane geometry and major facility landmarks, each marked VERIFIED or ESTIMATE with source; Lead verifies this before Sta…"
    ],
-   "last_test": "PASS: Capture-Progress reproduces 6 Blender + 6 Unreal fixed-camera images (synthetic); fixed 2 capture defects; de-hardcoded paths",
+   "last_test": "PASS: Stage2: NAIP-measured geometry (all ESTIMATE), config validates, 3 Blender builds give identical geometry hash, Unreal capture 7 shots with fixed overview/plan cameras, synthetic config regress…",
    "last_review": null,
    "issue": 37
   },
@@ -456,6 +456,31 @@
    "last_test": null,
    "last_review": null,
    "issue": 45
+  },
+  {
+   "id": "T-1",
+   "title": "High-fidelity Top Fuel tire architecture: research, math design, isolated test rig plan (issue #6; docs only)",
+   "description": "Owner-authorized architecture/research phase 2026-11-11. Documents, mathematical design and validation planning ONLY: no production tire parameter or physics change, no Source edits. Must account for the TIRE-RR findings (+37% radius change, wrinkle thrust, first-order 0.07 s, rpm pull-down interpretation, 99.9 vs 110-115 revs, finish rpm, inconsistent radius data, wind narrowing). Stage 2.7 B and F review-only; wind C on hold.",
+   "status": "In Progress",
+   "priority": "P2",
+   "progress_pct": 40,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "tire",
+   "branch": "feature/tire-radius-review",
+   "dependencies": [
+    "TIRE-RR review corrections",
+    "CL-1 clutch coupling interface (document only)"
+   ],
+   "acceptance_criteria": [
+    "TIRE-RR corrections applied with all qualifications kept",
+    "Architecture covers slick construction, wrinkle, growth, loaded vs unloaded radius, windup, slip/force, contact patch, temperature/compound, wheel inertia, clutch-tire coupling, timestep stability",
+    "Every quantity SOURCED/ESTIMATE/UNKNOWN; sources actually opened",
+    "Isolated rig with measurable acceptance criteria; clutch-tire interface defined as a document",
+    "Lead reviews the architecture before any implementation"
+   ],
+   "last_test": null,
+   "last_review": null,
+   "issue": 6
   }
  ],
  "agents": [
@@ -518,14 +543,15 @@
   {
    "id": "tire",
    "role": "C Tire and Track Physics",
-   "status": "Completed",
+   "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-10T10:25:00+00:00",
-   "current_task": "TIRE-RR",
-   "note": "TIRE-RR handed off for review",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T14:05:00+00:00",
+   "current_task": "T-1",
+   "note": "ack T-1: applying TIRE-RR corrections, starting tire architecture docs",
    "assigned_tasks": [
-    "TIRE-RR"
+    "TIRE-RR",
+    "T-1"
    ],
    "branch": "feature/tire-radius-review"
   },
@@ -590,7 +616,7 @@
    "role": "H UI/UX (UMG/Slate)",
    "status": "Blocked",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-11T13:55:00+00:00",
    "current_task": "UI-1",
    "note": "committed 79c76c8 and pushed; waiting for Lead on supported garage-open hook for screenshots",
@@ -658,10 +684,10 @@
    "role": "Gainesville Raceway environment + reusable dragstrip pipeline (lead of stream)",
    "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-11T13:25:00+00:00",
-   "current_task": "GNV-ENV-1",
-   "note": "GNV-S2: capture tool reproduced+fixed, committed 55c9805 locally (not pushed per owner instruction); next NAIP/lidar measurement",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T14:05:00+00:00",
+   "current_task": "GNV-S2",
+   "note": "ack next assignment: geographic reconstruction (stage2 package 36cb989 local; adding 3DEP DEM, hashes, level cameras)",
    "assigned_tasks": [
     "GNV-ENV-1",
     "GNV-S2",
@@ -675,6 +701,97 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T14:07:31+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:07:31+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "GNV-ENV-1",
+   "text": "PASS: Stage2: NAIP-measured geometry (all ESTIMATE), config validates, 3 Blender builds give identical geometry hash, Unreal capture 7 shots with fixed overvie…"
+  },
+  {
+   "time": "2026-11-11T14:07:13+00:00",
+   "kind": "note",
+   "agent": "lead",
+   "task": "T-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:07:13+00:00",
+   "kind": "task",
+   "agent": "tire",
+   "task": "T-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:06:13+00:00",
+   "kind": "progress",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:05:48+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "TIRE-RR",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:05:48+00:00",
+   "kind": "review",
+   "agent": "independent adversarial reviewer #2 (Lead-dispatched)",
+   "task": "TIRE-RR",
+   "text": "Revise: Revise (not accepted yet): headline numbers CONFIRMED vs 7E csv (R_roll 0.3912 min, 0.5378 max/0.5348 line, ratio 1.37; revs 96.1/100.0/100.1; 3.20 fin…"
+  },
+  {
+   "time": "2026-11-11T14:05:48+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "CAR-LT",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:05:48+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:05:48+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "TIRE-RR",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:03:43+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "CAR-LT",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:03:43+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:03:43+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "T-1",
+   "text": null
+  },
   {
    "time": "2026-11-11T14:01:42+00:00",
    "kind": "progress",
@@ -933,118 +1050,6 @@
    "agent": "lead",
    "task": null,
    "text": null
-  },
-  {
-   "time": "2026-11-11T12:20:55+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T12:20:55+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T12:20:55+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T12:20:55+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T12:20:55+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T12:20:55+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T12:20:55+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T11:13:30+00:00",
-   "kind": "note",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T11:05:33+00:00",
-   "kind": "task",
-   "agent": "gainesville-env",
-   "task": "GNV-S2",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T11:05:32+00:00",
-   "kind": "test",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": "PASS: Run A 0->13, run B 13->13 assets, identical TP_MESH and geometry_sha256; Capture-Progress produced 6 blender + 6 unreal shots (Build-Native/Editor not re…"
-  },
-  {
-   "time": "2026-11-11T11:05:32+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T11:03:41+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T11:01:57+00:00",
-   "kind": "note",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:57:11+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:56:25+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:55:11+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
   }
  ],
  "approvals": [],
@@ -1065,7 +1070,8 @@
    "UI-1",
    "V-1",
    "GNV-ENV-1",
-   "GNV-S2"
+   "GNV-S2",
+   "T-1"
   ],
   "Review": [
    "CAR-LT",

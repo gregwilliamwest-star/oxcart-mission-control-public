@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T14:02:56Z",
+ "generated": "2026-11-11T14:10:07Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -99,7 +99,7 @@
    "labels": [
     "area:tire"
    ],
-   "updated": "2026-11-11T10:32:40Z",
+   "updated": "2026-11-11T14:07:15Z",
    "description": "Hybrid physics-informed lookup tire with dynamic states; standalone rig; existing model as baseline; first target one Top Fuel rear slick; review Stage 2.7 proposals B and F first (TIRE-RR).",
    "acceptance_criteria": [
     "Four tire docs; rig sweeps (load, torque, slip, pressure, temperature, combined)"
@@ -107,11 +107,11 @@
    "dependencies": [
     "TIRE-RR review; data sources"
    ],
-   "assigned_agent": "Tire agent",
+   "assigned_agent": "tire",
    "priority": "unspecified",
-   "status": "Open",
-   "progress_pct": null,
-   "progress_basis": "no linked board task"
+   "status": "In Progress",
+   "progress_pct": 40,
+   "progress_basis": "ESTIMATE from linked board task T-1"
   },
   {
    "number": 7,
@@ -601,7 +601,7 @@
     "area:tire",
     "type:research"
    ],
-   "updated": "2026-11-11T10:32:42Z",
+   "updated": "2026-11-11T14:05:50Z",
    "description": "Owner: Tire agent. Review Tire.cpp:84,155,248 for sign dependence of wrinkle under windup; review together with S27-F. Note Top Fuel constant is 0.14 (Pro Mod 0.055).",
    "acceptance_criteria": [],
    "dependencies": [
@@ -681,7 +681,7 @@
     "area:tire",
     "type:research"
    ],
-   "updated": "2026-11-10T10:04:30Z",
+   "updated": "2026-11-11T14:05:51Z",
    "description": "Owner: Tire agent, after B and C. Top Fuel rear longStiffnessPerN=50.0; the Fx/N~77 figure is an output of the carcass path, not a constant. Define the quantity, find data (only revs/1,000 ft envelope is sourced).",
    "acceptance_criteria": [],
    "dependencies": [
