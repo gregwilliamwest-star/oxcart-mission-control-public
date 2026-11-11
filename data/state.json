@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T17:13:13Z",
+ "generated": "2026-11-11T17:20:24Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -701,6 +701,20 @@
  ],
  "events": [
   {
+   "time": "2026-11-11T17:15:31+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:15:31+00:00",
+   "kind": "review",
+   "agent": "lead",
+   "task": "CL-1-CR2",
+   "text": "Revise: CR2 draft is sound in structure (flag default Legacy, single owners, WOT from pedal, proof obligations) but needs: rebase of line refs/baseline numbers…"
+  },
+  {
    "time": "2026-11-11T17:12:20+00:00",
    "kind": "message",
    "agent": "lead",
@@ -1105,20 +1119,6 @@
    "agent": "gainesville-env",
    "task": "GNV-ENV-1",
    "text": null
-  },
-  {
-   "time": "2026-11-11T15:24:53+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T15:24:53+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "CL-1",
-   "text": "PASS: 20 test groups pass (scratch build); order asserted >=0.7; reversal vs independent numeric reference; implicit thermal bounded to dt=1e6; spec validation."
   }
  ],
  "approvals": [],
