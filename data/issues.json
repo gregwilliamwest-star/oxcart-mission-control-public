@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T10:16:31Z",
+ "generated": "2026-11-11T10:23:41Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -732,18 +732,18 @@
    "assigned_agent": "gainesville-env",
    "priority": "unspecified",
    "status": "In Progress",
-   "progress_pct": 1,
+   "progress_pct": 15,
    "progress_basis": "ESTIMATE from linked board task GNV-ENV-1"
   },
   {
    "number": 38,
    "title": "GNV-S1 Stage 1 toolchain validation",
-   "state": "OPEN",
+   "state": "CLOSED",
    "labels": [
     "area:visual",
     "track:gainesville"
    ],
-   "updated": "2026-11-11T08:07:05Z",
+   "updated": "2026-11-11T10:17:34Z",
    "description": "Blender 4.5 script -> render -> inspect -> export -> Unreal import, repeatable without duplicate assets; source-control isolation confirmed.",
    "acceptance_criteria": [
     "Small end-to-end workflow demonstrated and re-run cleanly; Lead review BEFORE Stage 2."
@@ -751,8 +751,8 @@
    "dependencies": [],
    "assigned_agent": "gainesville-env",
    "priority": "unspecified",
-   "status": "Assigned",
-   "progress_pct": 5,
+   "status": "Done",
+   "progress_pct": 100,
    "progress_basis": "ESTIMATE from linked board task GNV-S1"
   },
   {
@@ -763,7 +763,7 @@
     "area:visual",
     "track:gainesville"
    ],
-   "updated": "2026-11-11T08:07:07Z",
+   "updated": "2026-11-11T10:17:36Z",
    "description": "Coordinate system, dimensions, terrain, racing surface and major structures of Gainesville Raceway; [redacted]",
    "acceptance_criteria": [
     "No invented measurements; documented Blender-Unreal transform; geometric reference model."
@@ -771,8 +771,8 @@
    "dependencies": [],
    "assigned_agent": "gainesville-env",
    "priority": "unspecified",
-   "status": "Backlog",
-   "progress_pct": 0,
+   "status": "Assigned",
+   "progress_pct": 5,
    "progress_basis": "ESTIMATE from linked board task GNV-S2"
   },
   {
