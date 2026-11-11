@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T16:40:28Z",
+ "generated": "2026-11-11T16:47:38Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -517,7 +517,7 @@
    "role": "A Engine and Clutch",
    "status": "Waiting for input",
    "process_state": "Alive",
-   "connection_state": "Stale",
+   "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-11T16:10:00+00:00",
    "current_task": "CL-1",
    "note": "public-data stage committed ef8e158; awaiting Lead review",
