@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T14:10:07Z",
+ "generated": "2026-11-11T14:16:52Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -453,8 +453,8 @@
     "G4: comparative traces + regression (native, Editor, PIE) + recommendation; owner approval before default/merge",
     "SampleReplays files and cache untouched"
    ],
-   "last_test": null,
-   "last_review": null,
+   "last_test": "PASS: G1 isolated clutch tests pass in a scratch CMake build (not yet in ctest: CR pending). Energy residual 1e-7 J; dt 1/240..1/4800 convergent; control purity; sensitivity directions.",
+   "last_review": "Revise: REVISE-G0: NHRA 2026 rules claims all CONFIRMED against the live rulebook (6 discs, WOT-switch-only timers, pressure-over-time only, clutch pressure sole feedback, 3.20:1); WOT-switch vs tran…",
    "issue": 45
   },
   {
@@ -515,12 +515,12 @@
   {
    "id": "engine",
    "role": "A Engine and Clutch",
-   "status": "Waiting for input",
+   "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T13:50:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T14:15:00+00:00",
    "current_task": "CL-1",
-   "note": "G0 committed 3cdcce4; awaiting Lead G0 review before G1",
+   "note": "DISCLOSURE: committed G1 code bf4538b (local, unpushed) before the REVISE-G0 verdict reached me; no further code. Doing G0 rev3 docs now",
    "assigned_tasks": [
     "CL-1"
    ],
@@ -543,12 +543,12 @@
   {
    "id": "tire",
    "role": "C Tire and Track Physics",
-   "status": "Running",
+   "status": "Completed",
    "process_state": "Alive",
    "connection_state": "Connected",
-   "last_heartbeat": "2026-11-11T14:05:00+00:00",
+   "last_heartbeat": "2026-11-11T14:10:00+00:00",
    "current_task": "T-1",
-   "note": "ack T-1: applying TIRE-RR corrections, starting tire architecture docs",
+   "note": "T-1 architecture handed off for Lead review",
    "assigned_tasks": [
     "TIRE-RR",
     "T-1"
@@ -684,7 +684,7 @@
    "role": "Gainesville Raceway environment + reusable dragstrip pipeline (lead of stream)",
    "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-11T14:05:00+00:00",
    "current_task": "GNV-S2",
    "note": "ack next assignment: geographic reconstruction (stage2 package 36cb989 local; adding 3DEP DEM, hashes, level cameras)",
@@ -701,6 +701,62 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T14:16:03+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:16:03+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "CL-1",
+   "text": "PASS: G1 isolated clutch tests pass in a scratch CMake build (not yet in ctest: CR pending). Energy residual 1e-7 J; dt 1/240..1/4800 convergent; control purit…"
+  },
+  {
+   "time": "2026-11-11T14:15:19+00:00",
+   "kind": "review",
+   "agent": "independent reviewer (Lead-dispatched), gate G0",
+   "task": "CL-1",
+   "text": "Revise: REVISE-G0: NHRA 2026 rules claims all CONFIRMED against the live rulebook (6 discs, WOT-switch-only timers, pressure-over-time only, clutch pressure so…"
+  },
+  {
+   "time": "2026-11-11T14:15:19+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:14:21+00:00",
+   "kind": "progress",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:14:20+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "T-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:12:56+00:00",
+   "kind": "note",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:12:55+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": null
+  },
   {
    "time": "2026-11-11T14:07:31+00:00",
    "kind": "handoff",
@@ -993,62 +1049,6 @@
    "kind": "handoff",
    "agent": null,
    "task": "CAR-LT",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T12:51:07+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "GNV-S2",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T12:40:44+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "UNIT-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T12:40:43+00:00",
-   "kind": "test",
-   "agent": "lead",
-   "task": "UNIT-1",
-   "text": "PASS: Lead independent Build-Native at 1722d98 in Lead scratch worktree: 100% tests passed, 23/23 (22 baseline + Oxcart_units), exit 0, 519 s; log <path>"
-  },
-  {
-   "time": "2026-11-11T12:22:48+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "UNIT-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T12:22:48+00:00",
-   "kind": "review",
-   "agent": "independent reviewer (Lead-dispatched)",
-   "task": "UNIT-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T12:21:47+00:00",
-   "kind": "note",
-   "agent": "lead",
-   "task": "MC-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T12:20:55+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T12:20:55+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
    "text": null
   }
  ],
