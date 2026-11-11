@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T15:28:37Z",
+ "generated": "2026-11-11T15:35:48Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -64,7 +64,7 @@
     "Report with sourced vs estimated values",
     "Revs per 1,000 ft check"
    ],
-   "last_test": "PASS: Build-Native: 22/22 CTest passed on review branch (docs only; no source changed). Editor build/PIE not run: no Unreal code changed.",
+   "last_test": null,
    "last_review": "Revise: Revise (not accepted yet): headline numbers CONFIRMED vs 7E csv (R_roll 0.3912 min, 0.5378 max/0.5348 line, ratio 1.37; revs 96.1/100.0/100.1; 3.20 final drive; 0.07 s correctly first-order);…",
    "issue": null
   },
@@ -83,7 +83,7 @@
     "Sourced comparison",
     "Proposed corrections with justification"
    ],
-   "last_test": "PASS: Build-Native: 22/22 ctest pass (baseline, no code changed); probe reproduces 4.288 s / 4.398 s",
+   "last_test": null,
    "last_review": "Revise: Revise (moderate): sections describe the legacy 0.58 m car not the 2026 spec (R 0.4649); 9 cm claim unsupported; numbers recompute and labelling honest; docs only",
    "issue": null
   },
@@ -285,7 +285,7 @@
     "Stage 1 visual QA: inspect the actual rendered image and record at least one identified deficiency and the correction made (before/after images and a short note); 'an image was generated' is not sufficient",
     "Stage 2 gate: documented real-world coordinate system for Gainesville Raceway covering track orientation (bearing), starting-line position, lane geometry and major facility landmarks, each marked VERIFIED or ESTIMATE with source; Lead verifies this before Sta…"
    ],
-   "last_test": "PASS: Stage2 geo: NAIP-measured layout + 3DEP DEM + Dewberry accuracy (all ESTIMATE), 3 identical Blender geometry hashes, Unreal capture 7 shots (14 images), level overview/plan, synthetic regressio…",
+   "last_test": "PASS: Stage2 revision items 1-8: NAIP item/date recorded, uniform register JSON+md, generator de-hardcoded, Run-Geo reproduces identical hashes, establishing overview+watermark, pyc removed. Not run:…",
    "last_review": null,
    "issue": 37
   },
@@ -453,8 +453,8 @@
     "G4: comparative traces + regression (native, Editor, PIE) + recommendation; owner approval before default/merge",
     "SampleReplays files and cache untouched"
    ],
-   "last_test": "PASS: 20 test groups pass (scratch build); order asserted >=0.7; reversal vs independent numeric reference; implicit thermal bounded to dt=1e6; spec validation.",
-   "last_review": "Revise: G1 code+tests ACCEPT with must-fix items (huge-dt thermal stability and multi-step test, muStatic<muKinetic guard, closed-form reversal test, tautology at test:136, assert convergence order);…",
+   "last_test": "PASS: Lead independent build+run at Engine 0b2fde6 (strict C++17 /W4 scratch project outside the worktree): passes; order 1.02/1.04 and 0.84/0.90 asserted >= 0.7; residual scaling ratio 13.8 asserted…",
+   "last_review": "Accept: G0 ACCEPT and G1 ACCEPT for the ISOLATED model (0b2fde6): all must-fix items verified; stale doc text purged; interface owners and common-step policy documented; no shared files touched; Samp…",
    "issue": 45
   },
   {
@@ -478,8 +478,8 @@
     "Isolated rig with measurable acceptance criteria; clutch-tire interface defined as a document",
     "Lead reviews the architecture before any implementation"
    ],
-   "last_test": "PASS: test_tire_rig 18/18 pass incl R-15 (lumped brush vs distributed parabolic patch 1e-6; pressure shape at fixed N moves Fx 0.56x-1.18x). Source/ untouched.",
-   "last_review": "Accept: ACCEPT for implementation: NO FUNDAMENTAL BLOCKER. Verified by hand: apparent-radius identity, wrinkle table, momentum table (Tire right, relayed 0.4/4-8 kN wrong), 49.1 m/s crossover, omega^…",
+   "last_test": "PASS: Lead independent build+run of the Tire rig at 5e1f0f1 (scratch CMake project outside every worktree; existing oxcart_sim sources unchanged + rig, Release): test_tire_rig 'TIRE RIG TESTS PASSED…",
+   "last_review": "Accept: Accept Phase 1 + R-15 as numerical-correctness evidence: new files only (no Source changes), deterministic, 7E replay matches the car's own tire (R_kin min 0.3910 m), four-radius identity clo…",
    "issue": 6
   }
  ],
@@ -517,7 +517,7 @@
    "role": "A Engine and Clutch",
    "status": "Waiting for input",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-11T15:20:00+00:00",
    "current_task": "CL-1",
    "note": "re-check must-fix items 1-4 done 0b2fde6; awaiting quick re-check",
@@ -586,12 +586,12 @@
   {
    "id": "tree",
    "role": "F Christmas Tree",
-   "status": "Running",
+   "status": "Completed",
    "process_state": "Alive",
-   "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T15:10:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T15:30:00+00:00",
    "current_task": "TREE-1",
-   "note": "resumed",
+   "note": "TREE-1 housekeeping pushed 5a89d500a54e22feb99d719d05fe569c8680a3eb",
    "assigned_tasks": [
     "TREE-1"
    ],
@@ -616,10 +616,10 @@
    "role": "H UI/UX (UMG/Slate)",
    "status": "Blocked",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-11T13:55:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T15:30:00+00:00",
    "current_task": "UI-1",
-   "note": "committed 79c76c8 and pushed; waiting for Lead on supported garage-open hook for screenshots",
+   "note": "eea48ff pushed; garage seen on screen once; remaining checks need a person or larger render window",
    "assigned_tasks": [
     "UI-1"
    ],
@@ -668,12 +668,12 @@
   {
    "id": "visuals",
    "role": "Visual Fidelity / Photorealism",
-   "status": "Running",
+   "status": "Idle",
    "process_state": "Alive",
    "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-11T13:20:00+00:00",
+   "last_heartbeat": "2026-11-11T15:35:00+00:00",
    "current_task": "V-1",
-   "note": "native 22/22 pass; editor build + PIE next",
+   "note": "V-1 handoff posted, awaiting Lead diff review; not pushed",
    "assigned_tasks": [
     "V-1"
    ],
@@ -682,12 +682,12 @@
   {
    "id": "gainesville-env",
    "role": "Gainesville Raceway environment + reusable dragstrip pipeline (lead of stream)",
-   "status": "Running",
+   "status": "Waiting for input",
    "process_state": "Alive",
-   "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T15:20:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T15:35:00+00:00",
    "current_task": "GNV-S2",
-   "note": "ack REVISE-STAGE-2: working items 1-8",
+   "note": "Revision bde1e43 pushed; awaiting Lead re-check; Stage 3 not started",
    "assigned_tasks": [
     "GNV-ENV-1",
     "GNV-S2",
@@ -701,6 +701,90 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T15:35:35+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "visuals",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:35:20+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:35:20+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "GNV-ENV-1",
+   "text": "PASS: Stage2 revision items 1-8: NAIP item/date recorded, uniform register JSON+md, generator de-hardcoded, Run-Geo reproduces identical hashes, establishing o…"
+  },
+  {
+   "time": "2026-11-11T15:34:36+00:00",
+   "kind": "progress",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:32:52+00:00",
+   "kind": "progress",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:32:28+00:00",
+   "kind": "review",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": "Accept: G0 ACCEPT and G1 ACCEPT for the ISOLATED model (0b2fde6): all must-fix items verified; stale doc text purged; interface owners and common-step policy d…"
+  },
+  {
+   "time": "2026-11-11T15:32:28+00:00",
+   "kind": "test",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": "PASS: Lead independent build+run at Engine 0b2fde6 (strict C++17 /W4 scratch project outside the worktree): passes; order 1.02/1.04 and 0.84/0.90 asserted >= 0…"
+  },
+  {
+   "time": "2026-11-11T15:32:27+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:32:03+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "UI-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:31:20+00:00",
+   "kind": "handoff",
+   "agent": "tree",
+   "task": "TREE-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:30:11+00:00",
+   "kind": "review",
+   "agent": "lead",
+   "task": "T-1",
+   "text": "Accept: Accept Phase 1 + R-15 as numerical-correctness evidence: new files only (no Source changes), deterministic, 7E replay matches the car's own tire (R_kin…"
+  },
+  {
+   "time": "2026-11-11T15:30:11+00:00",
+   "kind": "test",
+   "agent": "lead",
+   "task": "T-1",
+   "text": "PASS: Lead independent build+run of the Tire rig at 5e1f0f1 (scratch CMake project outside every worktree; existing oxcart_sim sources unchanged + rig, Release…"
+  },
   {
    "time": "2026-11-11T15:27:22+00:00",
    "kind": "note",
@@ -1035,90 +1119,6 @@
    "kind": "progress",
    "agent": "gainesville-env",
    "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:16:03+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:16:03+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "CL-1",
-   "text": "PASS: G1 isolated clutch tests pass in a scratch CMake build (not yet in ctest: CR pending). Energy residual 1e-7 J; dt 1/240..1/4800 convergent; control purit…"
-  },
-  {
-   "time": "2026-11-11T14:15:19+00:00",
-   "kind": "review",
-   "agent": "independent reviewer (Lead-dispatched), gate G0",
-   "task": "CL-1",
-   "text": "Revise: REVISE-G0: NHRA 2026 rules claims all CONFIRMED against the live rulebook (6 discs, WOT-switch-only timers, pressure-over-time only, clutch pressure so…"
-  },
-  {
-   "time": "2026-11-11T14:15:19+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:14:21+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:14:20+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "T-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:12:56+00:00",
-   "kind": "note",
-   "agent": "lead",
-   "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:12:55+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:07:31+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:07:31+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "GNV-ENV-1",
-   "text": "PASS: Stage2: NAIP-measured geometry (all ESTIMATE), config validates, 3 Blender builds give identical geometry hash, Unreal capture 7 shots with fixed overvie…"
-  },
-  {
-   "time": "2026-11-11T14:07:13+00:00",
-   "kind": "note",
-   "agent": "lead",
-   "task": "T-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:07:13+00:00",
-   "kind": "task",
-   "agent": "tire",
-   "task": "T-1",
    "text": null
   }
  ],
