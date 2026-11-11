@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T11:33:21Z",
+ "generated": "2026-11-11T11:56:48Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -601,7 +601,7 @@
   {
    "id": "gainesville-env",
    "role": "Gainesville Raceway environment + reusable dragstrip pipeline (lead of stream)",
-   "status": "Stale",
+   "status": "Disconnected",
    "last_heartbeat": "2026-11-11T11:05:00+00:00",
    "current_task": "GNV-ENV-1",
    "note": "Stage 2: coordinate system document next",
