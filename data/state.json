@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T14:38:25Z",
+ "generated": "2026-11-11T14:45:35Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -453,8 +453,8 @@
     "G4: comparative traces + regression (native, Editor, PIE) + recommendation; owner approval before default/merge",
     "SampleReplays files and cache untouched"
    ],
-   "last_test": "PASS: G1 isolated clutch tests pass in a scratch CMake build (not yet in ctest: CR pending). Energy residual 1e-7 J; dt 1/240..1/4800 convergent; control purity; sensitivity directions.",
-   "last_review": "Revise: REVISE-G0: NHRA 2026 rules claims all CONFIRMED against the live rulebook (6 discs, WOT-switch-only timers, pressure-over-time only, clutch pressure sole feedback, 3.20:1); WOT-switch vs tran…",
+   "last_test": "PASS: Isolated clutch tests pass (scratch build, not yet ctest: CR pending). Boundary sweep found+fixed passivity defect; ledger 2e-9 @1/2400; Hi/Lo, staging, interface guard.",
+   "last_review": "Revise: REVISE-G0 (force balance, Hi/Lo, tags, register, no speed ramp resolved; inertia values, staging mode, compliance, stability wording, SAE page refs open) and REVISE-G1 (slip-reversal overshoo…",
    "issue": 45
   },
   {
@@ -517,10 +517,10 @@
    "role": "A Engine and Clutch",
    "status": "Waiting for input",
    "process_state": "Alive",
-   "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T14:15:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T14:40:00+00:00",
    "current_task": "CL-1",
-   "note": "G0 rev3 committed cff46f0; awaiting re-check. No further code.",
+   "note": "committed b2efc73; awaiting Lead G0 re-check / G1 review",
    "assigned_tasks": [
     "CL-1"
    ],
@@ -543,12 +543,12 @@
   {
    "id": "tire",
    "role": "C Tire and Track Physics",
-   "status": "Completed",
+   "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T14:10:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T14:40:00+00:00",
    "current_task": "T-1",
-   "note": "T-1 architecture handed off for Lead review",
+   "note": "Hallum SAE 942484 evaluation: locating overview text",
    "assigned_tasks": [
     "TIRE-RR",
     "T-1"
@@ -701,6 +701,41 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T14:44:39+00:00",
+   "kind": "review",
+   "agent": "independent reviewer (Lead-dispatched), G0 rev3 + G1",
+   "task": "CL-1",
+   "text": "Revise: REVISE-G0 (force balance, Hi/Lo, tags, register, no speed ramp resolved; inertia values, staging mode, compliance, stability wording, SAE page refs ope…"
+  },
+  {
+   "time": "2026-11-11T14:44:39+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:44:29+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:44:29+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "CL-1",
+   "text": "PASS: Isolated clutch tests pass (scratch build, not yet ctest: CR pending). Boundary sweep found+fixed passivity defect; ledger 2e-9 @1/2400; Hi/Lo, staging,…"
+  },
+  {
+   "time": "2026-11-11T14:41:34+00:00",
+   "kind": "test",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": "PASS: Lead independent build+run of the isolated clutch test (Tests/test_clutch_topfuel.cpp @ bf4538b, scratch project outside every worktree, strict C++17 /W4…"
+  },
   {
    "time": "2026-11-11T14:34:29+00:00",
    "kind": "review",
@@ -1064,48 +1099,6 @@
    "agent": null,
    "task": "UNIT-1",
    "text": "PASS: Oxcart_units ctest pass at 6b1c828 (rounding pinned, CR wording fixed); full 23/23 verified earlier on 1722d98"
-  },
-  {
-   "time": "2026-11-11T13:24:03+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "UNIT-1",
-   "text": "PASS: Build-Native on 1722d98: 23/23 CTest pass incl. Oxcart_units; Editor build/PIE not run (no Unreal code changed)"
-  },
-  {
-   "time": "2026-11-11T13:23:31+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T13:19:53+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "IND-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T13:19:53+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "IND-1",
-   "text": "PASS: Build-Editor Succeeded; Tour-Screenshots completed (44 shots incl. new 41_drivers_eye). Native tests/PIE not run: no sim code changed"
-  },
-  {
-   "time": "2026-11-11T13:17:36+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "UI-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T13:17:36+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "UNIT-1",
-   "text": null
   }
  ],
  "approvals": [],
