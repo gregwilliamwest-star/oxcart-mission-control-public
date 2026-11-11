@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T09:26:03Z",
+ "generated": "2026-11-11T09:28:08Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -861,10 +861,9 @@
    "state": "OPEN",
    "labels": [
     "area:visual",
-    "track:gainesville",
-    "sync-test"
+    "track:gainesville"
    ],
-   "updated": "2026-11-11T09:24:40Z",
+   "updated": "2026-11-11T09:26:39Z",
    "description": "Generate a second SYNTHETIC/generic dragstrip from a separate config using the shared tools.",
    "acceptance_criteria": [
     "No Indianapolis or Gainesville-specific hardcoding in shared tools; reproducible from a clean checkout; [redacted]"
