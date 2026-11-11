@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T13:12:45Z",
+ "generated": "2026-11-11T13:19:55Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -72,9 +72,9 @@
    "id": "CAR-LT",
    "title": "Review CG height, weight distribution, load transfer vs real Top Fuel",
    "description": "Compare 29% front / 0.45 m CG against documented configurations. No parameter changes without approval.",
-   "status": "Assigned",
+   "status": "Review",
    "priority": "P2",
-   "progress_pct": 5,
+   "progress_pct": 80,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "car",
    "branch": "feature/car-loadtransfer-review",
@@ -91,9 +91,9 @@
    "id": "IND-1",
    "title": "Indianapolis photorealistic starting-line milestone",
    "description": "Baseline screenshots, source-backed reference inventory, PBR pavement, markings, barriers, lighting; no traction/tire changes.",
-   "status": "Blocked",
+   "status": "In Progress",
    "priority": "P3",
-   "progress_pct": null,
+   "progress_pct": 40,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "indy",
    "branch": "feature/indy-track-visuals",
@@ -103,7 +103,7 @@
    "acceptance_criteria": [
     "See directive section 6 criteria"
    ],
-   "last_test": null,
+   "last_test": "PASS: Build-Editor Succeeded; Tour-Screenshots completed (44 shots incl. new 41_drivers_eye). Native tests/PIE not run: no sim code changed",
    "last_review": null,
    "issue": null
   },
@@ -467,22 +467,22 @@
    "role": "A Engine and Clutch",
    "status": "Waiting for input",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-11T10:25:00+00:00",
+   "connection_state": "Stale",
+   "last_heartbeat": "2026-11-11T13:10:00+00:00",
    "current_task": "ENG-27",
-   "note": "Blocked: git restore SampleReplays denied by permission classifier; need owner confirmation",
+   "note": "ENG27 doc corrections applied in working tree, uncommitted; awaiting Lead git authorization",
    "assigned_tasks": [],
    "branch": "feature/integrated-physics-cont"
   },
   {
    "id": "car",
    "role": "B Car Physics",
-   "status": "Completed",
+   "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-10T10:20:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T13:15:00+00:00",
    "current_task": "CAR-LT",
-   "note": "CAR-LT review handed off",
+   "note": "CAR-LT rev2 handed off; D/E wait on owner data",
    "assigned_tasks": [
     "CAR-LT"
    ],
@@ -506,7 +506,7 @@
    "id": "chute-visual",
    "role": "D Parachute and Vehicle Visuals",
    "status": "Idle",
-   "process_state": "Alive",
+   "process_state": "Exited",
    "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-10T10:20:00+00:00",
    "current_task": "VIS-1",
@@ -519,16 +519,16 @@
   {
    "id": "indy",
    "role": "E Indianapolis Venue",
-   "status": "Blocked",
+   "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-10T10:20:00+00:00",
+   "connection_state": "Stale",
+   "last_heartbeat": "2026-11-11T13:15:00+00:00",
    "current_task": "IND-1",
-   "note": "Waiting on Lead: sync plan, material ownership",
+   "note": "Synced; next: reconcile docs, marking inventory, map-side dressing",
    "assigned_tasks": [
     "IND-1"
    ],
-   "branch": "feature/indy-track-visuals"
+   "branch": "feature/indy-starting-line"
   },
   {
    "id": "tree",
@@ -549,10 +549,10 @@
    "role": "G Camera and Presentation",
    "status": "Waiting for input",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-10T10:05:00+00:00",
+   "connection_state": "Stale",
+   "last_heartbeat": "2026-11-11T13:10:00+00:00",
    "current_task": "CAM-1",
-   "note": "CAM-1-CR written, waiting for Lead approval before pawn edits",
+   "note": "plan committed; holding for Lead confirmation that UI-1 pawn hunk is integrated",
    "assigned_tasks": [
     "CAM-1"
    ],
@@ -561,12 +561,12 @@
   {
    "id": "ui",
    "role": "H UI/UX (UMG/Slate)",
-   "status": "Idle",
+   "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-11T10:50:00+00:00",
+   "connection_state": "Stale",
+   "last_heartbeat": "2026-11-11T13:10:00+00:00",
    "current_task": "UI-1",
-   "note": "duplicate PID 56940: stopped, handoff written, awaiting retirement",
+   "note": "resumed; reading duplicate-session handoff, then on-screen verification",
    "assigned_tasks": [
     "UI-1"
    ],
@@ -575,12 +575,12 @@
   {
    "id": "units",
    "role": "I Imperial Units",
-   "status": "Completed",
+   "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-11T10:40:00+00:00",
+   "connection_state": "Stale",
+   "last_heartbeat": "2026-11-11T13:10:00+00:00",
    "current_task": "UNIT-1",
-   "note": "UNIT-1 handed off",
+   "note": "resumed; verifying Build-Native on 1722d98",
    "assigned_tasks": [
     "UNIT-1"
    ],
@@ -615,12 +615,12 @@
   {
    "id": "visuals",
    "role": "Visual Fidelity / Photorealism",
-   "status": "Idle",
+   "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-11T10:30:00+00:00",
+   "connection_state": "Stale",
+   "last_heartbeat": "2026-11-11T13:10:00+00:00",
    "current_task": "V-1",
-   "note": "lane master rebuilt, editor builds; capturing AFTER shots",
+   "note": "resumed",
    "assigned_tasks": [
     "V-1"
    ],
@@ -631,10 +631,10 @@
    "role": "Gainesville Raceway environment + reusable dragstrip pipeline (lead of stream)",
    "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-11T11:05:00+00:00",
+   "connection_state": "Stale",
+   "last_heartbeat": "2026-11-11T13:10:00+00:00",
    "current_task": "GNV-ENV-1",
-   "note": "Stage 2: coordinate system document next",
+   "note": "resumed GNV-S2 (original session)",
    "assigned_tasks": [
     "GNV-ENV-1",
     "GNV-S2",
@@ -648,6 +648,62 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T13:19:53+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "IND-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T13:19:53+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "IND-1",
+   "text": "PASS: Build-Editor Succeeded; Tour-Screenshots completed (44 shots incl. new 41_drivers_eye). Native tests/PIE not run: no sim code changed"
+  },
+  {
+   "time": "2026-11-11T13:17:36+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "UI-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T13:17:36+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "UNIT-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T13:17:36+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "ENG-27",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T13:17:36+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "IND-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T13:17:32+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "CAR-LT",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T13:17:32+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "CAR-LT",
+   "text": null
+  },
   {
    "time": "2026-11-11T12:51:07+00:00",
    "kind": "message",
@@ -990,83 +1046,6 @@
    "agent": "independent reviewer (Lead-dispatched)",
    "task": "ENG-27",
    "text": "Accept: Accept as RESEARCH. Scope clean (one new doc, no code). Corrections: cite Nhra2026.h:64 for the 7,950 rpm fit; 0.48 eta_ind repeats Stage 2.5 (not new)…"
-  },
-  {
-   "time": "2026-11-11T10:29:27+00:00",
-   "kind": "task",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:29:27+00:00",
-   "kind": "register",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:29:24+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "UI-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:29:08+00:00",
-   "kind": "register",
-   "agent": "visuals",
-   "task": "V-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:29:07+00:00",
-   "kind": "register",
-   "agent": "ui",
-   "task": "UI-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:29:06+00:00",
-   "kind": "register",
-   "agent": "engine",
-   "task": "ENG-27",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:29:06+00:00",
-   "kind": "register",
-   "agent": "units",
-   "task": "UNIT-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:28:39+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:17:02+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "GNV-S1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:17:01+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "GNV-S2",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:17:01+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "GNV-S1",
-   "text": null
   }
  ],
  "approvals": [],
@@ -1079,17 +1058,18 @@
    "GNV-S7"
   ],
   "Assigned": [
-   "TIRE-RR",
-   "CAR-LT"
+   "TIRE-RR"
   ],
   "In Progress": [
    "MC-1",
+   "IND-1",
    "UI-1",
    "V-1",
    "GNV-ENV-1",
    "GNV-S2"
   ],
   "Review": [
+   "CAR-LT",
    "TREE-1",
    "SB-1"
   ],
@@ -1101,7 +1081,6 @@
    "GNV-S1"
   ],
   "Blocked": [
-   "IND-1",
    "CAM-1",
    "VIS-1",
    "DEC-27"
