@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T15:42:59Z",
+ "generated": "2026-11-11T15:50:11Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -515,12 +515,12 @@
   {
    "id": "engine",
    "role": "A Engine and Clutch",
-   "status": "Waiting for input",
+   "status": "Running",
    "process_state": "Alive",
    "connection_state": "Connected",
-   "last_heartbeat": "2026-11-11T15:35:00+00:00",
+   "last_heartbeat": "2026-11-11T15:45:00+00:00",
    "current_task": "CL-1",
-   "note": "study, sensitivity, data needs, draft CR2 committed b96513e; awaiting Lead review",
+   "note": "owner directive: public-data clutch reconstruction; researching Electrimotion/Boninfante/HotRod + digitizing SAE Fig 5/6; isolated rig only",
    "assigned_tasks": [
     "CL-1"
    ],
@@ -529,12 +529,12 @@
   {
    "id": "car",
    "role": "B Car Physics",
-   "status": "Idle",
+   "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-11T15:10:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T15:45:00+00:00",
    "current_task": "CAR-LT",
-   "note": "hub height verification handed off",
+   "note": "building editor so the game can be opened (user request)",
    "assigned_tasks": [
     "CAR-LT"
    ],
@@ -682,12 +682,12 @@
   {
    "id": "gainesville-env",
    "role": "Gainesville Raceway environment + reusable dragstrip pipeline (lead of stream)",
-   "status": "Waiting for input",
+   "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T15:35:00+00:00",
-   "current_task": "GNV-S2",
-   "note": "Revision bde1e43 pushed; awaiting Lead re-check; Stage 3 not started",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T15:45:00+00:00",
+   "current_task": "GNV-S3",
+   "note": "ack Stage 3 authorized; surveying level/PIE tooling",
    "assigned_tasks": [
     "GNV-ENV-1",
     "GNV-S3",
@@ -1111,13 +1111,6 @@
    "kind": "note",
    "agent": "lead",
    "task": "T-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:33:02+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "CL-1",
    "text": null
   }
  ],
