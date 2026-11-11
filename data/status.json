@@ -1,0 +1,11 @@
+{
+ "schema_version": 1,
+ "generated": "2026-11-11T09:19:09Z",
+ "project": "Oxcart Mission Control (public read-only snapshot)",
+ "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
+ "stale_after_minutes": 15,
+ "tasks": 21,
+ "agents": 15,
+ "issues": 43,
+ "withheld_items": 2
+}

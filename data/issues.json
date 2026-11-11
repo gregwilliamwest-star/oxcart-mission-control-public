@@ -1,0 +1,879 @@
+{
+ "schema_version": 1,
+ "generated": "2026-11-11T09:19:09Z",
+ "project": "Oxcart Mission Control (public read-only snapshot)",
+ "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
+ "stale_after_minutes": 15,
+ "issues": [
+  {
+   "number": 2,
+   "title": "L-1 Lead operating model, Mission Control and session handoff",
+   "state": "OPEN",
+   "labels": [
+    "area:lead",
+    "area:process"
+   ],
+   "updated": "2026-11-10T11:03:44Z",
+   "description": "Maintain operating model, board, GitHub record, session continuity.",
+   "acceptance_criteria": [
+    "Operating model doc merged; Mission Control verified each session; Issues/Project current"
+   ],
+   "dependencies": [
+    "None"
+   ],
+   "assigned_agent": "Lead",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 3,
+   "title": "C-1 Consolidation candidate and single approved baseline",
+   "state": "OPEN",
+   "labels": [
+    "area:lead",
+    "area:process"
+   ],
+   "updated": "2026-11-10T10:52:03Z",
+   "description": "Verify ancestry/content of 29d6040, 1614980, 558a364, c149573, 5acfc01, ca60a24, f2cfd82; [redacted] build integration branch; native tests, editor build, PIE.",
+   "acceptance_criteria": [
+    "One baseline commit all specialists branch from; regressions documented"
+   ],
+   "dependencies": [
+    "Owner decision on baseline; asset-branch tire breaks 2 tests by design"
+   ],
+   "assigned_agent": "Lead",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 4,
+   "title": "G-1 Vehicle geometry contract and ~9 cm height investigation",
+   "state": "OPEN",
+   "labels": [
+    "area:chrono",
+    "area:geometry"
+   ],
+   "updated": "2026-11-10T10:54:17Z",
+   "description": "Audit chassis origin, wheelbase, axle centres, tire dimensions, ride height, CG/inertia refs, bar mounting, collision geometry, aero force points, physics-to-visual transforms. Evidence pass found no fixed 9 cm; [redacted] Do not blindly subtract 9 cm.",
+   "acceptance_criteria": [
+    "docs/VEHICLE_GEOMETRY_CONTRACT.md; geometry debug visualisation; discrepancy root-caused and corrected"
+   ],
+   "dependencies": [
+    "C-1 baseline"
+   ],
+   "assigned_agent": "Vehicle Dynamics / Geometry specialist (not the Engine agent)",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 5,
+   "title": "E-1 Stage 2.7 engine-only: baseline, energy accounting, RPM/power discrepancy",
+   "state": "OPEN",
+   "labels": [
+    "area:engine"
+   ],
+   "updated": "2026-11-10T10:12:51Z",
+   "description": "Protected engine baseline; recover Stage 2.5-2.7 records; energy accounting; reproduce 6,686 vs 7,950 rpm (Stage 2.5 s4 fit-point inconsistency) and the 10,156-11,051 hp provenance (EngineLabs 2015); engine-only changes. Clutch protected: H2 lock-up ramp suspended pending owner approval. No tire/track/chassis/aero/exhaust/chute/timing/UI edits.",
+   "acceptance_criteria": [
+    "ENGINE_BASELINE_AND_PRESERVATION, TOPFUEL_STAGE2_7_ENGINE_SCOPE, ENGINE_ENERGY_ACCOUNTING, ENGINE_RPM_POWER_VALIDATION docs; unauthorised-file check clean"
+   ],
+   "dependencies": [
+    "C-1 baseline; Engine worktree sync plan (9 commits behind, dirty tree: SampleReplays deletions)"
+   ],
+   "assigned_agent": "Engine agent (<path>, feature/integrated-physics-cont)",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 6,
+   "title": "T-1 High-fidelity tire architecture, response maps and test rig",
+   "state": "OPEN",
+   "labels": [
+    "area:tire"
+   ],
+   "updated": "2026-11-10T10:54:16Z",
+   "description": "Hybrid physics-informed lookup tire with dynamic states; standalone rig; existing model as baseline; first target one Top Fuel rear slick; review Stage 2.7 proposals B and F first (TIRE-RR).",
+   "acceptance_criteria": [
+    "Four tire docs; rig sweeps (load, torque, slip, pressure, temperature, combined)"
+   ],
+   "dependencies": [
+    "TIRE-RR review; data sources"
+   ],
+   "assigned_agent": "Tire agent",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 7,
+   "title": "P-1 Physics inventory, coupling matrix, validation matrix, parameter registry",
+   "state": "OPEN",
+   "labels": [
+    "area:process",
+    "type:research"
+   ],
+   "updated": "2026-11-10T10:25:36Z",
+   "description": "Audit all physics systems; implemented is not validated.",
+   "acceptance_criteria": [
+    "Four PHYSICS_* docs"
+   ],
+   "dependencies": [
+    "C-1"
+   ],
+   "assigned_agent": "Lead with specialists",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 8,
+   "title": "O-1 Open-source engineering audit (Chrono, SOFA, SU2, Cantera, Ceres, OpenMDAO, SUNDIALS)",
+   "state": "OPEN",
+   "labels": [
+    "type:research"
+   ],
+   "updated": "2026-11-10T10:25:39Z",
+   "description": "[redacted] Prior facts: Chrono BSD-3, SOFA LGPL-2.1 (verified); OpenCourant AGPL (unverified).",
+   "acceptance_criteria": [
+    "OPEN_SOURCE_PHYSICS_AUDIT.md, OPEN_SOURCE_INTEGRATION_ROADMAP.md"
+   ],
+   "dependencies": [
+    "None"
+   ],
+   "assigned_agent": "Lead / research subagent",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 9,
+   "title": "CH-1 Project Chrono vehicle-dynamics prototype (isolated)",
+   "state": "OPEN",
+   "labels": [
+    "area:chrono"
+   ],
+   "updated": "2026-11-10T09:41:28Z",
+   "description": "Isolated prototype; preserved engine/clutch through a torque interface; compare accel, axle loads, tire forces, pitch/yaw, bar forces, energy, ET, convergence, CPU.",
+   "acceptance_criteria": [
+    "Comparison report vs production solver"
+   ],
+   "dependencies": [
+    "E-1 output interface; G-1; T-1 interface"
+   ],
+   "assigned_agent": "Vehicle Dynamics agent",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 10,
+   "title": "S-1 SOFA structural deformation prototype and Chrono/SOFA coupling",
+   "state": "OPEN",
+   "labels": [
+    "area:sofa"
+   ],
+   "updated": "2026-11-10T09:41:30Z",
+   "description": "Isolated; define bidirectional coupling; compare with Chrono native FEA and the in-house beam/node option (docs/SOFTBODY_RESEARCH.md).",
+   "acceptance_criteria": [
+    "Prototype + coupling contract; no double-counting of mass/inertia/gravity/stiffness/contact"
+   ],
+   "dependencies": [
+    "CH-1"
+   ],
+   "assigned_agent": "Structural agent",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 11,
+   "title": "A-1 Complete vehicle aerodynamics (SU2 maps, forces at physical locations)",
+   "state": "OPEN",
+   "labels": [
+    "area:aero"
+   ],
+   "updated": "2026-11-10T09:41:31Z",
+   "description": "[redacted] crosswind, pitch, yaw, ride-height sensitivity.",
+   "acceptance_criteria": [
+    "Response maps with provenance; no double counting"
+   ],
+   "dependencies": [
+    "G-1"
+   ],
+   "assigned_agent": "Aero agent",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 12,
+   "title": "X-1 Exhaust reaction forces (momentum and pressure)",
+   "state": "OPEN",
+   "labels": [
+    "area:exhaust"
+   ],
+   "updated": "2026-11-10T10:25:37Z",
+   "description": "Forces from mass flow, outlet geometry, ambient pressure; asymmetric failures; no multipliers.",
+   "acceptance_criteria": [
+    "Forces at correct locations; engine remains source of state"
+   ],
+   "dependencies": [
+    "E-1 interface; G-1"
+   ],
+   "assigned_agent": "Exhaust agent (engine owns state)",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 13,
+   "title": "TR-1 Dynamic track: rubber, moisture, oil, dust, temperature, preparation",
+   "state": "OPEN",
+   "labels": [
+    "area:track"
+   ],
+   "updated": "2026-11-10T09:41:34Z",
+   "description": "Preserve and extend spatial track-state model; tire/track coupling; Unreal visualises authoritative state.",
+   "acceptance_criteria": [
+    "Track state evolves with burnouts/passes and feeds tire contact"
+   ],
+   "dependencies": [
+    "T-1"
+   ],
+   "assigned_agent": "Track agent (Ground.*, OxcartTrackWear.cpp)",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 14,
+   "title": "W-1 Authoritative weather/environment (wind profile, solar, rain, drying)",
+   "state": "OPEN",
+   "labels": [
+    "area:environment"
+   ],
+   "updated": "2026-11-10T09:41:35Z",
+   "description": "Includes Stage 2.7 proposal C (surface-layer wind profile; exponent source needed); server-authoritative, replay-compatible; docs ENVIRONMENT_PHYSICS_CONTRACT, WEATHER_ENGINE_AERO_TRACK_VALIDATION.",
+   "acceptance_criteria": [
+    "No generic horsepower/grip/downforce multipliers"
+   ],
+   "dependencies": [
+    "Owner decision on C"
+   ],
+   "assigned_agent": "Environment agent",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 15,
+   "title": "SB-1 Chassis flex coupling and structural failure",
+   "state": "OPEN",
+   "labels": [
+    "area:sofa",
+    "area:crash"
+   ],
+   "updated": "2026-11-10T09:41:36Z",
+   "description": "Flex must change wheel positions, axle loads, contact geometry, bar engagement, steering, aero orientation; no visual-only flex, no grip multipliers.",
+   "acceptance_criteria": [
+    "Coupled effects demonstrated"
+   ],
+   "dependencies": [
+    "G-1"
+   ],
+   "assigned_agent": "softbody",
+   "priority": "unspecified",
+   "status": "Review",
+   "progress_pct": 80,
+   "progress_basis": "ESTIMATE from linked board task SB-1"
+  },
+  {
+   "number": 16,
+   "title": "CR-1 Crash physics and damage (Chrono-based)",
+   "state": "OPEN",
+   "labels": [
+    "area:crash"
+   ],
+   "updated": "2026-11-10T09:41:38Z",
+   "description": "Wall/vehicle impacts, wheel/axle breakaway, debris, damage changing later behaviour; no canned wreck animations.",
+   "acceptance_criteria": [
+    "CRASH_AND_DEFORMATION_ARCHITECTURE.md; barrier collision test"
+   ],
+   "dependencies": [
+    "CH-1, S-1"
+   ],
+   "assigned_agent": "Crash agent",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 17,
+   "title": "N-1 Numerical integration and state ownership across subsystems",
+   "state": "OPEN",
+   "labels": [
+    "area:lead",
+    "area:chrono"
+   ],
+   "updated": "2026-11-10T09:41:39Z",
+   "description": "Define update order, units, frames, force locations, energy accounting; preserve 4 substeps until alternatives validated (2-vs-4 review pending); benchmark 120/240/500/1000 Hz.",
+   "acceptance_criteria": [
+    "Documented ownership; convergence/determinism/CPU data"
+   ],
+   "dependencies": [
+    "CH-1"
+   ],
+   "assigned_agent": "Lead",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 18,
+   "title": "UI-1 UI/UX modernization: inventory, design system, components",
+   "state": "OPEN",
+   "labels": [
+    "area:ui"
+   ],
+   "updated": "2026-11-10T10:55:19Z",
+   "description": "Screen inventory, UMG/Common UI/Slate audit (Build.cs has none today), design system, reusable components; docs UI_*.",
+   "acceptance_criteria": [
+    "Four UI docs; one working slice"
+   ],
+   "dependencies": [
+    "Lead CR for Build.cs; UNIT-1"
+   ],
+   "assigned_agent": "ui",
+   "priority": "unspecified",
+   "status": "In Progress",
+   "progress_pct": 40,
+   "progress_basis": "ESTIMATE from linked board task UI-1"
+  },
+  {
+   "number": 19,
+   "title": "UI-2 Garage and tuning vertical slice",
+   "state": "OPEN",
+   "labels": [
+    "area:ui"
+   ],
+   "updated": "2026-11-10T09:41:42Z",
+   "description": "Authentic Top Fuel terminology, legal ranges, fixed/limited/open modes, measured vs adjustable; no invented outcomes.",
+   "acceptance_criteria": [
+    "Existing tuning functionality preserved"
+   ],
+   "dependencies": [
+    "UI-1; UNIT-1"
+   ],
+   "assigned_agent": "UI agent",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 20,
+   "title": "UI-3 Race HUD, telemetry, results, replay, settings, accessibility, multiplayer UI",
+   "state": "OPEN",
+   "labels": [
+    "area:ui"
+   ],
+   "updated": "2026-11-10T09:41:44Z",
+   "description": "Per directive Part XIX; mock data clearly labelled; multiplayer not claimed until validated.",
+   "acceptance_criteria": [
+    "Screens exist and read authoritative data"
+   ],
+   "dependencies": [
+    "UI-1"
+   ],
+   "assigned_agent": "UI agent",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 21,
+   "title": "UNIT-1 US-customary units: central helper, tests, HUD/menu adoption",
+   "state": "OPEN",
+   "labels": [
+    "area:ui",
+    "area:process"
+   ],
+   "updated": "2026-11-10T10:55:21Z",
+   "description": "OxcartUnits helper; replace duplicate kMph; kPa/degC/kg/m/s UI values.",
+   "acceptance_criteria": [
+    "Round-trip, rounding, limit tests"
+   ],
+   "dependencies": [
+    "None"
+   ],
+   "assigned_agent": "units",
+   "priority": "unspecified",
+   "status": "In Progress",
+   "progress_pct": 40,
+   "progress_basis": "ESTIMATE from linked board task UNIT-1"
+  },
+  {
+   "number": 22,
+   "title": "V-1 Photorealism: audit existing materials, evaluate sources, PBR masters",
+   "state": "OPEN",
+   "labels": [
+    "area:visual"
+   ],
+   "updated": "2026-11-11T08:15:05Z",
+   "description": "Audit imported sets (asphalt_track, asphalt_pit_lane, concrete_floor_worn_001, Road012B, Asphalt023S, ...); evaluate concrete_floor_01 and verified Megascans terms; build parameterised masters; docs PHOTOREALISM_MASTER_PLAN, TRACK_MATERIAL_ASSET_REGISTER, UE5_TRACK_MATERIAL_ARCHITECTURE, VISUAL_FIDELITY_VALIDATION.",
+   "acceptance_criteria": [],
+   "dependencies": [
+    "C-1"
+   ],
+   "assigned_agent": "visuals",
+   "priority": "unspecified",
+   "status": "Assigned",
+   "progress_pct": 5,
+   "progress_basis": "ESTIMATE from linked board task V-1"
+  },
+  {
+   "number": 23,
+   "title": "V-2 Indianapolis starting-line scene (IND-1) and rubber/traction layers",
+   "state": "OPEN",
+   "labels": [
+    "area:visual",
+    "track:indy"
+   ],
+   "updated": "2026-11-11T07:45:28Z",
+   "description": "Baseline screenshots, source-backed reference inventory, PBR pavement, markings, barriers, lighting using SimMap (rubber/moisture/oil); no grip changes; investigate DXGI device-hung.",
+   "acceptance_criteria": [
+    "Directive Rev 1 section 6 acceptance criteria"
+   ],
+   "dependencies": [
+    "V-1; V-3"
+   ],
+   "assigned_agent": "Indy venue agent + Visual Fidelity agent",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 24,
+   "title": "V-3 Christmas tree overhaul (TREE-1)",
+   "state": "OPEN",
+   "labels": [
+    "area:visual"
+   ],
+   "updated": "2026-11-10T10:54:15Z",
+   "description": "Replace procedural tree visuals; keep SetTreeState/FOxcartTreeState and race-control logic.",
+   "acceptance_criteria": [
+    "Full staging sequence by day and night"
+   ],
+   "dependencies": [
+    "None"
+   ],
+   "assigned_agent": "Tree agent",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 25,
+   "title": "V-4 Cockpit camera refinement (CAM-1) and vehicle materials (VIS-1)",
+   "state": "OPEN",
+   "labels": [
+    "area:visual"
+   ],
+   "updated": "2026-11-10T11:10:02Z",
+   "description": "Refine existing Cockpit camera via Lead change request; review/commit the 8 preserved visual-fix files; vehicle materials.",
+   "acceptance_criteria": [
+    "Staging, launch, braking, shutdown validated"
+   ],
+   "dependencies": [
+    "Lead CR; CAM-1/VIS-1"
+   ],
+   "assigned_agent": "Camera and Chute/Visual agents",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 26,
+   "state": "OPEN",
+   "withheld": true,
+   "reason": "internal"
+  },
+  {
+   "number": 27,
+   "title": "B-2 Stage 2.7 proposals A-G: owner decisions and sources",
+   "state": "OPEN",
+   "labels": [
+    "area:process",
+    "status:blocked-owner"
+   ],
+   "updated": "2026-11-10T10:12:50Z",
+   "description": "See docs/STAGE2_7_DECISIONS.md: C approve now; A, D, E, F need sourced inputs; B with F; G defer. 2-vs-4 substep review.",
+   "acceptance_criteria": [
+    "Decision per proposal"
+   ],
+   "dependencies": [
+    "None"
+   ],
+   "assigned_agent": "Owner",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 28,
+   "title": "B-3 Hard-coded <path> paths in Tools and docs",
+   "state": "OPEN",
+   "labels": [
+    "area:process",
+    "type:bug"
+   ],
+   "updated": "2026-11-10T09:41:54Z",
+   "description": "Tools/Art/*.py, Tools/AssetPipeline/Import*.py defaults, BUILD_AND_PLAYTEST.md; possibly tracked __pycache__.",
+   "acceptance_criteria": [
+    "Scripts run from <path> worktrees"
+   ],
+   "dependencies": [
+    "None"
+   ],
+   "assigned_agent": "Lead",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 29,
+   "title": "B-4 Intermittent DXGI_ERROR_DEVICE_HUNG in venue levels",
+   "state": "OPEN",
+   "labels": [
+    "area:visual",
+    "type:bug"
+   ],
+   "updated": "2026-11-10T09:41:55Z",
+   "description": "2 hangs in 18 launches (VENUES.md); cause not isolated.",
+   "acceptance_criteria": [
+    "Cause isolated or mitigated"
+   ],
+   "dependencies": [
+    "None"
+   ],
+   "assigned_agent": "Venue agent",
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 30,
+   "state": "OPEN",
+   "withheld": true,
+   "reason": "internal"
+  },
+  {
+   "number": 31,
+   "title": "S27-B Tire wrinkle radius law review (Top Fuel maxWrinkleFraction 0.14)",
+   "state": "OPEN",
+   "labels": [
+    "area:tire",
+    "type:research"
+   ],
+   "updated": "2026-11-10T10:04:24Z",
+   "description": "Owner: Tire agent. Review Tire.cpp:84,155,248 for sign dependence of wrinkle under windup; review together with S27-F. Note Top Fuel constant is 0.14 (Pro Mod 0.055).",
+   "acceptance_criteria": [],
+   "dependencies": [
+    "TIRE-RR report."
+   ],
+   "assigned_agent": null,
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 32,
+   "title": "S27-C Wind height profile: reconcile with Ground 0.7 factor and source exponent",
+   "state": "OPEN",
+   "labels": [
+    "area:environment",
+    "type:research"
+   ],
+   "updated": "2026-11-10T10:04:26Z",
+   "description": "Owner: Environment/Tire-Track agent. Reconcile AtmosphereState::windAt with Ground.cpp:220 kWindAtSurface=0.7 (double-count risk); cite a surface-layer source and 10 m reference height. NOT approved; no implementation.",
+   "acceptance_criteria": [],
+   "dependencies": [
+    "None."
+   ],
+   "assigned_agent": null,
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 33,
+   "title": "S27-D CG height and static weight distribution: sourcing and review",
+   "state": "OPEN",
+   "labels": [
+    "area:process",
+    "type:research"
+   ],
+   "updated": "2026-11-10T10:24:02Z",
+   "description": "Owner: Car Physics agent (worktree Oxcart-car). Compare 0.45 m / 29% front with documented Top Fuel figures; locate where the 29% share is set (axle stations via ChassisSpec::TopFuel, IntegratedSpecs.cpp:33). Owner must supply measured figures.",
+   "acceptance_criteria": [],
+   "dependencies": [
+    "Owner data."
+   ],
+   "assigned_agent": null,
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 34,
+   "title": "S27-E 2026 model geometry function (new nhra2026::applyModelGeometry)",
+   "state": "OPEN",
+   "labels": [
+    "area:process",
+    "type:research"
+   ],
+   "updated": "2026-11-10T10:04:28Z",
+   "description": "Owner: Lead (Nhra2026) with Car Physics; Tire for dimensions. The function does not exist on main. Values: half-track 0.60 (now 0.68), bar wheels 0.08, bar 1.895 m behind axle, gap 0.0634, model-measured, no real source.",
+   "acceptance_criteria": [],
+   "dependencies": [
+    "S27-D; geometry contract (G-1 #4)."
+   ],
+   "assigned_agent": null,
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 35,
+   "title": "S27-F Tire longitudinal slip stiffness and growth law: define quantity, source data",
+   "state": "OPEN",
+   "labels": [
+    "area:tire",
+    "type:research"
+   ],
+   "updated": "2026-11-10T10:04:30Z",
+   "description": "Owner: Tire agent, after B and C. Top Fuel rear longStiffnessPerN=50.0; the Fx/N~77 figure is an output of the carcass path, not a constant. Define the quantity, find data (only revs/1,000 ft envelope is sourced).",
+   "acceptance_criteria": [],
+   "dependencies": [
+    "S27-B, S27-C."
+   ],
+   "assigned_agent": null,
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 36,
+   "title": "S27-G Barrier / out-of-bounds consequence model (gameplay scope)",
+   "state": "OPEN",
+   "labels": [
+    "area:crash",
+    "area:process"
+   ],
+   "updated": "2026-11-10T10:04:31Z",
+   "description": "Owner: Lead scopes with Venue. Not physics; defer until A-D addressed (it hides rather than fixes causes).",
+   "acceptance_criteria": [],
+   "dependencies": [
+    "CR-1 (#16)."
+   ],
+   "assigned_agent": null,
+   "priority": "unspecified",
+   "status": "Open",
+   "progress_pct": null,
+   "progress_basis": "no linked board task"
+  },
+  {
+   "number": 37,
+   "title": "GNV-ENV-1 Gainesville Raceway environment and reusable dragstrip pipeline",
+   "state": "OPEN",
+   "labels": [
+    "area:visual",
+    "track:gainesville"
+   ],
+   "updated": "2026-11-11T07:53:51Z",
+   "description": "Recreate Gainesville Raceway (Gainesville, FL; NHRA Gatornationals) as a photorealistic, playable Unreal environment built mainly through automated Blender workflows, and deliver the reusable data-driven Blender-to-Unreal dragstrip pipeline. Supersedes the Indianapolis environment assignment of 2026-11-11 (cancelled). Child tasks: GNV-S1..GNV-S7.",
+   "acceptance_criteria": [
+    "Playable DragStrip_Gainesville; reference register; reusable pipeline with a synthetic second-track validation."
+   ],
+   "dependencies": [
+    "Photorealism agent (track material masters, consume only); Tree agent (shared vegetation); Lead change requests for shared files."
+   ],
+   "assigned_agent": "gainesville-env",
+   "priority": "unspecified",
+   "status": "In Progress",
+   "progress_pct": 1,
+   "progress_basis": "ESTIMATE from linked board task GNV-ENV-1"
+  },
+  {
+   "number": 38,
+   "title": "GNV-S1 Stage 1 toolchain validation",
+   "state": "OPEN",
+   "labels": [
+    "area:visual",
+    "track:gainesville"
+   ],
+   "updated": "2026-11-11T08:07:05Z",
+   "description": "Blender 4.5 script -> render -> inspect -> export -> Unreal import, repeatable without duplicate assets; source-control isolation confirmed.",
+   "acceptance_criteria": [
+    "Small end-to-end workflow demonstrated and re-run cleanly; Lead review BEFORE Stage 2."
+   ],
+   "dependencies": [],
+   "assigned_agent": "gainesville-env",
+   "priority": "unspecified",
+   "status": "Assigned",
+   "progress_pct": 5,
+   "progress_basis": "ESTIMATE from linked board task GNV-S1"
+  },
+  {
+   "number": 39,
+   "title": "GNV-S2 Stage 2 geographic reconstruction and reference register",
+   "state": "OPEN",
+   "labels": [
+    "area:visual",
+    "track:gainesville"
+   ],
+   "updated": "2026-11-11T08:07:07Z",
+   "description": "Coordinate system, dimensions, terrain, racing surface and major structures of Gainesville Raceway; [redacted]",
+   "acceptance_criteria": [
+    "No invented measurements; documented Blender-Unreal transform; geometric reference model."
+   ],
+   "dependencies": [],
+   "assigned_agent": "gainesville-env",
+   "priority": "unspecified",
+   "status": "Backlog",
+   "progress_pct": 0,
+   "progress_basis": "ESTIMATE from linked board task GNV-S2"
+  },
+  {
+   "number": 40,
+   "title": "GNV-S3 Stage 3 starting line and first 660 ft vertical slice",
+   "state": "OPEN",
+   "labels": [
+    "area:visual",
+    "track:gainesville"
+   ],
+   "updated": "2026-11-11T08:10:59Z",
+   "description": "Detailed surfaces, barriers, staging equipment, grandstands, visible surroundings; imported to Unreal and run with the existing Top Fuel.",
+   "acceptance_criteria": [
+    "First photorealism gate: real Unreal screenshots from fixed cameras; Lead review BEFORE Stage 4; PIE pass."
+   ],
+   "dependencies": [],
+   "assigned_agent": "gainesville-env",
+   "priority": "unspecified",
+   "status": "Backlog",
+   "progress_pct": 0,
+   "progress_basis": "ESTIMATE from linked board task GNV-S3"
+  },
+  {
+   "number": 41,
+   "title": "GNV-S4 Stage 4 complete facility",
+   "state": "OPEN",
+   "labels": [
+    "area:visual",
+    "track:gainesville"
+   ],
+   "updated": "2026-11-11T07:45:36Z",
+   "description": "Full racing surface, shutdown, return roads, paddock, spectator facilities, buildings, surrounding landscape via the shared procedural tools.",
+   "acceptance_criteria": [
+    "Config-driven; nothing Gainesville-specific hardcoded in shared generators."
+   ],
+   "dependencies": [],
+   "assigned_agent": "gainesville-env",
+   "priority": "unspecified",
+   "status": "Backlog",
+   "progress_pct": 0,
+   "progress_basis": "ESTIMATE from linked board task GNV-S4"
+  },
+  {
+   "number": 42,
+   "title": "GNV-S5 Stage 5 Unreal integration (DragStrip_Gainesville)",
+   "state": "OPEN",
+   "labels": [
+    "area:visual",
+    "track:gainesville"
+   ],
+   "updated": "2026-11-11T07:45:38Z",
+   "description": "Import complete environment, collisions, rendering configuration, integration with existing vehicle and track systems.",
+   "acceptance_criteria": [
+    "Top Fuel stages, launches, completes a pass, stops safely; timing and staging aligned; existing maps untouched."
+   ],
+   "dependencies": [],
+   "assigned_agent": "gainesville-env",
+   "priority": "unspecified",
+   "status": "Backlog",
+   "progress_pct": 0,
+   "progress_basis": "ESTIMATE from linked board task GNV-S5"
+  },
+  {
+   "number": 43,
+   "title": "GNV-S6 Stage 6 optimisation and QA",
+   "state": "OPEN",
+   "labels": [
+    "area:visual",
+    "track:gainesville"
+   ],
+   "updated": "2026-11-11T07:45:39Z",
+   "description": "Scale, visual fidelity, frame rate, asset integrity, collisions, timing alignment, gameplay functionality.",
+   "acceptance_criteria": [
+    "Measurable criteria and unresolved-issue list; Build-Native 22/22 unchanged."
+   ],
+   "dependencies": [],
+   "assigned_agent": "gainesville-env",
+   "priority": "unspecified",
+   "status": "Backlog",
+   "progress_pct": 0,
+   "progress_basis": "ESTIMATE from linked board task GNV-S6"
+  },
+  {
+   "number": 44,
+   "title": "GNV-S7 Stage 7 reusable pipeline validation",
+   "state": "OPEN",
+   "labels": [
+    "area:visual",
+    "track:gainesville"
+   ],
+   "updated": "2026-11-11T07:45:41Z",
+   "description": "Generate a second SYNTHETIC/generic dragstrip from a separate config using the shared tools.",
+   "acceptance_criteria": [
+    "No Indianapolis or Gainesville-specific hardcoding in shared tools; reproducible from a clean checkout; [redacted]"
+   ],
+   "dependencies": [],
+   "assigned_agent": "gainesville-env",
+   "priority": "unspecified",
+   "status": "Backlog",
+   "progress_pct": 0,
+   "progress_basis": "ESTIMATE from linked board task GNV-S7"
+  }
+ ]
+}

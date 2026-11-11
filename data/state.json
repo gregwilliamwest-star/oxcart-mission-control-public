@@ -1,0 +1,1081 @@
+{
+ "schema_version": 1,
+ "generated": "2026-11-11T09:19:09Z",
+ "project": "Oxcart Mission Control (public read-only snapshot)",
+ "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
+ "stale_after_minutes": 15,
+ "tasks": [
+  {
+   "id": "MC-1",
+   "title": "Mission Control first functional release",
+   "description": "Localhost read-only dashboard: Kanban, registered agents, worktrees/branches, commits, tests, reviews, approvals.",
+   "status": "In Progress",
+   "priority": "unspecified",
+   "progress_pct": 40,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "mission-control",
+   "branch": "feature/mission-control",
+   "dependencies": [],
+   "acceptance_criteria": [
+    "Serves on 127.0.0.1",
+    "State change via mc.py appears in the dashboard",
+    "No write/merge endpoints",
+    "Stale detection works"
+   ],
+   "last_test": "PASS: test_mc.py 5/5",
+   "last_review": null,
+   "issue": null
+  },
+  {
+   "id": "ENG-27",
+   "title": "Stage 2.7: continue diagnostics; lock-up ramp as isolated experiment",
+   "description": "Resume Stage 2.7 without touching tire/chassis; H2 lock-up ramp experiment only; no ET tuning.",
+   "status": "Review",
+   "priority": "unspecified",
+   "progress_pct": 80,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "engine",
+   "branch": "feature/integrated-physics-cont",
+   "dependencies": [
+    "TIRE-RR",
+    "CAR-LT (before any clutch retune)"
+   ],
+   "acceptance_criteria": [
+    "Native tests unchanged-green",
+    "Timestep convergence preserved",
+    "Experiment documented with diagnostics"
+   ],
+   "last_test": "PASS: Baseline 22/22 ctest pass; engine_energy_audit byte-identical to stored baseline. Docs only.",
+   "last_review": null,
+   "issue": null
+  },
+  {
+   "id": "TIRE-RR",
+   "title": "Review tire rolling-radius / wrinkle / growth; recommendations",
+   "description": "Evidence-based report: effect of radius change on launch and clutch interpretation. No parameter changes.",
+   "status": "Review",
+   "priority": "unspecified",
+   "progress_pct": 80,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "tire",
+   "branch": "feature/tire-radius-review",
+   "dependencies": [],
+   "acceptance_criteria": [
+    "Report with sourced vs estimated values",
+    "Revs per 1,000 ft check"
+   ],
+   "last_test": "PASS: Build-Native: 22/22 CTest passed on review branch (docs only; no source changed). Editor build/PIE not run: no Unreal code changed.",
+   "last_review": null,
+   "issue": null
+  },
+  {
+   "id": "CAR-LT",
+   "title": "Review CG height, weight distribution, load transfer vs real Top Fuel",
+   "description": "Compare 29% front / 0.45 m CG against documented configurations. No parameter changes without approval.",
+   "status": "Review",
+   "priority": "unspecified",
+   "progress_pct": 80,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "car",
+   "branch": "feature/car-loadtransfer-review",
+   "dependencies": [],
+   "acceptance_criteria": [
+    "Sourced comparison",
+    "Proposed corrections with justification"
+   ],
+   "last_test": "PASS: Build-Native: 22/22 ctest pass (baseline, no code changed); probe reproduces 4.288 s / 4.398 s",
+   "last_review": null,
+   "issue": null
+  },
+  {
+   "id": "IND-1",
+   "title": "Indianapolis photorealistic starting-line milestone",
+   "description": "Baseline screenshots, source-backed reference inventory, PBR pavement, markings, barriers, lighting; no traction/tire changes.",
+   "status": "Blocked",
+   "priority": "unspecified",
+   "progress_pct": null,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "indy",
+   "branch": "feature/indy-track-visuals",
+   "dependencies": [
+    "TREE-1 (placement interface)"
+   ],
+   "acceptance_criteria": [
+    "See directive section 6 criteria"
+   ],
+   "last_test": null,
+   "last_review": null,
+   "issue": null
+  },
+  {
+   "id": "TREE-1",
+   "title": "Christmas tree visual overhaul",
+   "description": "Researched geometry, lenses, emissive lighting; keep SetTreeState / FOxcartTreeState unchanged.",
+   "status": "Review",
+   "priority": "unspecified",
+   "progress_pct": 80,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "tree",
+   "branch": "feature/tree-visuals",
+   "dependencies": [],
+   "acceptance_criteria": [
+    "Full staging sequence demo",
+    "Close-up screenshots"
+   ],
+   "last_test": "PASS: Native ctest 22/22; editor build OK; oxcart.tree.selftest PASS 175 checks. PIE playtest FAILS at 'turn-around' (600 s timeout) after a complete pass (ET 4.578 s); CLAUDE.md records this as pre-…",
+   "last_review": null,
+   "issue": null
+  },
+  {
+   "id": "CAM-1",
+   "title": "Refine existing cockpit camera",
+   "description": "[redacted] bounded pawn change request to Lead first.",
+   "status": "Blocked",
+   "priority": "unspecified",
+   "progress_pct": null,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "camera",
+   "branch": "feature/camera-cockpit",
+   "dependencies": [
+    "Lead CR"
+   ],
+   "acceptance_criteria": [
+    "Staging, launch, braking, shutdown validated"
+   ],
+   "last_test": null,
+   "last_review": null,
+   "issue": null
+  },
+  {
+   "id": "UI-1",
+   "title": "UMG/Slate garage vertical slice and design system",
+   "description": "Working garage screen with the new visual system; preserve tuning functionality.",
+   "status": "In Progress",
+   "priority": "unspecified",
+   "progress_pct": 40,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "ui",
+   "branch": "feature/ui-garage",
+   "dependencies": [
+    "UNIT-1"
+   ],
+   "acceptance_criteria": [
+    "Garage usable with mouse, keyboard, gamepad"
+   ],
+   "last_test": "PASS: native garage model tests pass (scratch build); editor build Succeeded with temp Slate deps; widget not seen on screen; PIE/Build-Native not run",
+   "last_review": "Revise: independent review: model connected to Setup and no physics edits; revise: use central units helper, no SI help text, display-unit steps, register test, EndPlay Hide, on-screen focus/clipping…",
+   "issue": 18
+  },
+  {
+   "id": "UNIT-1",
+   "title": "Centralized US-customary unit conversion and formatting",
+   "description": "OxcartUnits helper + tests (mph, ft, in, lb, lb-ft, hp, psi, F, US gal, inHg); SI stays internal.",
+   "status": "In Progress",
+   "priority": "unspecified",
+   "progress_pct": 40,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "units",
+   "branch": "feature/units-imperial",
+   "dependencies": [],
+   "acceptance_criteria": [
+    "Round-trip and rounding tests pass"
+   ],
+   "last_test": "PASS: Build-Native 22/22 ctest pass (unchanged baseline); test_units standalone MSVC build passes (not in ctest until Lead CMake CR)",
+   "last_review": "Revise: independent review: factors all correct; revise: missing <algorithm> include (test_units.cpp:77), tighten tolerances to ~1e-12 relative, add absolute US ToDisplay/Format tests, genuine roundi…",
+   "issue": 21
+  },
+  {
+   "id": "VIS-1",
+   "title": "Review/commit chute+shell WIP, then vehicle materials",
+   "description": "Review and commit the 8 preserved uncommitted files on own branch; then PBR vehicle materials with before/after screenshots; physics untouched.",
+   "status": "Blocked",
+   "priority": "unspecified",
+   "progress_pct": null,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "chute-visual",
+   "branch": "feature/topfuel-visual-fix",
+   "dependencies": [
+    "CAM-1 (cockpit)"
+   ],
+   "acceptance_criteria": [
+    "WIP reviewed, built, tested, committed",
+    "Before/after screenshots"
+   ],
+   "last_test": null,
+   "last_review": null,
+   "issue": null
+  },
+  {
+   "id": "SB-1",
+   "title": "Soft-body crash deformation research",
+   "description": "Recommend isolated prototype.",
+   "status": "Review",
+   "priority": "unspecified",
+   "progress_pct": 80,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "softbody",
+   "branch": null,
+   "dependencies": [],
+   "acceptance_criteria": [
+    "Report delivered"
+   ],
+   "last_test": null,
+   "last_review": null,
+   "issue": 15
+  },
+  {
+   "id": "DEC-27",
+   "title": "Owner decisions on Stage 2.7 proposals A-G",
+   "description": "Owner approval and sourcing for physical-property changes.",
+   "status": "Blocked",
+   "priority": "unspecified",
+   "progress_pct": null,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "lead",
+   "branch": null,
+   "dependencies": [],
+   "acceptance_criteria": [
+    "Owner decides each proposal"
+   ],
+   "last_test": null,
+   "last_review": null,
+   "issue": null
+  },
+  {
+   "id": "V-1",
+   "title": "Photorealism: inspect existing 2K materials, improved representative track section",
+   "description": "Inspect existing materials, baseline screenshots, improved representative section, then evaluate higher-res sources. OWNER APPROVED 2026-11-11: edit OxcartTrackArt.cpp to visually separate traction compound from deposited rubber (rendering only; SimMap/physics unchanged); before/after screenshots and regression evidence required.",
+   "status": "Assigned",
+   "priority": "unspecified",
+   "progress_pct": 5,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "visuals",
+   "branch": "feature/photorealism",
+   "dependencies": [],
+   "acceptance_criteria": [
+    "Before/after identical-view screenshots",
+    "Performance numbers",
+    "Asset register",
+    "Compound and rubber visually separated; before/after from identical cameras",
+    "Native 22/22, Editor build OK, PIE ET 4.579 / 337.0 mph / 60 ft 0.901 unchanged"
+   ],
+   "last_test": null,
+   "last_review": null,
+   "issue": 22
+  },
+  {
+   "id": "GNV-ENV-1",
+   "title": "Gainesville Raceway environment + reusable dragstrip pipeline (parent; issue #37)",
+   "description": "Owner amendment 2026-11-11 (supersedes the Indianapolis environment assignment). Isolated from Indianapolis (IND-1 untouched, no cherry-picks). Stages S1-S7 are child tasks; Lead review after Stage 1 and after Stage 3.",
+   "status": "In Progress",
+   "priority": "unspecified",
+   "progress_pct": 1,
+   "progress_basis": "ESTIMATE: mean of child stage task estimates",
+   "assigned_agent": "gainesville-env",
+   "branch": "feature/gainesville-environment",
+   "dependencies": [
+    "V-1 material masters (consume only)",
+    "Tree agent vegetation (consume only)"
+   ],
+   "acceptance_criteria": [
+    "Playable DragStrip_Gainesville, Top Fuel standard body, PIE PASS",
+    "Reusable config-driven pipeline; Stage 7 on a synthetic track",
+    "No physics/vehicle/tire/clutch/parachute/multiplayer changes; no Indianapolis changes",
+    "Stage 1 REQUIRES repeatable, UNATTENDED generation and import: one command (no manual clicks) runs Blender generation, export and Unreal import; a SECOND execution of the same command must not duplicate assets (show before/after asset counts or listings and a…",
+    "Stage 1 visual QA: inspect the actual rendered image and record at least one identified deficiency and the correction made (before/after images and a short note); 'an image was generated' is not sufficient",
+    "Stage 2 gate: documented real-world coordinate system for Gainesville Raceway covering track orientation (bearing), starting-line position, lane geometry and major facility landmarks, each marked VERIFIED or ESTIMATE with source; Lead verifies this before Sta…"
+   ],
+   "last_test": "PASS: Stage1: Blender 4.5.3 build+render+FBX; UE 5.8.4 Build-Editor OK, import 0->13 then 13->13 identical; Build-Native 22/22; config validator OK. PIE not run (no runtime code changed).",
+   "last_review": null,
+   "issue": 37
+  },
+  {
+   "id": "GNV-S1",
+   "title": "Stage 1 toolchain validation (issue #38)",
+   "description": "Child of GNV-ENV-1. Isolated from Indianapolis (IND-1 untouched, no cherry-picks).",
+   "status": "Assigned",
+   "priority": "unspecified",
+   "progress_pct": 5,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "gainesville-env",
+   "branch": "feature/gainesville-environment",
+   "dependencies": [
+    "GNV-ENV-1"
+   ],
+   "acceptance_criteria": [
+    "Blender script -> render -> export -> UE import repeatable; Lead review before Stage 2.",
+    "Stage 1 REQUIRES repeatable, UNATTENDED generation and import: one command (no manual clicks) runs Blender generation, export and Unreal import; a SECOND execution of the same command must not duplicate assets (show before/after asset counts or listings and a…",
+    "Stage 1 visual QA: inspect the actual rendered image and record at least one identified deficiency and the correction made (before/after images and a short note); 'an image was generated' is not sufficient"
+   ],
+   "last_test": null,
+   "last_review": null,
+   "issue": 38
+  },
+  {
+   "id": "GNV-S2",
+   "title": "Stage 2 geographic reconstruction + reference register (issue #39)",
+   "description": "Child of GNV-ENV-1. Isolated from Indianapolis (IND-1 untouched, no cherry-picks).",
+   "status": "Backlog",
+   "priority": "unspecified",
+   "progress_pct": 0,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "gainesville-env",
+   "branch": "feature/gainesville-environment",
+   "dependencies": [
+    "previous stage Lead review"
+   ],
+   "acceptance_criteria": [
+    "Coordinate system, dimensions, reference register (VERIFIED vs ESTIMATE).",
+    "Stage 2 gate: documented real-world coordinate system for Gainesville Raceway covering track orientation (bearing), starting-line position, lane geometry and major facility landmarks, each marked VERIFIED or ESTIMATE with source; Lead verifies this before Sta…"
+   ],
+   "last_test": null,
+   "last_review": null,
+   "issue": 39
+  },
+  {
+   "id": "GNV-S3",
+   "title": "Stage 3 starting line + first 660 ft vertical slice (issue #40)",
+   "description": "Child of GNV-ENV-1. Isolated from Indianapolis (IND-1 untouched, no cherry-picks).",
+   "status": "Backlog",
+   "priority": "unspecified",
+   "progress_pct": 0,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "gainesville-env",
+   "branch": "feature/gainesville-environment",
+   "dependencies": [
+    "Stage 2 gate: coordinate system, track geometry and landmark positions independently verified or explicitly documented as ESTIMATE (Lead verifies); no Stage 3 construction before then"
+   ],
+   "acceptance_criteria": [
+    "First photorealism gate; Top Fuel PIE pass; Lead review before Stage 4."
+   ],
+   "last_test": null,
+   "last_review": null,
+   "issue": 40
+  },
+  {
+   "id": "GNV-S4",
+   "title": "Stage 4 complete facility (issue #41)",
+   "description": "Child of GNV-ENV-1. Isolated from Indianapolis (IND-1 untouched, no cherry-picks).",
+   "status": "Backlog",
+   "priority": "unspecified",
+   "progress_pct": 0,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "gainesville-env",
+   "branch": "feature/gainesville-environment",
+   "dependencies": [
+    "previous stage Lead review"
+   ],
+   "acceptance_criteria": [
+    "Full facility via shared config-driven tools."
+   ],
+   "last_test": null,
+   "last_review": null,
+   "issue": 41
+  },
+  {
+   "id": "GNV-S5",
+   "title": "Stage 5 Unreal integration (DragStrip_Gainesville) (issue #42)",
+   "description": "Child of GNV-ENV-1. Isolated from Indianapolis (IND-1 untouched, no cherry-picks).",
+   "status": "Backlog",
+   "priority": "unspecified",
+   "progress_pct": 0,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "gainesville-env",
+   "branch": "feature/gainesville-environment",
+   "dependencies": [
+    "previous stage Lead review"
+   ],
+   "acceptance_criteria": [
+    "Playable level; staging, timing, collisions."
+   ],
+   "last_test": null,
+   "last_review": null,
+   "issue": 42
+  },
+  {
+   "id": "GNV-S6",
+   "title": "Stage 6 optimisation and QA (issue #43)",
+   "description": "Child of GNV-ENV-1. Isolated from Indianapolis (IND-1 untouched, no cherry-picks).",
+   "status": "Backlog",
+   "priority": "unspecified",
+   "progress_pct": 0,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "gainesville-env",
+   "branch": "feature/gainesville-environment",
+   "dependencies": [
+    "previous stage Lead review"
+   ],
+   "acceptance_criteria": [
+    "Frame rate, fidelity, collisions, 22/22 native tests unchanged."
+   ],
+   "last_test": null,
+   "last_review": null,
+   "issue": 43
+  },
+  {
+   "id": "GNV-S7",
+   "title": "Stage 7 reusable pipeline validation (synthetic track) (issue #44)",
+   "description": "Child of GNV-ENV-1. Isolated from Indianapolis (IND-1 untouched, no cherry-picks).",
+   "status": "Backlog",
+   "priority": "unspecified",
+   "progress_pct": 0,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "gainesville-env",
+   "branch": "feature/gainesville-environment",
+   "dependencies": [
+    "previous stage Lead review"
+   ],
+   "acceptance_criteria": [
+    "Second generic dragstrip from separate config; no hardcoding."
+   ],
+   "last_test": null,
+   "last_review": null,
+   "issue": 44
+  }
+ ],
+ "agents": [
+  {
+   "id": "lead",
+   "role": "Lead (coordination, integration)",
+   "status": "Disconnected",
+   "last_heartbeat": "2026-11-10T10:15:00+00:00",
+   "current_task": "DEC-27",
+   "note": "[redacted]",
+   "assigned_tasks": [
+    "DEC-27"
+   ],
+   "branch": "integration/consolidate-20261109"
+  },
+  {
+   "id": "mission-control",
+   "role": "K Mission Control tooling",
+   "status": "Disconnected",
+   "last_heartbeat": "2026-11-10T10:05:00+00:00",
+   "current_task": "MC-1",
+   "note": "dashboard running",
+   "assigned_tasks": [
+    "MC-1"
+   ],
+   "branch": "feature/mission-control"
+  },
+  {
+   "id": "engine",
+   "role": "A Engine and Clutch",
+   "status": "Disconnected",
+   "last_heartbeat": "2026-11-10T10:20:00+00:00",
+   "current_task": "ENG-27",
+   "note": "ENG-27 checkpoint done; awaiting Lead on main-merge plan",
+   "assigned_tasks": [
+    "ENG-27"
+   ],
+   "branch": "feature/integrated-physics-cont"
+  },
+  {
+   "id": "car",
+   "role": "B Car Physics",
+   "status": "Completed",
+   "last_heartbeat": "2026-11-10T10:20:00+00:00",
+   "current_task": "CAR-LT",
+   "note": "CAR-LT review handed off",
+   "assigned_tasks": [
+    "CAR-LT"
+   ],
+   "branch": "feature/car-loadtransfer-review"
+  },
+  {
+   "id": "tire",
+   "role": "C Tire and Track Physics",
+   "status": "Completed",
+   "last_heartbeat": "2026-11-10T10:25:00+00:00",
+   "current_task": "TIRE-RR",
+   "note": "TIRE-RR handed off for review",
+   "assigned_tasks": [
+    "TIRE-RR"
+   ],
+   "branch": "feature/tire-radius-review"
+  },
+  {
+   "id": "chute-visual",
+   "role": "D Parachute and Vehicle Visuals",
+   "status": "Disconnected",
+   "last_heartbeat": "2026-11-10T10:20:00+00:00",
+   "current_task": "VIS-1",
+   "note": "VIS-1: native 22/22 pass; committed 2 commits; next editor build + Issue 30 run",
+   "assigned_tasks": [
+    "VIS-1"
+   ],
+   "branch": "feature/topfuel-visual-fix"
+  },
+  {
+   "id": "indy",
+   "role": "E Indianapolis Venue",
+   "status": "Disconnected",
+   "last_heartbeat": "2026-11-10T10:20:00+00:00",
+   "current_task": "IND-1",
+   "note": "Waiting on Lead: sync plan, material ownership",
+   "assigned_tasks": [
+    "IND-1"
+   ],
+   "branch": "feature/indy-track-visuals"
+  },
+  {
+   "id": "tree",
+   "role": "F Christmas Tree",
+   "status": "Completed",
+   "last_heartbeat": "2026-11-10T11:15:00+00:00",
+   "current_task": "TREE-1",
+   "note": "TREE-1 v2 handed off",
+   "assigned_tasks": [
+    "TREE-1"
+   ],
+   "branch": "feature/tree-visuals"
+  },
+  {
+   "id": "camera",
+   "role": "G Camera and Presentation",
+   "status": "Disconnected",
+   "last_heartbeat": "2026-11-10T10:05:00+00:00",
+   "current_task": "CAM-1",
+   "note": "CAM-1-CR written, waiting for Lead approval before pawn edits",
+   "assigned_tasks": [
+    "CAM-1"
+   ],
+   "branch": "feature/camera-cockpit"
+  },
+  {
+   "id": "ui",
+   "role": "H UI/UX (UMG/Slate)",
+   "status": "Completed",
+   "last_heartbeat": "2026-11-10T10:25:00+00:00",
+   "current_task": "UI-1",
+   "note": "UI-1 handed off for review",
+   "assigned_tasks": [
+    "UI-1"
+   ],
+   "branch": "feature/ui-garage"
+  },
+  {
+   "id": "units",
+   "role": "I Imperial Units",
+   "status": "Completed",
+   "last_heartbeat": "2026-11-10T10:25:00+00:00",
+   "current_task": "UNIT-1",
+   "note": "UNIT-1 handed off",
+   "assigned_tasks": [
+    "UNIT-1"
+   ],
+   "branch": "feature/units-imperial"
+  },
+  {
+   "id": "softbody",
+   "role": "J Soft-Body R&D (research only)",
+   "status": "Not launched",
+   "last_heartbeat": null,
+   "current_task": null,
+   "note": null,
+   "assigned_tasks": [
+    "SB-1"
+   ],
+   "branch": null
+  },
+  {
+   "id": "qa",
+   "role": "L Adversarial QA (read-only)",
+   "status": "Not launched",
+   "last_heartbeat": null,
+   "current_task": null,
+   "note": null,
+   "assigned_tasks": [],
+   "branch": null
+  },
+  {
+   "id": "visuals",
+   "role": "Visual Fidelity / Photorealism",
+   "status": "Disconnected",
+   "last_heartbeat": "2026-11-10T10:25:00+00:00",
+   "current_task": "V-1",
+   "note": null,
+   "assigned_tasks": [
+    "V-1"
+   ],
+   "branch": "feature/photorealism"
+  },
+  {
+   "id": "gainesville-env",
+   "role": "Gainesville Raceway environment + reusable dragstrip pipeline (lead of stream)",
+   "status": "Disconnected",
+   "last_heartbeat": "2026-11-11T08:10:00+00:00",
+   "current_task": "GNV-ENV-1",
+   "note": "Stage 1 handoff posted; awaiting Lead evidence check",
+   "assigned_tasks": [
+    "GNV-ENV-1",
+    "GNV-S1",
+    "GNV-S2",
+    "GNV-S3",
+    "GNV-S4",
+    "GNV-S5",
+    "GNV-S6",
+    "GNV-S7"
+   ],
+   "branch": "feature/gainesville-environment"
+  }
+ ],
+ "events": [
+  {
+   "time": "2026-11-11T08:15:12+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T08:14:48+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T08:14:48+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "GNV-ENV-1",
+   "text": "PASS: Stage1: Blender 4.5.3 build+render+FBX; UE 5.8.4 Build-Editor OK, import 0->13 then 13->13 identical; Build-Native 22/22; config validator OK. PIE not ru…"
+  },
+  {
+   "time": "2026-11-11T08:14:48+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "V-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T08:14:48+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "V-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T08:14:48+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "V-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T08:10:57+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "GNV-S3",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T08:07:03+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T07:53:10+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T07:52:54+00:00",
+   "kind": "register",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T07:46:15+00:00",
+   "kind": "note",
+   "agent": "lead",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T16:50:52+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-10T11:16:07+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "TREE-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T11:10:00+00:00",
+   "kind": "note",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-10T11:09:59+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "VIS-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T11:03:43+00:00",
+   "kind": "note",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-10T11:02:12+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "TREE-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T11:02:12+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "TREE-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T11:02:12+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "TREE-1",
+   "text": "PASS: Native ctest 22/22; editor build OK; oxcart.tree.selftest PASS 175 checks. PIE playtest FAILS at 'turn-around' (600 s timeout) after a complete pass (ET…"
+  },
+  {
+   "time": "2026-11-10T10:55:19+00:00",
+   "kind": "review",
+   "agent": "qa",
+   "task": "UI-1",
+   "text": "Revise: independent review: model connected to Setup and no physics edits; revise: use central units helper, no SI help text, display-unit steps, register test…"
+  },
+  {
+   "time": "2026-11-10T10:54:51+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "UNIT-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:54:42+00:00",
+   "kind": "review",
+   "agent": "qa",
+   "task": "UNIT-1",
+   "text": "Revise: independent review: factors all correct; revise: missing <algorithm> include (test_units.cpp:77), tighten tolerances to ~1e-12 relative, add absolute U…"
+  },
+  {
+   "time": "2026-11-10T10:53:48+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:53:48+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:53:18+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "TREE-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:53:18+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "UNIT-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:53:18+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "UI-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:53:18+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "TIRE-RR",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:53:18+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "CAR-LT",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:53:18+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:53:18+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:53:17+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:53:17+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:53:17+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:53:17+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:52:02+00:00",
+   "kind": "test",
+   "agent": "lead",
+   "task": "C-1",
+   "text": "FAIL: cand asset-tire hunk 3360a09: 9/22 ctest FAIL (DynamicsTests, integrated, failure_engine, failure_structure, topfuel2026 + stage15/25/26/26b) - not produ…"
+  },
+  {
+   "time": "2026-11-10T10:52:02+00:00",
+   "kind": "test",
+   "agent": "lead",
+   "task": "C-1",
+   "text": "PASS: cand mission-control merge clean, self-tests 5/5"
+  },
+  {
+   "time": "2026-11-10T10:52:02+00:00",
+   "kind": "test",
+   "agent": "lead",
+   "task": "C-1",
+   "text": "PASS: cand indy 1614980: editor build OK, PIE PASS ET 4.578 (headless)"
+  },
+  {
+   "time": "2026-11-10T10:52:01+00:00",
+   "kind": "test",
+   "agent": "lead",
+   "task": "C-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:26:36+00:00",
+   "kind": "test",
+   "agent": "lead",
+   "task": "C-1",
+   "text": "PASS: PIE on main e045f99 (headless, scripted): full procedure PASS; ET 4.579 s, 1320 ft 337.0 mph, 60ft 0.901, 330ft 2.207, 660ft 3.141, 1000ft 3.918; maxLat…"
+  },
+  {
+   "time": "2026-11-10T10:25:39+00:00",
+   "kind": "note",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:25:39+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:25:33+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "UNIT-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:25:33+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "UNIT-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:25:33+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "UNIT-1",
+   "text": "PASS: Build-Native 22/22 ctest pass (unchanged baseline); test_units standalone MSVC build passes (not in ctest until Lead CMake CR)"
+  },
+  {
+   "time": "2026-11-10T10:25:17+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "UI-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:25:17+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "UI-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:25:17+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "UI-1",
+   "text": "PASS: native garage model tests pass (scratch build); editor build Succeeded with temp Slate deps; widget not seen on screen; PIE/Build-Native not run"
+  },
+  {
+   "time": "2026-11-10T10:25:10+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "TIRE-RR",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:25:10+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "TIRE-RR",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:25:10+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "TIRE-RR",
+   "text": "PASS: Build-Native: 22/22 CTest passed on review branch (docs only; no source changed). Editor build/PIE not run: no Unreal code changed."
+  },
+  {
+   "time": "2026-11-10T10:24:00+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "CAR-LT",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:24:00+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "CAR-LT",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:24:00+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "CAR-LT",
+   "text": "PASS: Build-Native: 22/22 ctest pass (baseline, no code changed); probe reproduces 4.288 s / 4.398 s"
+  },
+  {
+   "time": "2026-11-10T10:22:44+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "ENG-27",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:22:43+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "ENG-27",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:22:43+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "ENG-27",
+   "text": "PASS: Baseline 22/22 ctest pass; engine_energy_audit byte-identical to stored baseline. Docs only."
+  },
+  {
+   "time": "2026-11-10T10:21:04+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "IND-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:21:03+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "IND-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-10T10:19:56+00:00",
+   "kind": "test",
+   "agent": "lead",
+   "task": "C-1",
+   "text": "PASS: Unreal Editor build OK on main e045f99 (UBT 269 s); candidate PIE + individual evaluations started"
+  }
+ ],
+ "approvals": [],
+ "columns": {
+  "Backlog": [
+   "GNV-S2",
+   "GNV-S3",
+   "GNV-S4",
+   "GNV-S5",
+   "GNV-S6",
+   "GNV-S7"
+  ],
+  "Assigned": [
+   "V-1",
+   "GNV-S1"
+  ],
+  "In Progress": [
+   "MC-1",
+   "UI-1",
+   "UNIT-1",
+   "GNV-ENV-1"
+  ],
+  "Review": [
+   "ENG-27",
+   "TIRE-RR",
+   "CAR-LT",
+   "TREE-1",
+   "SB-1"
+  ],
+  "Ready to Merge": [],
+  "Done": [],
+  "Blocked": [
+   "IND-1",
+   "CAM-1",
+   "VIS-1",
+   "DEC-27"
+  ]
+ }
+}

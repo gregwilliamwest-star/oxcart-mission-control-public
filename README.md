@@ -1,3 +1,5 @@
 # Oxcart Mission Control (public, read-only snapshot)
 
-Placeholder. Generated, sanitised snapshot files will be published here after owner review. Nothing here can affect the development environment.
+Generated files only. A local script pushes a sanitised snapshot of the development board and GitHub issues here about every minute. Do not edit by hand; changes here never flow back to the development environment.
+
+See `llms.txt` for the JSON endpoints.
