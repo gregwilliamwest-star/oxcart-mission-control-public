@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T09:19:09Z",
+ "generated": "2026-11-11T09:21:54Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -871,8 +871,8 @@
    "dependencies": [],
    "assigned_agent": "gainesville-env",
    "priority": "unspecified",
-   "status": "Backlog",
-   "progress_pct": 0,
+   "status": "Assigned",
+   "progress_pct": 5,
    "progress_basis": "ESTIMATE from linked board task GNV-S7"
   }
  ]

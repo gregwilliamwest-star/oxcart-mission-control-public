@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T09:19:09Z",
+ "generated": "2026-11-11T09:21:54Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -416,9 +416,9 @@
    "id": "GNV-S7",
    "title": "Stage 7 reusable pipeline validation (synthetic track) (issue #44)",
    "description": "Child of GNV-ENV-1. Isolated from Indianapolis (IND-1 untouched, no cherry-picks).",
-   "status": "Backlog",
+   "status": "Assigned",
    "priority": "unspecified",
-   "progress_pct": 0,
+   "progress_pct": 5,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "gainesville-env",
    "branch": "feature/gainesville-environment",
@@ -621,6 +621,13 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T09:20:19+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "GNV-S7",
+   "text": null
+  },
   {
    "time": "2026-11-11T08:15:12+00:00",
    "kind": "handoff",
@@ -1033,13 +1040,6 @@
    "agent": null,
    "task": "IND-1",
    "text": null
-  },
-  {
-   "time": "2026-11-10T10:19:56+00:00",
-   "kind": "test",
-   "agent": "lead",
-   "task": "C-1",
-   "text": "PASS: Unreal Editor build OK on main e045f99 (UBT 269 s); candidate PIE + individual evaluations started"
   }
  ],
  "approvals": [],
@@ -1049,12 +1049,12 @@
    "GNV-S3",
    "GNV-S4",
    "GNV-S5",
-   "GNV-S6",
-   "GNV-S7"
+   "GNV-S6"
   ],
   "Assigned": [
    "V-1",
-   "GNV-S1"
+   "GNV-S1",
+   "GNV-S7"
   ],
   "In Progress": [
    "MC-1",
