@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T13:19:55Z",
+ "generated": "2026-11-11T13:27:05Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -78,7 +78,7 @@
    "labels": [
     "area:engine"
    ],
-   "updated": "2026-11-11T10:32:57Z",
+   "updated": "2026-11-11T13:20:21Z",
    "description": "Protected engine baseline; recover Stage 2.5-2.7 records; energy accounting; reproduce 6,686 vs 7,950 rpm (Stage 2.5 s4 fit-point inconsistency) and the 10,156-11,051 hp provenance (EngineLabs 2015); engine-only changes. Clutch protected: H2 lock-up ramp suspended pending owner approval. No tire/track/chassis/aero/exhaust/chute/timing/UI edits.",
    "acceptance_criteria": [
     "ENGINE_BASELINE_AND_PRESERVATION, TOPFUEL_STAGE2_7_ENGINE_SCOPE, ENGINE_ENERGY_ACCOUNTING, ENGINE_RPM_POWER_VALIDATION docs; unauthorised-file check clean"
@@ -459,7 +459,7 @@
     "area:visual",
     "track:indy"
    ],
-   "updated": "2026-11-11T07:45:28Z",
+   "updated": "2026-11-11T13:20:20Z",
    "description": "Baseline screenshots, source-backed reference inventory, PBR pavement, markings, barriers, lighting using SimMap (rubber/moisture/oil); no grip changes; investigate DXGI device-hung.",
    "acceptance_criteria": [
     "Directive Rev 1 section 6 acceptance criteria"
