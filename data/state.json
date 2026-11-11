@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T14:16:52Z",
+ "generated": "2026-11-11T14:24:03Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -515,12 +515,12 @@
   {
    "id": "engine",
    "role": "A Engine and Clutch",
-   "status": "Running",
+   "status": "Waiting for input",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-11T14:15:00+00:00",
    "current_task": "CL-1",
-   "note": "DISCLOSURE: committed G1 code bf4538b (local, unpushed) before the REVISE-G0 verdict reached me; no further code. Doing G0 rev3 docs now",
+   "note": "G0 rev3 committed cff46f0; awaiting re-check. No further code.",
    "assigned_tasks": [
     "CL-1"
    ],
@@ -545,7 +545,7 @@
    "role": "C Tire and Track Physics",
    "status": "Completed",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-11T14:10:00+00:00",
    "current_task": "T-1",
    "note": "T-1 architecture handed off for Lead review",
@@ -701,6 +701,20 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T14:17:36+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:16:54+00:00",
+   "kind": "progress",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
   {
    "time": "2026-11-11T14:16:03+00:00",
    "kind": "handoff",
