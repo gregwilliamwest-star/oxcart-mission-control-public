@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T10:38:01Z",
+ "generated": "2026-11-11T10:45:11Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -162,7 +162,7 @@
    "acceptance_criteria": [
     "Garage usable with mouse, keyboard, gamepad"
    ],
-   "last_test": "PASS: native garage model tests pass (scratch build); editor build Succeeded with temp Slate deps; widget not seen on screen; PIE/Build-Native not run",
+   "last_test": "PASS: Native: 23/23 CTest incl. new Oxcart_garage_ui (after fixing 2 wrong test expectations; model unchanged by that)",
    "last_review": "Revise: independent review: model connected to Setup and no physics edits; revise: use central units helper, no SI help text, display-unit steps, register test, EndPlay Hide, on-screen focus/clipping…",
    "issue": 18
   },
@@ -170,9 +170,9 @@
    "id": "UNIT-1",
    "title": "Centralized US-customary unit conversion and formatting",
    "description": "OxcartUnits helper + tests (mph, ft, in, lb, lb-ft, hp, psi, F, US gal, inHg); SI stays internal.",
-   "status": "In Progress",
+   "status": "Review",
    "priority": "P0",
-   "progress_pct": 40,
+   "progress_pct": 80,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "units",
    "branch": "feature/units-imperial",
@@ -180,7 +180,7 @@
    "acceptance_criteria": [
     "Round-trip and rounding tests pass"
    ],
-   "last_test": "PASS: Build-Native 22/22 ctest pass (unchanged baseline); test_units standalone MSVC build passes (not in ctest until Lead CMake CR)",
+   "last_test": "PASS: Oxcart_units pass; Build-Native 23/23 (units first run failed on degree format, fixed, re-run units pass; other 22 passed pre-fix, unaffected: header only included by test_units)",
    "last_review": "Revise: independent review: factors all correct; revise: missing <algorithm> include (test_units.cpp:77), tighten tolerances to ~1e-12 relative, add absolute US ToDisplay/Format tests, genuine roundi…",
    "issue": 21
   },
@@ -544,9 +544,9 @@
    "id": "ui",
    "role": "H UI/UX (UMG/Slate)",
    "status": "Running",
-   "last_heartbeat": "2026-11-11T10:30:00+00:00",
+   "last_heartbeat": "2026-11-11T10:45:00+00:00",
    "current_task": "UI-1",
-   "note": "Model+tests rewritten (units helper, display steps); native build running; next Slate widget revisions + pawn wiring",
+   "note": "Native tests pass; running Build-Editor",
    "assigned_tasks": [
     "UI-1"
    ],
@@ -555,8 +555,8 @@
   {
    "id": "units",
    "role": "I Imperial Units",
-   "status": "Stale",
-   "last_heartbeat": "2026-11-11T10:25:00+00:00",
+   "status": "Completed",
+   "last_heartbeat": "2026-11-11T10:40:00+00:00",
    "current_task": "UNIT-1",
    "note": "UNIT-1 handed off",
    "assigned_tasks": [
@@ -589,7 +589,7 @@
   {
    "id": "visuals",
    "role": "Visual Fidelity / Photorealism",
-   "status": "Idle",
+   "status": "Stale",
    "last_heartbeat": "2026-11-11T10:30:00+00:00",
    "current_task": "V-1",
    "note": "lane master rebuilt, editor builds; capturing AFTER shots",
@@ -618,6 +618,41 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T10:45:02+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "UI-1",
+   "text": "PASS: Native: 23/23 CTest incl. new Oxcart_garage_ui (after fixing 2 wrong test expectations; model unchanged by that)"
+  },
+  {
+   "time": "2026-11-11T10:43:58+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "UNIT-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:43:58+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "UNIT-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:43:58+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "UNIT-1",
+   "text": "PASS: Oxcart_units pass; Build-Native 23/23 (units first run failed on degree format, fixed, re-run units pass; other 22 passed pre-fix, unaffected: header onl…"
+  },
+  {
+   "time": "2026-11-11T10:38:06+00:00",
+   "kind": "progress",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
   {
    "time": "2026-11-11T10:37:12+00:00",
    "kind": "progress",
@@ -1002,41 +1037,6 @@
    "agent": "lead",
    "task": null,
    "text": null
-  },
-  {
-   "time": "2026-11-10T10:53:18+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "TREE-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-10T10:53:18+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "UNIT-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-10T10:53:18+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "UI-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-10T10:53:18+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "TIRE-RR",
-   "text": null
-  },
-  {
-   "time": "2026-11-10T10:53:18+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "CAR-LT",
-   "text": null
   }
  ],
  "approvals": [],
@@ -1056,12 +1056,12 @@
   "In Progress": [
    "MC-1",
    "UI-1",
-   "UNIT-1",
    "V-1",
    "GNV-ENV-1"
   ],
   "Review": [
    "TREE-1",
+   "UNIT-1",
    "SB-1"
   ],
   "Ready to Merge": [],
