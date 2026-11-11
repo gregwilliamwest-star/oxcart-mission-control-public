@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T15:50:11Z",
+ "generated": "2026-11-11T15:57:21Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -260,7 +260,7 @@
     "Native 22/22, Editor build OK, PIE ET 4.579 / 337.0 mph / 60 ft 0.901 unchanged"
    ],
    "last_test": null,
-   "last_review": null,
+   "last_review": "Revise: Code side verified (display-only, 22/22, PIE pass). Feature not demonstrated on populated SimMap; body check, frame-time, and SimMap R meaning change documentation required. No push yet.",
    "issue": 22
   },
   {
@@ -478,7 +478,7 @@
     "Isolated rig with measurable acceptance criteria; clutch-tire interface defined as a document",
     "Lead reviews the architecture before any implementation"
    ],
-   "last_test": "PASS: Lead independent build+run of the Tire rig at 5e1f0f1 (scratch CMake project outside every worktree; existing oxcart_sim sources unchanged + rig, Release): test_tire_rig 'TIRE RIG TESTS PASSED…",
+   "last_test": "PASS: R-12..R-14 stepped torque full-rate: road-clamped torsion mode (peak 80.0 ms vs 82.4 predicted; overshoot 1.93 vs 1.89); apparent axle radius 2.3 in at 54 ms rising to 16 in at 1 s, windup-domi…",
    "last_review": "Accept: Accept Phase 1 + R-15 as numerical-correctness evidence: new files only (no Source changes), deterministic, 7E replay matches the car's own tire (R_kin min 0.3910 m), four-radius identity clo…",
    "issue": 6
   }
@@ -517,7 +517,7 @@
    "role": "A Engine and Clutch",
    "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-11T15:45:00+00:00",
    "current_task": "CL-1",
    "note": "owner directive: public-data clutch reconstruction; researching Electrimotion/Boninfante/HotRod + digitizing SAE Fig 5/6; isolated rig only",
@@ -531,7 +531,7 @@
    "role": "B Car Physics",
    "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-11T15:45:00+00:00",
    "current_task": "CAR-LT",
    "note": "building editor so the game can be opened (user request)",
@@ -543,12 +543,12 @@
   {
    "id": "tire",
    "role": "C Tire and Track Physics",
-   "status": "Idle",
+   "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T15:20:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T15:50:00+00:00",
    "current_task": "T-1",
-   "note": "Phase 1 + R-15 committed; awaiting Lead direction for R-16/R-18/R-19 and experimental model",
+   "note": "R-18/R-19 committed; INTERFACE_CLUTCH_TIRE: tire side confirmed as written (variables 6-12,15; R_app diagnostics only); proceeding to R-12.…",
    "assigned_tasks": [
     "TIRE-RR",
     "T-1"
@@ -684,7 +684,7 @@
    "role": "Gainesville Raceway environment + reusable dragstrip pipeline (lead of stream)",
    "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-11T15:45:00+00:00",
    "current_task": "GNV-S3",
    "note": "ack Stage 3 authorized; surveying level/PIE tooling",
@@ -700,6 +700,62 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T15:55:51+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "T-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:55:50+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "T-1",
+   "text": "PASS: R-12..R-14 stepped torque full-rate: road-clamped torsion mode (peak 80.0 ms vs 82.4 predicted; overshoot 1.93 vs 1.89); apparent axle radius 2.3 in at 5…"
+  },
+  {
+   "time": "2026-11-11T15:52:55+00:00",
+   "kind": "note",
+   "agent": "lead",
+   "task": "CAM-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:52:55+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:52:09+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "T-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:52:09+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "T-1",
+   "text": "PASS: R-18/R-19: ring solve; speed independence 6.6e-16 (load) 2.7e-12 (pressure) 0-150 m/s; naive variant +70% at 150 m/s; hub identity 1e-16; test_tire_rig 2…"
+  },
+  {
+   "time": "2026-11-11T15:50:31+00:00",
+   "kind": "review",
+   "agent": "lead",
+   "task": "V-1",
+   "text": "Revise: Code side verified (display-only, 22/22, PIE pass). Feature not demonstrated on populated SimMap; body check, frame-time, and SimMap R meaning change d…"
+  },
+  {
+   "time": "2026-11-11T15:50:23+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "V-1",
+   "text": null
+  },
   {
    "time": "2026-11-11T15:39:19+00:00",
    "kind": "task",
@@ -1062,55 +1118,6 @@
    "kind": "message",
    "agent": "lead",
    "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:44:29+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:44:29+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "CL-1",
-   "text": "PASS: Isolated clutch tests pass (scratch build, not yet ctest: CR pending). Boundary sweep found+fixed passivity defect; ledger 2e-9 @1/2400; Hi/Lo, staging,…"
-  },
-  {
-   "time": "2026-11-11T14:41:34+00:00",
-   "kind": "test",
-   "agent": "lead",
-   "task": "CL-1",
-   "text": "PASS: Lead independent build+run of the isolated clutch test (Tests/test_clutch_topfuel.cpp @ bf4538b, scratch project outside every worktree, strict C++17 /W4…"
-  },
-  {
-   "time": "2026-11-11T14:34:29+00:00",
-   "kind": "review",
-   "agent": "independent evaluator (Lead-dispatched), architecture vs Hallum evidence",
-   "task": "T-1",
-   "text": "Revise: Revise (justified revisions authorized, docs only): architecture 4fbfd8c is adequate as a first-order ring+torsion+brush structure but lacks a fourth (…"
-  },
-  {
-   "time": "2026-11-11T14:34:29+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:34:29+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "T-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:33:02+00:00",
-   "kind": "note",
-   "agent": "lead",
-   "task": "T-1",
    "text": null
   }
  ],
