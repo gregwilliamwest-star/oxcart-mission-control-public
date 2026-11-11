@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T17:05:01Z",
+ "generated": "2026-11-11T17:13:13Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -454,7 +454,7 @@
     "SampleReplays files and cache untouched"
    ],
    "last_test": "PASS: 24 test groups pass (scratch build, mutation-checked); public rig R0/R1/R2 run; defaults bit-identical (study outputs unchanged).",
-   "last_review": "Accept: G0 ACCEPT and G1 ACCEPT for the ISOLATED model (0b2fde6): all must-fix items verified; stale doc text purged; interface owners and common-step policy documented; no shared files touched; Samp…",
+   "last_review": "Accept: Study + public-data stage: independent strict build passes (clutch tests); scope Engine-owned files only; SampleReplays untouched; no push. Accept as research/isolated-model evidence with con…",
    "issue": 45
   },
   {
@@ -700,6 +700,20 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T17:12:20+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:12:20+00:00",
+   "kind": "review",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": "Accept: Study + public-data stage: independent strict build passes (clutch tests); scope Engine-owned files only; SampleReplays untouched; no push. Accept as r…"
+  },
   {
    "time": "2026-11-11T17:02:44+00:00",
    "kind": "message",
@@ -1105,20 +1119,6 @@
    "agent": null,
    "task": "CL-1",
    "text": "PASS: 20 test groups pass (scratch build); order asserted >=0.7; reversal vs independent numeric reference; implicit thermal bounded to dt=1e6; spec validation."
-  },
-  {
-   "time": "2026-11-11T15:20:25+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "T-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T15:20:24+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "T-1",
-   "text": "PASS: test_tire_rig 18/18 pass incl R-15 (lumped brush vs distributed parabolic patch 1e-6; pressure shape at fixed N moves Fx 0.56x-1.18x). Source/ untouched."
   }
  ],
  "approvals": [],
