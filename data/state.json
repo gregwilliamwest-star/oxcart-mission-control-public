@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T14:24:03Z",
+ "generated": "2026-11-11T14:31:14Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -285,7 +285,7 @@
     "Stage 1 visual QA: inspect the actual rendered image and record at least one identified deficiency and the correction made (before/after images and a short note); 'an image was generated' is not sufficient",
     "Stage 2 gate: documented real-world coordinate system for Gainesville Raceway covering track orientation (bearing), starting-line position, lane geometry and major facility landmarks, each marked VERIFIED or ESTIMATE with source; Lead verifies this before Sta…"
    ],
-   "last_test": "PASS: Stage2: NAIP-measured geometry (all ESTIMATE), config validates, 3 Blender builds give identical geometry hash, Unreal capture 7 shots with fixed overview/plan cameras, synthetic config regress…",
+   "last_test": "PASS: Stage2 geo: NAIP-measured layout + 3DEP DEM + Dewberry accuracy (all ESTIMATE), 3 identical Blender geometry hashes, Unreal capture 7 shots (14 images), level overview/plan, synthetic regressio…",
    "last_review": null,
    "issue": 37
   },
@@ -616,7 +616,7 @@
    "role": "H UI/UX (UMG/Slate)",
    "status": "Blocked",
    "process_state": "Alive",
-   "connection_state": "Stale",
+   "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-11T13:55:00+00:00",
    "current_task": "UI-1",
    "note": "committed 79c76c8 and pushed; waiting for Lead on supported garage-open hook for screenshots",
@@ -682,12 +682,12 @@
   {
    "id": "gainesville-env",
    "role": "Gainesville Raceway environment + reusable dragstrip pipeline (lead of stream)",
-   "status": "Running",
+   "status": "Waiting for input",
    "process_state": "Alive",
-   "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T14:05:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T14:25:00+00:00",
    "current_task": "GNV-S2",
-   "note": "ack next assignment: geographic reconstruction (stage2 package 36cb989 local; adding 3DEP DEM, hashes, level cameras)",
+   "note": "Stage 2 evidence pushed (342f7a6); awaiting Lead review; Stage 3 not started",
    "assigned_tasks": [
     "GNV-ENV-1",
     "GNV-S2",
@@ -701,6 +701,34 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T14:26:50+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:26:50+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "GNV-ENV-1",
+   "text": "PASS: Stage2 geo: NAIP-measured layout + 3DEP DEM + Dewberry accuracy (all ESTIMATE), 3 identical Blender geometry hashes, Unreal capture 7 shots (14 images),…"
+  },
+  {
+   "time": "2026-11-11T14:25:35+00:00",
+   "kind": "progress",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:24:07+00:00",
+   "kind": "progress",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
   {
    "time": "2026-11-11T14:17:36+00:00",
    "kind": "handoff",
