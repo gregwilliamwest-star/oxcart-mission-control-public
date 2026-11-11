@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T12:07:02Z",
+ "generated": "2026-11-11T12:13:32Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -35,7 +35,7 @@
     "area:lead",
     "area:process"
    ],
-   "updated": "2026-11-10T10:52:03Z",
+   "updated": "2026-11-11T12:09:32Z",
    "description": "Verify ancestry/content of 29d6040, 1614980, 558a364, c149573, 5acfc01, ca60a24, f2cfd82; [redacted] build integration branch; native tests, editor build, PIE.",
    "acceptance_criteria": [
     "One baseline commit all specialists branch from; regressions documented"
