@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T15:14:15Z",
+ "generated": "2026-11-11T15:21:26Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -763,7 +763,7 @@
     "area:visual",
     "track:gainesville"
    ],
-   "updated": "2026-11-11T13:56:49Z",
+   "updated": "2026-11-11T15:19:10Z",
    "description": "Coordinate system, dimensions, terrain, racing surface and major structures of Gainesville Raceway; [redacted]",
    "acceptance_criteria": [
     "No invented measurements; documented Blender-Unreal transform; geometric reference model."
@@ -882,7 +882,7 @@
    "labels": [
     "area:engine"
    ],
-   "updated": "2026-11-11T14:44:41Z",
+   "updated": "2026-11-11T15:18:12Z",
    "description": "Realistic 2026 NHRA Top Fuel multi-disc centrifugal clutch (discs, floaters, pressure plate, centrifugal fingers/weights/leverage, base pressure, air gaps, RPM-dependent clamp, static/dynamic friction, slip, heat/temperature/energy accounting, progressive engagement, NHRA-legal pressure-over-time control, crew-chief adjustments), built as an experimental model behind a flag. The existing clutch stays the production default. Linked to #5 (E-1); supersedes the unapproved H2 lock-up ramp. Owner di…",
    "acceptance_criteria": [],
    "dependencies": [

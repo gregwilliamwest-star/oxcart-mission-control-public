@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T15:14:15Z",
+ "generated": "2026-11-11T15:21:26Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -180,7 +180,7 @@
    "acceptance_criteria": [
     "Round-trip and rounding tests pass"
    ],
-   "last_test": "PASS: Oxcart_units ctest pass at 6b1c828 (rounding pinned, CR wording fixed); full 23/23 verified earlier on 1722d98",
+   "last_test": "PASS: Lead independent build+run of Tests/test_units.cpp at 6b1c828 (units follow-up: pins RoundTo binary-double rounding 1.005/2.675, CR wording fixed; docs/test only, pushed to its own branch): str…",
    "last_review": "Accept: Accept (hand review of 1722d98): all earlier findings fixed, scope = 5 files incl. [redacted] Not verified by reviewer: build/ctest; Lead running Build-Native. [redacted] pin 1.005 rounding",
    "issue": 21
   },
@@ -329,7 +329,7 @@
     "Stage 2 gate: documented real-world coordinate system for Gainesville Raceway covering track orientation (bearing), starting-line position, lane geometry and major facility landmarks, each marked VERIFIED or ESTIMATE with source; Lead verifies this before Sta…"
    ],
    "last_test": "PASS: Lead review of 55c9805: scope = Tools/TrackPipeline + docs only; DragStrip.umap byte-identical to main; no physics/vehicle/Indy files; worktree clean; fast-forward from 928aea1 and pushed (orig…",
-   "last_review": null,
+   "last_review": "Revise: REVISE-STAGE-2 (small, mostly documentary): no VERIFIED mislabelled; independent OSM cross-check agrees (grid bearing 89.59 vs 89.53, origin 0.15 m from OSM line); coordinate system consisten…",
    "issue": 39
   },
   {
@@ -453,8 +453,8 @@
     "G4: comparative traces + regression (native, Editor, PIE) + recommendation; owner approval before default/merge",
     "SampleReplays files and cache untouched"
    ],
-   "last_test": "PASS: Isolated clutch tests pass (scratch build; CR pending for ctest). Mutation checks catch swapped lever (5 fails) and disc factor (4). Observed order ~1.0 speed, ~0.85-0.9 energy.",
-   "last_review": "Revise: REVISE-G0 (force balance, Hi/Lo, tags, register, no speed ramp resolved; inertia values, staging mode, compliance, stability wording, SAE page refs open) and REVISE-G1 (slip-reversal overshoo…",
+   "last_test": "PASS: Lead independent build+run at Engine e145b8a (strict C++17 /W4 scratch project outside the worktree): passes; observed order 1.02/1.04 final speed, 0.84/0.90 clutch energy; coupled ledger resid…",
+   "last_review": "Revise: G1 code+tests ACCEPT with must-fix items (huge-dt thermal stability and multi-step test, muStatic<muKinetic guard, closed-form reversal test, tautology at test:136, assert convergence order);…",
    "issue": 45
   },
   {
@@ -478,7 +478,7 @@
     "Isolated rig with measurable acceptance criteria; clutch-tire interface defined as a document",
     "Lead reviews the architecture before any implementation"
    ],
-   "last_test": null,
+   "last_test": "PASS: test_tire_rig 18/18 pass incl R-15 (lumped brush vs distributed parabolic patch 1e-6; pressure shape at fixed N moves Fx 0.56x-1.18x). Source/ untouched.",
    "last_review": "Accept: ACCEPT for implementation: NO FUNDAMENTAL BLOCKER. Verified by hand: apparent-radius identity, wrinkle table, momentum table (Tire right, relayed 0.4/4-8 kN wrong), 49.1 m/s crossover, omega^…",
    "issue": 6
   }
@@ -517,7 +517,7 @@
    "role": "A Engine and Clutch",
    "status": "Waiting for input",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-11T15:10:00+00:00",
    "current_task": "CL-1",
    "note": "clutch side of INTERFACE_CLUTCH_TIRE CONFIRMED + proposals for open decisions 1-4 in docs/CLUTCH_TOPFUEL_INTERFACE.md Sec 6 (e145b8a). No c…",
@@ -531,7 +531,7 @@
    "role": "B Car Physics",
    "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-11T15:10:00+00:00",
    "current_task": "CAR-LT",
    "note": "hub height verification handed off",
@@ -543,12 +543,12 @@
   {
    "id": "tire",
    "role": "C Tire and Track Physics",
-   "status": "Running",
+   "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T15:05:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T15:20:00+00:00",
    "current_task": "T-1",
-   "note": "ack T-1 rig implementation",
+   "note": "Phase 1 + R-15 committed; awaiting Lead direction for R-16/R-18/R-19 and experimental model",
    "assigned_tasks": [
     "TIRE-RR",
     "T-1"
@@ -588,7 +588,7 @@
    "role": "F Christmas Tree",
    "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-11T15:10:00+00:00",
    "current_task": "TREE-1",
    "note": "resumed",
@@ -682,12 +682,12 @@
   {
    "id": "gainesville-env",
    "role": "Gainesville Raceway environment + reusable dragstrip pipeline (lead of stream)",
-   "status": "Waiting for input",
+   "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-11T14:25:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T15:20:00+00:00",
    "current_task": "GNV-S2",
-   "note": "Stage 2 evidence pushed (342f7a6); awaiting Lead review; Stage 3 not started",
+   "note": "ack REVISE-STAGE-2: working items 1-8",
    "assigned_tasks": [
     "GNV-ENV-1",
     "GNV-S2",
@@ -701,6 +701,90 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T15:20:25+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "T-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:20:24+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "T-1",
+   "text": "PASS: test_tire_rig 18/18 pass incl R-15 (lumped brush vs distributed parabolic patch 1e-6; pressure shape at fixed N moves Fx 0.56x-1.18x). Source/ untouched."
+  },
+  {
+   "time": "2026-11-11T15:19:08+00:00",
+   "kind": "review",
+   "agent": "independent reviewer (Lead-dispatched), Stage 2 342f7a6",
+   "task": "GNV-S2",
+   "text": "Revise: REVISE-STAGE-2 (small, mostly documentary): no VERIFIED mislabelled; independent OSM cross-check agrees (grid bearing 89.59 vs 89.53, origin 0.15 m fro…"
+  },
+  {
+   "time": "2026-11-11T15:19:08+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "GNV-S2",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:18:10+00:00",
+   "kind": "review",
+   "agent": "independent reviewer (Lead-dispatched), re-check b2efc73..e145b8a",
+   "task": "CL-1",
+   "text": "Revise: G1 code+tests ACCEPT with must-fix items (huge-dt thermal stability and multi-step test, muStatic<muKinetic guard, closed-form reversal test, tautology…"
+  },
+  {
+   "time": "2026-11-11T15:18:10+00:00",
+   "kind": "test",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": "PASS: Lead independent build+run at Engine e145b8a (strict C++17 /W4 scratch project outside the worktree): passes; observed order 1.02/1.04 final speed, 0.84/…"
+  },
+  {
+   "time": "2026-11-11T15:18:09+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:16:47+00:00",
+   "kind": "test",
+   "agent": "lead",
+   "task": "UNIT-1",
+   "text": "PASS: Lead independent build+run of Tests/test_units.cpp at 6b1c828 (units follow-up: pins RoundTo binary-double rounding 1.005/2.675, CR wording fixed; docs/t…"
+  },
+  {
+   "time": "2026-11-11T15:16:44+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "T-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:16:44+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "T-1",
+   "text": "PASS: Tire rig Phase 1: test_tire_rig 16/16 numerical-correctness checks pass (scratch build); 7E replay min R_kin 0.3910 m; bitwise deterministic; identity 4e…"
+  },
+  {
+   "time": "2026-11-11T15:16:29+00:00",
+   "kind": "note",
+   "agent": "lead",
+   "task": "UI-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:16:29+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "UI-1",
+   "text": null
+  },
   {
    "time": "2026-11-11T15:12:17+00:00",
    "kind": "handoff",
@@ -1028,90 +1112,6 @@
    "kind": "message",
    "agent": "lead",
    "task": "CAR-LT",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:05:48+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:05:48+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "TIRE-RR",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:03:43+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "CAR-LT",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:03:43+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:03:43+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "T-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:01:42+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T13:58:46+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "UI-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T13:58:46+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "UI-1",
-   "text": "PASS: Build-Native 23/23, Build-Editor Succeeded (incl. SOxcartGarage), PIE (headless) pass by prior session; Slate garage NOT seen on screen"
-  },
-  {
-   "time": "2026-11-11T13:56:46+00:00",
-   "kind": "test",
-   "agent": "lead",
-   "task": "GNV-S2",
-   "text": "PASS: Lead review of 55c9805: scope = Tools/TrackPipeline + docs only; DragStrip.umap byte-identical to main; no physics/vehicle/Indy files; worktree clean; fa…"
-  },
-  {
-   "time": "2026-11-11T13:54:36+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "GNV-S2",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T13:54:24+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T13:54:24+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "CL-1",
    "text": null
   }
  ],
