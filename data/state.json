@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T13:55:46Z",
+ "generated": "2026-11-11T14:02:56Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -162,7 +162,7 @@
    "acceptance_criteria": [
     "Garage usable with mouse, keyboard, gamepad"
    ],
-   "last_test": "PASS: Native: 23/23 CTest incl. new Oxcart_garage_ui (after fixing 2 wrong test expectations; model unchanged by that)",
+   "last_test": "PASS: Build-Native 23/23, Build-Editor Succeeded (incl. SOxcartGarage), PIE (headless) pass by prior session; Slate garage NOT seen on screen",
    "last_review": "Revise: independent review: model connected to Setup and no physics edits; revise: use central units helper, no SI help text, display-unit steps, register test, EndPlay Hide, on-screen focus/clipping…",
    "issue": 18
   },
@@ -328,7 +328,7 @@
     "Coordinate system, dimensions, reference register (VERIFIED vs ESTIMATE).",
     "Stage 2 gate: documented real-world coordinate system for Gainesville Raceway covering track orientation (bearing), starting-line position, lane geometry and major facility landmarks, each marked VERIFIED or ESTIMATE with source; Lead verifies this before Sta…"
    ],
-   "last_test": null,
+   "last_test": "PASS: Lead review of 55c9805: scope = Tools/TrackPipeline + docs only; DragStrip.umap byte-identical to main; no physics/vehicle/Indy files; worktree clean; fast-forward from 928aea1 and pushed (orig…",
    "last_review": null,
    "issue": 39
   },
@@ -492,7 +492,7 @@
    "role": "A Engine and Clutch",
    "status": "Waiting for input",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-11T13:50:00+00:00",
    "current_task": "CL-1",
    "note": "G0 committed 3cdcce4; awaiting Lead G0 review before G1",
@@ -590,10 +590,10 @@
    "role": "H UI/UX (UMG/Slate)",
    "status": "Blocked",
    "process_state": "Alive",
-   "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T13:45:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T13:55:00+00:00",
    "current_task": "UI-1",
-   "note": "Slate garage compiles; on-screen verification blocked: no supported way to open garage in a rendered run",
+   "note": "committed 79c76c8 and pushed; waiting for Lead on supported garage-open hook for screenshots",
    "assigned_tasks": [
     "UI-1"
    ],
@@ -658,7 +658,7 @@
    "role": "Gainesville Raceway environment + reusable dragstrip pipeline (lead of stream)",
    "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Stale",
+   "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-11T13:25:00+00:00",
    "current_task": "GNV-ENV-1",
    "note": "GNV-S2: capture tool reproduced+fixed, committed 55c9805 locally (not pushed per owner instruction); next NAIP/lidar measurement",
@@ -675,6 +675,34 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T14:01:42+00:00",
+   "kind": "progress",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T13:58:46+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "UI-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T13:58:46+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "UI-1",
+   "text": "PASS: Build-Native 23/23, Build-Editor Succeeded (incl. SOxcartGarage), PIE (headless) pass by prior session; Slate garage NOT seen on screen"
+  },
+  {
+   "time": "2026-11-11T13:56:46+00:00",
+   "kind": "test",
+   "agent": "lead",
+   "task": "GNV-S2",
+   "text": "PASS: Lead review of 55c9805: scope = Tools/TrackPipeline + docs only; DragStrip.umap byte-identical to main; no physics/vehicle/Indy files; worktree clean; fa…"
+  },
   {
    "time": "2026-11-11T13:54:36+00:00",
    "kind": "message",
@@ -1016,27 +1044,6 @@
    "kind": "progress",
    "agent": "gainesville-env",
    "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:48:39+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:46:57+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:46:57+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
    "text": null
   }
  ],

@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T13:55:46Z",
+ "generated": "2026-11-11T14:02:56Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -763,7 +763,7 @@
     "area:visual",
     "track:gainesville"
    ],
-   "updated": "2026-11-11T10:17:36Z",
+   "updated": "2026-11-11T13:56:49Z",
    "description": "Coordinate system, dimensions, terrain, racing surface and major structures of Gainesville Raceway; [redacted]",
    "acceptance_criteria": [
     "No invented measurements; documented Blender-Unreal transform; geometric reference model."
