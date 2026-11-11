@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T14:59:55Z",
+ "generated": "2026-11-11T15:07:05Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -459,7 +459,7 @@
   },
   {
    "id": "T-1",
-   "title": "High-fidelity Top Fuel tire architecture: research, math design, isolated test rig plan (issue #6; docs only)",
+   "title": "High-fidelity Top Fuel tire: standalone rig and isolated experimental model (issue #6; architecture accepted, implementation authorized)",
    "description": "Owner-authorized architecture/research phase 2026-11-11. Documents, mathematical design and validation planning ONLY: no production tire parameter or physics change, no Source edits. Must account for the TIRE-RR findings (+37% radius change, wrinkle thrust, first-order 0.07 s, rpm pull-down interpretation, 99.9 vs 110-115 revs, finish rpm, inconsistent radius data, wind narrowing). Stage 2.7 B and F review-only; wind C on hold.",
    "status": "In Progress",
    "priority": "P2",
@@ -479,7 +479,7 @@
     "Lead reviews the architecture before any implementation"
    ],
    "last_test": null,
-   "last_review": "Revise: Revise (justified revisions authorized, docs only): architecture 4fbfd8c is adequate as a first-order ring+torsion+brush structure but lacks a fourth (apparent) radius and any distributed pat…",
+   "last_review": "Accept: ACCEPT for implementation: NO FUNDAMENTAL BLOCKER. Verified by hand: apparent-radius identity, wrinkle table, momentum table (Tire right, relayed 0.4/4-8 kN wrong), 49.1 m/s crossover, omega^…",
    "issue": 6
   }
  ],
@@ -701,6 +701,20 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T15:01:17+00:00",
+   "kind": "review",
+   "agent": "independent reviewer (Lead-dispatched), architecture r2 79949af",
+   "task": "T-1",
+   "text": "Accept: ACCEPT for implementation: NO FUNDAMENTAL BLOCKER. Verified by hand: apparent-radius identity, wrinkle table, momentum table (Tire right, relayed 0.4/4…"
+  },
+  {
+   "time": "2026-11-11T15:01:17+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "T-1",
+   "text": null
+  },
   {
    "time": "2026-11-11T14:59:51+00:00",
    "kind": "task",
@@ -1105,20 +1119,6 @@
    "kind": "note",
    "agent": "lead",
    "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T13:46:30+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T13:39:53+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "visuals",
    "text": null
   }
  ],
