@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T10:45:11Z",
+ "generated": "2026-11-11T10:52:22Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -543,10 +543,10 @@
   {
    "id": "ui",
    "role": "H UI/UX (UMG/Slate)",
-   "status": "Running",
+   "status": "Stale",
    "last_heartbeat": "2026-11-11T10:45:00+00:00",
    "current_task": "UI-1",
-   "note": "Native tests pass; running Build-Editor",
+   "note": "Build-Editor OK; running Playtest-Pie",
    "assigned_tasks": [
     "UI-1"
    ],
@@ -618,6 +618,34 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T10:48:39+00:00",
+   "kind": "progress",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:46:57+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:46:57+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:46:57+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
   {
    "time": "2026-11-11T10:45:02+00:00",
    "kind": "test",
@@ -1009,34 +1037,6 @@
    "agent": "qa",
    "task": "UI-1",
    "text": "Revise: independent review: model connected to Setup and no physics edits; revise: use central units helper, no SI help text, display-unit steps, register test…"
-  },
-  {
-   "time": "2026-11-10T10:54:51+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "UNIT-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-10T10:54:42+00:00",
-   "kind": "review",
-   "agent": "qa",
-   "task": "UNIT-1",
-   "text": "Revise: independent review: factors all correct; revise: missing <algorithm> include (test_units.cpp:77), tighten tolerances to ~1e-12 relative, add absolute U…"
-  },
-  {
-   "time": "2026-11-10T10:53:48+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-10T10:53:48+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
   }
  ],
  "approvals": [],
