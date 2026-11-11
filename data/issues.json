@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T14:52:45Z",
+ "generated": "2026-11-11T14:59:55Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -99,7 +99,7 @@
    "labels": [
     "area:tire"
    ],
-   "updated": "2026-11-11T14:34:31Z",
+   "updated": "2026-11-11T14:59:52Z",
    "description": "Hybrid physics-informed lookup tire with dynamic states; standalone rig; existing model as baseline; first target one Top Fuel rear slick; review Stage 2.7 proposals B and F first (TIRE-RR).",
    "acceptance_criteria": [
     "Four tire docs; rig sweeps (load, torque, slip, pressure, temperature, combined)"

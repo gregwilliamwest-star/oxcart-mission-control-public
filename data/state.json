@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T14:52:45Z",
+ "generated": "2026-11-11T14:59:55Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -453,7 +453,7 @@
     "G4: comparative traces + regression (native, Editor, PIE) + recommendation; owner approval before default/merge",
     "SampleReplays files and cache untouched"
    ],
-   "last_test": "PASS: Lead independent build+run at Engine b2efc73 (+working tree identical): strict C++17 /W4 scratch project outside every worktree: 'ClutchTopFuel tests passed' exit 0; new in this commit: complia…",
+   "last_test": "PASS: Isolated clutch tests pass (scratch build; CR pending for ctest). Mutation checks catch swapped lever (5 fails) and disc factor (4). Observed order ~1.0 speed, ~0.85-0.9 energy.",
    "last_review": "Revise: REVISE-G0 (force balance, Hi/Lo, tags, register, no speed ramp resolved; inertia values, staging mode, compliance, stability wording, SAE page refs open) and REVISE-G1 (slip-reversal overshoo…",
    "issue": 45
   },
@@ -518,9 +518,9 @@
    "status": "Waiting for input",
    "process_state": "Alive",
    "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T14:40:00+00:00",
+   "last_heartbeat": "2026-11-11T14:50:00+00:00",
    "current_task": "CL-1",
-   "note": "committed b2efc73; awaiting Lead G0 re-check / G1 review",
+   "note": "second pass committed b44bb4a; requesting G0/G1 re-check",
    "assigned_tasks": [
     "CL-1"
    ],
@@ -684,7 +684,7 @@
    "role": "Gainesville Raceway environment + reusable dragstrip pipeline (lead of stream)",
    "status": "Waiting for input",
    "process_state": "Alive",
-   "connection_state": "Stale",
+   "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-11T14:25:00+00:00",
    "current_task": "GNV-S2",
    "note": "Stage 2 evidence pushed (342f7a6); awaiting Lead review; Stage 3 not started",
@@ -701,6 +701,55 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T14:59:51+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "T-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:59:41+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "CAR-LT",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:59:41+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:59:41+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "T-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:54:40+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:54:10+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:54:10+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "CL-1",
+   "text": "PASS: Isolated clutch tests pass (scratch build; CR pending for ctest). Mutation checks catch swapped lever (5 fails) and disc factor (4). Observed order ~1.0…"
+  },
   {
    "time": "2026-11-11T14:50:21+00:00",
    "kind": "message",
@@ -1071,41 +1120,6 @@
    "agent": null,
    "task": "visuals",
    "text": null
-  },
-  {
-   "time": "2026-11-11T13:35:06+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "ENG-27",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T13:35:06+00:00",
-   "kind": "handoff",
-   "agent": "lead",
-   "task": "ENG-27",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T13:35:05+00:00",
-   "kind": "test",
-   "agent": "lead",
-   "task": "ENG-27",
-   "text": "PASS: Lead verified Engine commit 02bfb2c (docs only): single file docs/TOPFUEL_2026_STAGE2_7_ENG27_FITPOINT.md; nothing staged; 8 SampleReplays still deleted+…"
-  },
-  {
-   "time": "2026-11-11T13:34:47+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "ENG-27",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T13:28:15+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "GNV-ENV-1",
-   "text": "PASS: Capture-Progress reproduces 6 Blender + 6 Unreal fixed-camera images (synthetic); fixed 2 capture defects; de-hardcoded paths"
   }
  ],
  "approvals": [],
