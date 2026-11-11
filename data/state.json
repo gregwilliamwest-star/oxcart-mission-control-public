@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T17:30:37Z",
+ "generated": "2026-11-11T17:38:50Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -701,6 +701,27 @@
  ],
  "events": [
   {
+   "time": "2026-11-11T17:37:52+00:00",
+   "kind": "note",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:37:52+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:37:52+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
    "time": "2026-11-11T17:15:31+00:00",
    "kind": "message",
    "agent": "lead",
@@ -1098,27 +1119,6 @@
    "agent": "lead",
    "task": "T-1",
    "text": "PASS: Lead independent build+run of the Tire rig at 5e1f0f1 (scratch CMake project outside every worktree; existing oxcart_sim sources unchanged + rig, Release…"
-  },
-  {
-   "time": "2026-11-11T15:27:22+00:00",
-   "kind": "note",
-   "agent": "lead",
-   "task": "T-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T15:27:22+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "T-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T15:25:39+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
   }
  ],
  "approvals": [],
