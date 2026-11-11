@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T15:35:48Z",
+ "generated": "2026-11-11T15:42:59Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -269,7 +269,7 @@
    "description": "Owner amendment 2026-11-11 (supersedes the Indianapolis environment assignment). Isolated from Indianapolis (IND-1 untouched, no cherry-picks). Stages S1-S7 are child tasks; Lead review after Stage 1 and after Stage 3.",
    "status": "In Progress",
    "priority": "P1",
-   "progress_pct": 20,
+   "progress_pct": 34,
    "progress_basis": "ESTIMATE: mean of child stage task estimates",
    "assigned_agent": "gainesville-env",
    "branch": "feature/gainesville-environment",
@@ -315,9 +315,9 @@
    "id": "GNV-S2",
    "title": "Stage 2 geographic reconstruction + reference register (issue #39)",
    "description": "Child of GNV-ENV-1. Isolated from Indianapolis (IND-1 untouched, no cherry-picks).",
-   "status": "In Progress",
+   "status": "Done",
    "priority": "P1",
-   "progress_pct": 40,
+   "progress_pct": 100,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "gainesville-env",
    "branch": "feature/gainesville-environment",
@@ -328,17 +328,17 @@
     "Coordinate system, dimensions, reference register (VERIFIED vs ESTIMATE).",
     "Stage 2 gate: documented real-world coordinate system for Gainesville Raceway covering track orientation (bearing), starting-line position, lane geometry and major facility landmarks, each marked VERIFIED or ESTIMATE with source; Lead verifies this before Sta…"
    ],
-   "last_test": "PASS: Lead review of 55c9805: scope = Tools/TrackPipeline + docs only; DragStrip.umap byte-identical to main; no physics/vehicle/Indy files; worktree clean; fast-forward from 928aea1 and pushed (orig…",
-   "last_review": "Revise: REVISE-STAGE-2 (small, mostly documentary): no VERIFIED mislabelled; independent OSM cross-check agrees (grid bearing 89.59 vs 89.53, origin 0.15 m from OSM line); coordinate system consisten…",
+   "last_test": "PASS: Lead re-check of Stage 2 revision bde1e43: NAIP catalog items m_2908214_se_17_030_20230126 / m_2908222_ne_17_030_20230126 (acq 2023-01-26) recorded; register gainesville_register.json 22 rows a…",
+   "last_review": "Accept: ACCEPT Stage 2 (estimate-grade): all 8 corrections verified; datum decisions A/B documented; Stage 3 authorized treating everything as ESTIMATE, no VERIFIED claims",
    "issue": 39
   },
   {
    "id": "GNV-S3",
    "title": "Stage 3 starting line + first 660 ft vertical slice (issue #40)",
    "description": "Child of GNV-ENV-1. Isolated from Indianapolis (IND-1 untouched, no cherry-picks).",
-   "status": "Backlog",
+   "status": "In Progress",
    "priority": "P2",
-   "progress_pct": 0,
+   "progress_pct": 40,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "gainesville-env",
    "branch": "feature/gainesville-environment",
@@ -453,7 +453,7 @@
     "G4: comparative traces + regression (native, Editor, PIE) + recommendation; owner approval before default/merge",
     "SampleReplays files and cache untouched"
    ],
-   "last_test": "PASS: Lead independent build+run at Engine 0b2fde6 (strict C++17 /W4 scratch project outside the worktree): passes; order 1.02/1.04 and 0.84/0.90 asserted >= 0.7; residual scaling ratio 13.8 asserted…",
+   "last_test": "PASS: clutch_study compare+sweep run (scratch build); step check 0.25/0.5/4.17 ms identical; sensitivity table + traces committed. Plant has no tire: structure comparison only.",
    "last_review": "Accept: G0 ACCEPT and G1 ACCEPT for the ISOLATED model (0b2fde6): all must-fix items verified; stale doc text purged; interface owners and common-step policy documented; no shared files touched; Samp…",
    "issue": 45
   },
@@ -517,10 +517,10 @@
    "role": "A Engine and Clutch",
    "status": "Waiting for input",
    "process_state": "Alive",
-   "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T15:20:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T15:35:00+00:00",
    "current_task": "CL-1",
-   "note": "re-check must-fix items 1-4 done 0b2fde6; awaiting quick re-check",
+   "note": "study, sensitivity, data needs, draft CR2 committed b96513e; awaiting Lead review",
    "assigned_tasks": [
     "CL-1"
    ],
@@ -531,7 +531,7 @@
    "role": "B Car Physics",
    "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Stale",
+   "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-11T15:10:00+00:00",
    "current_task": "CAR-LT",
    "note": "hub height verification handed off",
@@ -588,7 +588,7 @@
    "role": "F Christmas Tree",
    "status": "Completed",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-11T15:30:00+00:00",
    "current_task": "TREE-1",
    "note": "TREE-1 housekeeping pushed 5a89d500a54e22feb99d719d05fe569c8680a3eb",
@@ -616,7 +616,7 @@
    "role": "H UI/UX (UMG/Slate)",
    "status": "Blocked",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-11T15:30:00+00:00",
    "current_task": "UI-1",
    "note": "eea48ff pushed; garage seen on screen once; remaining checks need a person or larger render window",
@@ -670,7 +670,7 @@
    "role": "Visual Fidelity / Photorealism",
    "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-11T15:35:00+00:00",
    "current_task": "V-1",
    "note": "V-1 handoff posted, awaiting Lead diff review; not pushed",
@@ -684,13 +684,12 @@
    "role": "Gainesville Raceway environment + reusable dragstrip pipeline (lead of stream)",
    "status": "Waiting for input",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-11T15:35:00+00:00",
    "current_task": "GNV-S2",
    "note": "Revision bde1e43 pushed; awaiting Lead re-check; Stage 3 not started",
    "assigned_tasks": [
     "GNV-ENV-1",
-    "GNV-S2",
     "GNV-S3",
     "GNV-S4",
     "GNV-S5",
@@ -701,6 +700,55 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T15:39:19+00:00",
+   "kind": "task",
+   "agent": "gainesville-env",
+   "task": "GNV-S3",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:39:19+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "GNV-S2",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:39:18+00:00",
+   "kind": "review",
+   "agent": "lead",
+   "task": "GNV-S2",
+   "text": "Accept: ACCEPT Stage 2 (estimate-grade): all 8 corrections verified; datum decisions A/B documented; Stage 3 authorized treating everything as ESTIMATE, no VER…"
+  },
+  {
+   "time": "2026-11-11T15:39:18+00:00",
+   "kind": "test",
+   "agent": "lead",
+   "task": "GNV-S2",
+   "text": "PASS: Lead re-check of Stage 2 revision bde1e43: NAIP catalog items m_2908214_se_17_030_20230126 / m_2908222_ne_17_030_20230126 (acq 2023-01-26) recorded; regi…"
+  },
+  {
+   "time": "2026-11-11T15:39:18+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "GNV-S3",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:38:29+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:38:29+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "CL-1",
+   "text": "PASS: clutch_study compare+sweep run (scratch build); step check 0.25/0.5/4.17 ms identical; sensitivity table + traces committed. Plant has no tire: structure…"
+  },
   {
    "time": "2026-11-11T15:35:35+00:00",
    "kind": "handoff",
@@ -1071,61 +1119,11 @@
    "agent": "lead",
    "task": "CL-1",
    "text": null
-  },
-  {
-   "time": "2026-11-11T14:33:02+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "T-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:26:50+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:26:50+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "GNV-ENV-1",
-   "text": "PASS: Stage2 geo: NAIP-measured layout + 3DEP DEM + Dewberry accuracy (all ESTIMATE), 3 identical Blender geometry hashes, Unreal capture 7 shots (14 images),…"
-  },
-  {
-   "time": "2026-11-11T14:25:35+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:24:07+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:17:36+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T14:16:54+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
   }
  ],
  "approvals": [],
  "columns": {
   "Backlog": [
-   "GNV-S3",
    "GNV-S4",
    "GNV-S5",
    "GNV-S6",
@@ -1140,7 +1138,7 @@
    "UI-1",
    "V-1",
    "GNV-ENV-1",
-   "GNV-S2",
+   "GNV-S3",
    "T-1"
   ],
   "Review": [
@@ -1154,7 +1152,8 @@
   ],
   "Done": [
    "ENG-27",
-   "GNV-S1"
+   "GNV-S1",
+   "GNV-S2"
   ],
   "Blocked": [
    "CAM-1",

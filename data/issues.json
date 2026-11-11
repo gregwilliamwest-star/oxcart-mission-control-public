@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T15:35:48Z",
+ "generated": "2026-11-11T15:42:59Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -732,7 +732,7 @@
    "assigned_agent": "gainesville-env",
    "priority": "unspecified",
    "status": "In Progress",
-   "progress_pct": 20,
+   "progress_pct": 34,
    "progress_basis": "ESTIMATE from linked board task GNV-ENV-1"
   },
   {
@@ -758,12 +758,12 @@
   {
    "number": 39,
    "title": "GNV-S2 Stage 2 geographic reconstruction and reference register",
-   "state": "OPEN",
+   "state": "CLOSED",
    "labels": [
     "area:visual",
     "track:gainesville"
    ],
-   "updated": "2026-11-11T15:19:10Z",
+   "updated": "2026-11-11T15:39:21Z",
    "description": "Coordinate system, dimensions, terrain, racing surface and major structures of Gainesville Raceway; [redacted]",
    "acceptance_criteria": [
     "No invented measurements; documented Blender-Unreal transform; geometric reference model."
@@ -771,8 +771,8 @@
    "dependencies": [],
    "assigned_agent": "gainesville-env",
    "priority": "unspecified",
-   "status": "In Progress",
-   "progress_pct": 40,
+   "status": "Done",
+   "progress_pct": 100,
    "progress_basis": "ESTIMATE from linked board task GNV-S2"
   },
   {
@@ -783,7 +783,7 @@
     "area:visual",
     "track:gainesville"
    ],
-   "updated": "2026-11-11T08:10:59Z",
+   "updated": "2026-11-11T15:39:23Z",
    "description": "Detailed surfaces, barriers, staging equipment, grandstands, visible surroundings; imported to Unreal and run with the existing Top Fuel.",
    "acceptance_criteria": [
     "First photorealism gate: real Unreal screenshots from fixed cameras; Lead review BEFORE Stage 4; PIE pass."
@@ -791,8 +791,8 @@
    "dependencies": [],
    "assigned_agent": "gainesville-env",
    "priority": "unspecified",
-   "status": "Backlog",
-   "progress_pct": 0,
+   "status": "In Progress",
+   "progress_pct": 40,
    "progress_basis": "ESTIMATE from linked board task GNV-S3"
   },
   {
