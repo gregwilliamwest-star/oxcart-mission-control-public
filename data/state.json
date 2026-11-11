@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T13:41:26Z",
+ "generated": "2026-11-11T13:48:36Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -431,6 +431,31 @@
    "last_test": null,
    "last_review": null,
    "issue": 44
+  },
+  {
+   "id": "CL-1",
+   "title": "Realistic 2026 Top Fuel multi-disc centrifugal clutch model, experimental (issue #45, linked to #5)",
+   "description": "Owner directive 2026-11-11. Physically grounded multi-disc centrifugal clutch behind an experimental flag; legacy clutch stays default; NHRA-legal open-loop control only; no tuning to an ET. Gates G0 research/architecture, G1 isolated model + tests, G2 rules compliance, G3 experimental coupling via Lead CR, G4 traces/regression/recommendation; owner approval before default or merge.",
+   "status": "Assigned",
+   "priority": "P1",
+   "progress_pct": 5,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "engine",
+   "branch": "feature/integrated-physics-cont",
+   "dependencies": [
+    "ENG-27 documentation complete (02bfb2c)"
+   ],
+   "acceptance_criteria": [
+    "G0: sources + 2026 NHRA rules verified, parameter register SOURCED/ESTIMATE/UNKNOWN, equations and numerics reviewed before coupling",
+    "G1: isolated model + automated tests (engagement, slip, lock-up, heat, schedules, energy balance, timestep convergence) independently validated",
+    "G2: NHRA-legal open-loop control only",
+    "G3: coupling behind a flag, default byte-identical",
+    "G4: comparative traces + regression (native, Editor, PIE) + recommendation; owner approval before default/merge",
+    "SampleReplays files and cache untouched"
+   ],
+   "last_test": null,
+   "last_review": null,
+   "issue": 45
   }
  ],
  "agents": [
@@ -471,7 +496,9 @@
    "last_heartbeat": "2026-11-11T13:30:00+00:00",
    "current_task": "ENG-27",
    "note": "ENG-27 corrections committed 02bfb2c, not pushed; available for review",
-   "assigned_tasks": [],
+   "assigned_tasks": [
+    "CL-1"
+   ],
    "branch": "feature/integrated-physics-cont"
   },
   {
@@ -479,7 +506,7 @@
    "role": "B Car Physics",
    "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Stale",
+   "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-11T13:15:00+00:00",
    "current_task": "CAR-LT",
    "note": "CAR-LT rev2 handed off; D/E wait on owner data",
@@ -549,7 +576,7 @@
    "role": "G Camera and Presentation",
    "status": "Waiting for input",
    "process_state": "Alive",
-   "connection_state": "Stale",
+   "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-11T13:10:00+00:00",
    "current_task": "CAM-1",
    "note": "plan committed; holding for Lead confirmation that UI-1 pawn hunk is integrated",
@@ -563,7 +590,7 @@
    "role": "H UI/UX (UMG/Slate)",
    "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Stale",
+   "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-11T13:10:00+00:00",
    "current_task": "UI-1",
    "note": "resumed; reading duplicate-session handoff, then on-screen verification",
@@ -648,6 +675,20 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T13:48:28+00:00",
+   "kind": "note",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T13:46:30+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": null
+  },
   {
    "time": "2026-11-11T13:39:53+00:00",
    "kind": "handoff",
@@ -1004,20 +1045,6 @@
    "agent": "gainesville-env",
    "task": "GNV-ENV-1",
    "text": null
-  },
-  {
-   "time": "2026-11-11T10:37:12+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:37:07+00:00",
-   "kind": "test",
-   "agent": "lead",
-   "task": "TREE-1",
-   "text": "PASS: Lead PIE on tree branch dea7fb3 in Lead scratch worktree: PLAYTEST PASSED, full procedure, ET 4.579 s, trap 335.6 mph (matches main e045f99); turn-around…"
   }
  ],
  "approvals": [],
@@ -1030,7 +1057,8 @@
    "GNV-S7"
   ],
   "Assigned": [
-   "TIRE-RR"
+   "TIRE-RR",
+   "CL-1"
   ],
   "In Progress": [
    "MC-1",

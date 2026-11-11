@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T13:41:26Z",
+ "generated": "2026-11-11T13:48:36Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -78,7 +78,7 @@
    "labels": [
     "area:engine"
    ],
-   "updated": "2026-11-11T13:35:08Z",
+   "updated": "2026-11-11T13:45:48Z",
    "description": "Protected engine baseline; recover Stage 2.5-2.7 records; energy accounting; reproduce 6,686 vs 7,950 rpm (Stage 2.5 s4 fit-point inconsistency) and the 10,156-11,051 hp provenance (EngineLabs 2015); engine-only changes. Clutch protected: H2 lock-up ramp suspended pending owner approval. No tire/track/chassis/aero/exhaust/chute/timing/UI edits.",
    "acceptance_criteria": [
     "ENGINE_BASELINE_AND_PRESERVATION, TOPFUEL_STAGE2_7_ENGINE_SCOPE, ENGINE_ENERGY_ACCOUNTING, ENGINE_RPM_POWER_VALIDATION docs; unauthorised-file check clean"
@@ -874,6 +874,25 @@
    "status": "Backlog",
    "progress_pct": 0,
    "progress_basis": "ESTIMATE from linked board task GNV-S7"
+  },
+  {
+   "number": 45,
+   "title": "CL-1 Realistic 2026 Top Fuel multi-disc centrifugal clutch model (experimental, linked to #5)",
+   "state": "OPEN",
+   "labels": [
+    "area:engine"
+   ],
+   "updated": "2026-11-11T13:48:30Z",
+   "description": "Realistic 2026 NHRA Top Fuel multi-disc centrifugal clutch (discs, floaters, pressure plate, centrifugal fingers/weights/leverage, base pressure, air gaps, RPM-dependent clamp, static/dynamic friction, slip, heat/temperature/energy accounting, progressive engagement, NHRA-legal pressure-over-time control, crew-chief adjustments), built as an experimental model behind a flag. The existing clutch stays the production default. Linked to #5 (E-1); supersedes the unapproved H2 lock-up ramp. Owner di…",
+   "acceptance_criteria": [],
+   "dependencies": [
+    "None blocking. Tire/Car are docs-only; any future edit of the Vehicle::substep clutch block is sequenced through the Lead. Do not touch the 8 deleted SampleRep…"
+   ],
+   "assigned_agent": "engine",
+   "priority": "unspecified",
+   "status": "Assigned",
+   "progress_pct": 5,
+   "progress_basis": "ESTIMATE from linked board task CL-1"
   }
  ]
 }
