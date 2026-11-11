@@ -10,7 +10,7 @@ Structured data (JSON, UTF-8, always current to about 1-3 minutes while the dev 
                      (sensitive items appear only as {number, state, withheld:true})
 - data/state.json  : tasks (id, title, description, status, priority, progress_pct, progress_basis,
                      assigned_agent, branch, dependencies, acceptance_criteria, last_test, last_review, issue),
-                     agents (status, current_task, note, last_heartbeat, branch), recent events, approvals,
+                     agents (status = declared by the agent, process_state Alive|Exited|Unknown from the OS process table, connection_state Connected|Stale|Disconnected inferred from heartbeat age, current_task, note, last_heartbeat, branch; a Disconnected agent may still be alive), recent events, approvals,
                      kanban columns
 priority is "unspecified" unless an issue carries a priority:* label. progress_pct is an ESTIMATE derived from board status (Backlog 0, Assigned 5, In Progress 40, Review 80, Ready to Merge 95, Done 100; parents average their stage tasks); it is not a measurement. agents[].last_heartbeat is floored to 5 minutes.
 
