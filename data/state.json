@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T13:48:36Z",
+ "generated": "2026-11-11T13:55:46Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -436,9 +436,9 @@
    "id": "CL-1",
    "title": "Realistic 2026 Top Fuel multi-disc centrifugal clutch model, experimental (issue #45, linked to #5)",
    "description": "Owner directive 2026-11-11. Physically grounded multi-disc centrifugal clutch behind an experimental flag; legacy clutch stays default; NHRA-legal open-loop control only; no tuning to an ET. Gates G0 research/architecture, G1 isolated model + tests, G2 rules compliance, G3 experimental coupling via Lead CR, G4 traces/regression/recommendation; owner approval before default or merge.",
-   "status": "Assigned",
+   "status": "Review",
    "priority": "P1",
-   "progress_pct": 5,
+   "progress_pct": 80,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "engine",
    "branch": "feature/integrated-physics-cont",
@@ -492,10 +492,10 @@
    "role": "A Engine and Clutch",
    "status": "Waiting for input",
    "process_state": "Alive",
-   "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T13:30:00+00:00",
-   "current_task": "ENG-27",
-   "note": "ENG-27 corrections committed 02bfb2c, not pushed; available for review",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T13:50:00+00:00",
+   "current_task": "CL-1",
+   "note": "G0 committed 3cdcce4; awaiting Lead G0 review before G1",
    "assigned_tasks": [
     "CL-1"
    ],
@@ -548,7 +548,7 @@
    "role": "E Indianapolis Venue",
    "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Stale",
+   "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-11T13:20:00+00:00",
    "current_task": "IND-1",
    "note": "paused by owner; work preserved; NOTE branch feature/indy-starting-line c3562f0 was pushed before the stop arrived",
@@ -588,12 +588,12 @@
   {
    "id": "ui",
    "role": "H UI/UX (UMG/Slate)",
-   "status": "Running",
+   "status": "Blocked",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-11T13:10:00+00:00",
+   "connection_state": "Stale",
+   "last_heartbeat": "2026-11-11T13:45:00+00:00",
    "current_task": "UI-1",
-   "note": "resumed; reading duplicate-session handoff, then on-screen verification",
+   "note": "Slate garage compiles; on-screen verification blocked: no supported way to open garage in a rendered run",
    "assigned_tasks": [
     "UI-1"
    ],
@@ -604,7 +604,7 @@
    "role": "I Imperial Units",
    "status": "Completed",
    "process_state": "Alive",
-   "connection_state": "Stale",
+   "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-11T13:20:00+00:00",
    "current_task": "UNIT-1",
    "note": "UNIT-1 follow-up pushed 6b1c828",
@@ -644,7 +644,7 @@
    "role": "Visual Fidelity / Photorealism",
    "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Stale",
+   "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-11T13:20:00+00:00",
    "current_task": "V-1",
    "note": "native 22/22 pass; editor build + PIE next",
@@ -675,6 +675,41 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T13:54:36+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "GNV-S2",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T13:54:24+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T13:54:24+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T13:50:19+00:00",
+   "kind": "note",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T13:50:19+00:00",
+   "kind": "task",
+   "agent": "engine",
+   "task": "CL-1",
+   "text": null
+  },
   {
    "time": "2026-11-11T13:48:28+00:00",
    "kind": "note",
@@ -1003,48 +1038,6 @@
    "agent": "lead",
    "task": null,
    "text": null
-  },
-  {
-   "time": "2026-11-11T10:46:57+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:45:02+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "UI-1",
-   "text": "PASS: Native: 23/23 CTest incl. new Oxcart_garage_ui (after fixing 2 wrong test expectations; model unchanged by that)"
-  },
-  {
-   "time": "2026-11-11T10:43:58+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "UNIT-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:43:58+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "UNIT-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:43:58+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "UNIT-1",
-   "text": "PASS: Oxcart_units pass; Build-Native 23/23 (units first run failed on degree format, fixed, re-run units pass; other 22 passed pre-fix, unaffected: header onl…"
-  },
-  {
-   "time": "2026-11-11T10:38:06+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
   }
  ],
  "approvals": [],
@@ -1057,8 +1050,7 @@
    "GNV-S7"
   ],
   "Assigned": [
-   "TIRE-RR",
-   "CL-1"
+   "TIRE-RR"
   ],
   "In Progress": [
    "MC-1",
@@ -1071,7 +1063,8 @@
   "Review": [
    "CAR-LT",
    "TREE-1",
-   "SB-1"
+   "SB-1",
+   "CL-1"
   ],
   "Ready to Merge": [
    "UNIT-1"
