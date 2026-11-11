@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T10:23:41Z",
+ "generated": "2026-11-11T10:30:51Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -461,10 +461,10 @@
   {
    "id": "engine",
    "role": "A Engine and Clutch",
-   "status": "Disconnected",
-   "last_heartbeat": "2026-11-10T10:20:00+00:00",
+   "status": "Waiting for input",
+   "last_heartbeat": "2026-11-11T10:25:00+00:00",
    "current_task": "ENG-27",
-   "note": "ENG-27 checkpoint done; awaiting Lead on main-merge plan",
+   "note": "Blocked: git restore SampleReplays denied by permission classifier; need owner confirmation",
    "assigned_tasks": [
     "ENG-27"
    ],
@@ -545,10 +545,10 @@
   {
    "id": "ui",
    "role": "H UI/UX (UMG/Slate)",
-   "status": "Completed",
-   "last_heartbeat": "2026-11-10T10:25:00+00:00",
+   "status": "Running",
+   "last_heartbeat": "2026-11-11T10:25:00+00:00",
    "current_task": "UI-1",
-   "note": "UI-1 handed off for review",
+   "note": "Reading brief + review; merging units branch, revising garage per Lead REVISE",
    "assigned_tasks": [
     "UI-1"
    ],
@@ -557,8 +557,8 @@
   {
    "id": "units",
    "role": "I Imperial Units",
-   "status": "Completed",
-   "last_heartbeat": "2026-11-10T10:25:00+00:00",
+   "status": "Idle",
+   "last_heartbeat": "2026-11-11T10:25:00+00:00",
    "current_task": "UNIT-1",
    "note": "UNIT-1 handed off",
    "assigned_tasks": [
@@ -591,10 +591,10 @@
   {
    "id": "visuals",
    "role": "Visual Fidelity / Photorealism",
-   "status": "Disconnected",
-   "last_heartbeat": "2026-11-10T10:25:00+00:00",
+   "status": "Idle",
+   "last_heartbeat": "2026-11-11T10:25:00+00:00",
    "current_task": "V-1",
-   "note": null,
+   "note": "C++ SimMap2 split written; next lane master rebuild + AFTER captures",
    "assigned_tasks": [
     "V-1"
    ],
@@ -603,10 +603,10 @@
   {
    "id": "gainesville-env",
    "role": "Gainesville Raceway environment + reusable dragstrip pipeline (lead of stream)",
-   "status": "Disconnected",
-   "last_heartbeat": "2026-11-11T08:10:00+00:00",
+   "status": "Running",
+   "last_heartbeat": "2026-11-11T10:25:00+00:00",
    "current_task": "GNV-ENV-1",
-   "note": "Stage 1 handoff posted; awaiting Lead evidence check",
+   "note": "Re-running Run-Stage1.ps1 to verify committed evidence",
    "assigned_tasks": [
     "GNV-ENV-1",
     "GNV-S2",
@@ -620,6 +620,62 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T10:29:27+00:00",
+   "kind": "task",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:29:27+00:00",
+   "kind": "register",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:29:24+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "UI-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:29:08+00:00",
+   "kind": "register",
+   "agent": "visuals",
+   "task": "V-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:29:07+00:00",
+   "kind": "register",
+   "agent": "ui",
+   "task": "UI-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:29:06+00:00",
+   "kind": "register",
+   "agent": "engine",
+   "task": "ENG-27",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:29:06+00:00",
+   "kind": "register",
+   "agent": "units",
+   "task": "UNIT-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:28:39+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
   {
    "time": "2026-11-11T10:17:02+00:00",
    "kind": "message",
@@ -983,62 +1039,6 @@
    "agent": null,
    "task": "UNIT-1",
    "text": "PASS: Build-Native 22/22 ctest pass (unchanged baseline); test_units standalone MSVC build passes (not in ctest until Lead CMake CR)"
-  },
-  {
-   "time": "2026-11-10T10:25:17+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "UI-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-10T10:25:17+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "UI-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-10T10:25:17+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "UI-1",
-   "text": "PASS: native garage model tests pass (scratch build); editor build Succeeded with temp Slate deps; widget not seen on screen; PIE/Build-Native not run"
-  },
-  {
-   "time": "2026-11-10T10:25:10+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "TIRE-RR",
-   "text": null
-  },
-  {
-   "time": "2026-11-10T10:25:10+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "TIRE-RR",
-   "text": null
-  },
-  {
-   "time": "2026-11-10T10:25:10+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "TIRE-RR",
-   "text": "PASS: Build-Native: 22/22 CTest passed on review branch (docs only; no source changed). Editor build/PIE not run: no Unreal code changed."
-  },
-  {
-   "time": "2026-11-10T10:24:00+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "CAR-LT",
-   "text": null
-  },
-  {
-   "time": "2026-11-10T10:24:00+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "CAR-LT",
-   "text": null
   }
  ],
  "approvals": [],
