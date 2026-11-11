@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T15:07:05Z",
+ "generated": "2026-11-11T15:14:15Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -517,10 +517,10 @@
    "role": "A Engine and Clutch",
    "status": "Waiting for input",
    "process_state": "Alive",
-   "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T14:50:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T15:10:00+00:00",
    "current_task": "CL-1",
-   "note": "second pass committed b44bb4a; requesting G0/G1 re-check",
+   "note": "clutch side of INTERFACE_CLUTCH_TIRE CONFIRMED + proposals for open decisions 1-4 in docs/CLUTCH_TOPFUEL_INTERFACE.md Sec 6 (e145b8a). No c…",
    "assigned_tasks": [
     "CL-1"
    ],
@@ -531,10 +531,10 @@
    "role": "B Car Physics",
    "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-11T13:15:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T15:10:00+00:00",
    "current_task": "CAR-LT",
-   "note": "CAR-LT rev2 handed off; D/E wait on owner data",
+   "note": "hub height verification handed off",
    "assigned_tasks": [
     "CAR-LT"
    ],
@@ -543,12 +543,12 @@
   {
    "id": "tire",
    "role": "C Tire and Track Physics",
-   "status": "Completed",
+   "status": "Running",
    "process_state": "Alive",
    "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T14:45:00+00:00",
+   "last_heartbeat": "2026-11-11T15:05:00+00:00",
    "current_task": "T-1",
-   "note": "T-1 Hallum revision handed off for Lead review",
+   "note": "ack T-1 rig implementation",
    "assigned_tasks": [
     "TIRE-RR",
     "T-1"
@@ -586,12 +586,12 @@
   {
    "id": "tree",
    "role": "F Christmas Tree",
-   "status": "Completed",
+   "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-10T11:15:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-11T15:10:00+00:00",
    "current_task": "TREE-1",
-   "note": "TREE-1 v2 handed off",
+   "note": "resumed",
    "assigned_tasks": [
     "TREE-1"
    ],
@@ -701,6 +701,20 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T15:12:17+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "CAR-LT",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T15:10:28+00:00",
+   "kind": "note",
+   "agent": "lead",
+   "task": "CAR-LT",
+   "text": null
+  },
   {
    "time": "2026-11-11T15:01:17+00:00",
    "kind": "review",
@@ -1097,27 +1111,6 @@
    "time": "2026-11-11T13:54:24+00:00",
    "kind": "handoff",
    "agent": null,
-   "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T13:50:19+00:00",
-   "kind": "note",
-   "agent": "lead",
-   "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T13:50:19+00:00",
-   "kind": "task",
-   "agent": "engine",
-   "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T13:48:28+00:00",
-   "kind": "note",
-   "agent": "lead",
    "task": "CL-1",
    "text": null
   }

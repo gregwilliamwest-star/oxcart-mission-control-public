@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T15:07:05Z",
+ "generated": "2026-11-11T15:14:15Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -57,7 +57,7 @@
     "area:chrono",
     "area:geometry"
    ],
-   "updated": "2026-11-11T10:32:43Z",
+   "updated": "2026-11-11T15:10:30Z",
    "description": "Audit chassis origin, wheelbase, axle centres, tire dimensions, ride height, CG/inertia refs, bar mounting, collision geometry, aero force points, physics-to-visual transforms. Evidence pass found no fixed 9 cm; [redacted] Do not blindly subtract 9 cm.",
    "acceptance_criteria": [
     "docs/VEHICLE_GEOMETRY_CONTRACT.md; geometry debug visualisation; discrepancy root-caused and corrected"
