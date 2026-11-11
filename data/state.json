@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T09:28:08Z",
+ "generated": "2026-11-11T09:33:08Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -444,7 +444,7 @@
    "assigned_tasks": [
     "DEC-27"
    ],
-   "branch": "integration/consolidate-20261109"
+   "branch": null
   },
   {
    "id": "mission-control",
@@ -456,7 +456,7 @@
    "assigned_tasks": [
     "MC-1"
    ],
-   "branch": "feature/mission-control"
+   "branch": null
   },
   {
    "id": "engine",
@@ -468,7 +468,7 @@
    "assigned_tasks": [
     "ENG-27"
    ],
-   "branch": "feature/integrated-physics-cont"
+   "branch": null
   },
   {
    "id": "car",
@@ -480,7 +480,7 @@
    "assigned_tasks": [
     "CAR-LT"
    ],
-   "branch": "feature/car-loadtransfer-review"
+   "branch": null
   },
   {
    "id": "tire",
@@ -492,7 +492,7 @@
    "assigned_tasks": [
     "TIRE-RR"
    ],
-   "branch": "feature/tire-radius-review"
+   "branch": null
   },
   {
    "id": "chute-visual",
@@ -504,7 +504,7 @@
    "assigned_tasks": [
     "VIS-1"
    ],
-   "branch": "feature/topfuel-visual-fix"
+   "branch": null
   },
   {
    "id": "indy",
@@ -516,7 +516,7 @@
    "assigned_tasks": [
     "IND-1"
    ],
-   "branch": "feature/indy-track-visuals"
+   "branch": null
   },
   {
    "id": "tree",
@@ -528,7 +528,7 @@
    "assigned_tasks": [
     "TREE-1"
    ],
-   "branch": "feature/tree-visuals"
+   "branch": null
   },
   {
    "id": "camera",
@@ -540,7 +540,7 @@
    "assigned_tasks": [
     "CAM-1"
    ],
-   "branch": "feature/camera-cockpit"
+   "branch": null
   },
   {
    "id": "ui",
@@ -552,7 +552,7 @@
    "assigned_tasks": [
     "UI-1"
    ],
-   "branch": "feature/ui-garage"
+   "branch": null
   },
   {
    "id": "units",
@@ -564,7 +564,7 @@
    "assigned_tasks": [
     "UNIT-1"
    ],
-   "branch": "feature/units-imperial"
+   "branch": null
   },
   {
    "id": "softbody",
@@ -598,7 +598,7 @@
    "assigned_tasks": [
     "V-1"
    ],
-   "branch": "feature/photorealism"
+   "branch": null
   },
   {
    "id": "gainesville-env",
@@ -617,7 +617,7 @@
     "GNV-S6",
     "GNV-S7"
    ],
-   "branch": "feature/gainesville-environment"
+   "branch": null
   }
  ],
  "events": [
