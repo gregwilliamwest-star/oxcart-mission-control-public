@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T11:13:51Z",
+ "generated": "2026-11-11T11:23:04Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -543,7 +543,7 @@
   {
    "id": "ui",
    "role": "H UI/UX (UMG/Slate)",
-   "status": "Stale",
+   "status": "Disconnected",
    "last_heartbeat": "2026-11-11T10:50:00+00:00",
    "current_task": "UI-1",
    "note": "duplicate PID 56940: stopped, handoff written, awaiting retirement",
