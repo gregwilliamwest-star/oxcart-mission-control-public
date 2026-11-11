@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T13:34:16Z",
+ "generated": "2026-11-11T13:41:26Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -45,7 +45,7 @@
     "Timestep convergence preserved",
     "Experiment documented with diagnostics"
    ],
-   "last_test": "PASS: Baseline 22/22 ctest pass; engine_energy_audit byte-identical to stored baseline. Docs only.",
+   "last_test": "PASS: Lead verified Engine commit 02bfb2c (docs only): single file docs/TOPFUEL_2026_STAGE2_7_ENG27_FITPOINT.md; nothing staged; 8 SampleReplays still deleted+unstaged and in no commit; build.stale-c…",
    "last_review": "Accept: Accept as RESEARCH. Scope clean (one new doc, no code). Corrections: cite Nhra2026.h:64 for the 7,950 rpm fit; 0.48 eta_ind repeats Stage 2.5 (not new); the 0.90 driveline efficiency (Vehicle…",
    "issue": null
   },
@@ -468,9 +468,9 @@
    "status": "Waiting for input",
    "process_state": "Alive",
    "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T13:10:00+00:00",
+   "last_heartbeat": "2026-11-11T13:30:00+00:00",
    "current_task": "ENG-27",
-   "note": "ENG27 doc corrections applied in working tree, uncommitted; awaiting Lead git authorization",
+   "note": "ENG-27 corrections committed 02bfb2c, not pushed; available for review",
    "assigned_tasks": [],
    "branch": "feature/integrated-physics-cont"
   },
@@ -648,6 +648,41 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T13:39:53+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "visuals",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T13:35:06+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "ENG-27",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T13:35:06+00:00",
+   "kind": "handoff",
+   "agent": "lead",
+   "task": "ENG-27",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T13:35:05+00:00",
+   "kind": "test",
+   "agent": "lead",
+   "task": "ENG-27",
+   "text": "PASS: Lead verified Engine commit 02bfb2c (docs only): single file docs/TOPFUEL_2026_STAGE2_7_ENG27_FITPOINT.md; nothing staged; 8 SampleReplays still deleted+…"
+  },
+  {
+   "time": "2026-11-11T13:34:47+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "ENG-27",
+   "text": null
+  },
   {
    "time": "2026-11-11T13:28:15+00:00",
    "kind": "test",
@@ -983,34 +1018,6 @@
    "agent": "lead",
    "task": "TREE-1",
    "text": "PASS: Lead PIE on tree branch dea7fb3 in Lead scratch worktree: PLAYTEST PASSED, full procedure, ET 4.579 s, trap 335.6 mph (matches main e045f99); turn-around…"
-  },
-  {
-   "time": "2026-11-11T10:36:08+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:34:53+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:33:28+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "ENG-27",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T10:32:33+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
   }
  ],
  "approvals": [],
