@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T10:52:22Z",
+ "generated": "2026-11-11T10:59:32Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -461,7 +461,7 @@
   {
    "id": "engine",
    "role": "A Engine and Clutch",
-   "status": "Stale",
+   "status": "Disconnected",
    "last_heartbeat": "2026-11-11T10:25:00+00:00",
    "current_task": "ENG-27",
    "note": "Blocked: git restore SampleReplays denied by permission classifier; need owner confirmation",
@@ -544,9 +544,9 @@
    "id": "ui",
    "role": "H UI/UX (UMG/Slate)",
    "status": "Stale",
-   "last_heartbeat": "2026-11-11T10:45:00+00:00",
+   "last_heartbeat": "2026-11-11T10:50:00+00:00",
    "current_task": "UI-1",
-   "note": "Build-Editor OK; running Playtest-Pie",
+   "note": "duplicate PID 56940: stopped, handoff written, awaiting retirement",
    "assigned_tasks": [
     "UI-1"
    ],
@@ -601,7 +601,7 @@
   {
    "id": "gainesville-env",
    "role": "Gainesville Raceway environment + reusable dragstrip pipeline (lead of stream)",
-   "status": "Stale",
+   "status": "Disconnected",
    "last_heartbeat": "2026-11-11T10:25:00+00:00",
    "current_task": "GNV-ENV-1",
    "note": "Re-running Run-Stage1.ps1 to verify committed evidence",
@@ -618,6 +618,27 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T10:57:11+00:00",
+   "kind": "progress",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:56:25+00:00",
+   "kind": "progress",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:55:11+00:00",
+   "kind": "progress",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
   {
    "time": "2026-11-11T10:48:39+00:00",
    "kind": "progress",
@@ -1016,27 +1037,6 @@
    "agent": null,
    "task": "TREE-1",
    "text": null
-  },
-  {
-   "time": "2026-11-10T11:02:12+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "TREE-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-10T11:02:12+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "TREE-1",
-   "text": "PASS: Native ctest 22/22; editor build OK; oxcart.tree.selftest PASS 175 checks. PIE playtest FAILS at 'turn-around' (600 s timeout) after a complete pass (ET…"
-  },
-  {
-   "time": "2026-11-10T10:55:19+00:00",
-   "kind": "review",
-   "agent": "qa",
-   "task": "UI-1",
-   "text": "Revise: independent review: model connected to Setup and no physics edits; revise: use central units helper, no SI help text, display-unit steps, register test…"
   }
  ],
  "approvals": [],
