@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T13:27:05Z",
+ "generated": "2026-11-11T13:34:16Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -285,7 +285,7 @@
     "Stage 1 visual QA: inspect the actual rendered image and record at least one identified deficiency and the correction made (before/after images and a short note); 'an image was generated' is not sufficient",
     "Stage 2 gate: documented real-world coordinate system for Gainesville Raceway covering track orientation (bearing), starting-line position, lane geometry and major facility landmarks, each marked VERIFIED or ESTIMATE with source; Lead verifies this before Sta…"
    ],
-   "last_test": "PASS: Run A 0->13, run B 13->13 assets, identical TP_MESH and geometry_sha256; Capture-Progress produced 6 blender + 6 unreal shots (Build-Native/Editor not rerun; no C++ changed)",
+   "last_test": "PASS: Capture-Progress reproduces 6 Blender + 6 Unreal fixed-camera images (synthetic); fixed 2 capture defects; de-hardcoded paths",
    "last_review": null,
    "issue": 37
   },
@@ -577,7 +577,7 @@
    "role": "I Imperial Units",
    "status": "Completed",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-11T13:20:00+00:00",
    "current_task": "UNIT-1",
    "note": "UNIT-1 follow-up pushed 6b1c828",
@@ -617,7 +617,7 @@
    "role": "Visual Fidelity / Photorealism",
    "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-11T13:20:00+00:00",
    "current_task": "V-1",
    "note": "native 22/22 pass; editor build + PIE next",
@@ -632,9 +632,9 @@
    "status": "Running",
    "process_state": "Alive",
    "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T13:10:00+00:00",
+   "last_heartbeat": "2026-11-11T13:25:00+00:00",
    "current_task": "GNV-ENV-1",
-   "note": "resumed GNV-S2 (original session)",
+   "note": "GNV-S2: capture tool reproduced+fixed, committed 55c9805 locally (not pushed per owner instruction); next NAIP/lidar measurement",
    "assigned_tasks": [
     "GNV-ENV-1",
     "GNV-S2",
@@ -648,6 +648,13 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T13:28:15+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "GNV-ENV-1",
+   "text": "PASS: Capture-Progress reproduces 6 Blender + 6 Unreal fixed-camera images (synthetic); fixed 2 capture defects; de-hardcoded paths"
+  },
   {
    "time": "2026-11-11T13:24:44+00:00",
    "kind": "handoff",
@@ -1004,20 +1011,6 @@
    "agent": "gainesville-env",
    "task": "GNV-ENV-1",
    "text": null
-  },
-  {
-   "time": "2026-11-11T10:32:28+00:00",
-   "kind": "review",
-   "agent": "independent reviewer (Lead-dispatched)",
-   "task": "TREE-1",
-   "text": "Accept: Accept (scope clean, tree sequence correct, read-only on sim); merge held for Lead PIE on branch vs main; housekeeping: selftest comment, evidence logs"
-  },
-  {
-   "time": "2026-11-11T10:32:28+00:00",
-   "kind": "review",
-   "agent": "independent reviewer (Lead-dispatched)",
-   "task": "CAR-LT",
-   "text": "Revise: Revise (moderate): sections describe the legacy 0.58 m car not the 2026 spec (R 0.4649); 9 cm claim unsupported; numbers recompute and labelling honest…"
   }
  ],
  "approvals": [],
