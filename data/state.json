@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T16:26:06Z",
+ "generated": "2026-11-11T16:33:17Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -588,7 +588,7 @@
    "role": "F Christmas Tree",
    "status": "Completed",
    "process_state": "Alive",
-   "connection_state": "Stale",
+   "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-11T15:55:00+00:00",
    "current_task": "TREE-1",
    "note": "TREE-1 v3 pushed",
