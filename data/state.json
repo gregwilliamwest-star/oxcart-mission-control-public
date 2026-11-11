@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T14:45:35Z",
+ "generated": "2026-11-11T14:52:45Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -453,7 +453,7 @@
     "G4: comparative traces + regression (native, Editor, PIE) + recommendation; owner approval before default/merge",
     "SampleReplays files and cache untouched"
    ],
-   "last_test": "PASS: Isolated clutch tests pass (scratch build, not yet ctest: CR pending). Boundary sweep found+fixed passivity defect; ledger 2e-9 @1/2400; Hi/Lo, staging, interface guard.",
+   "last_test": "PASS: Lead independent build+run at Engine b2efc73 (+working tree identical): strict C++17 /W4 scratch project outside every worktree: 'ClutchTopFuel tests passed' exit 0; new in this commit: complia…",
    "last_review": "Revise: REVISE-G0 (force balance, Hi/Lo, tags, register, no speed ramp resolved; inertia values, staging mode, compliance, stability wording, SAE page refs open) and REVISE-G1 (slip-reversal overshoo…",
    "issue": 45
   },
@@ -517,7 +517,7 @@
    "role": "A Engine and Clutch",
    "status": "Waiting for input",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-11T14:40:00+00:00",
    "current_task": "CL-1",
    "note": "committed b2efc73; awaiting Lead G0 re-check / G1 review",
@@ -543,12 +543,12 @@
   {
    "id": "tire",
    "role": "C Tire and Track Physics",
-   "status": "Running",
+   "status": "Completed",
    "process_state": "Alive",
-   "connection_state": "Connected",
-   "last_heartbeat": "2026-11-11T14:40:00+00:00",
+   "connection_state": "Stale",
+   "last_heartbeat": "2026-11-11T14:45:00+00:00",
    "current_task": "T-1",
-   "note": "Hallum SAE 942484 evaluation: locating overview text",
+   "note": "T-1 Hallum revision handed off for Lead review",
    "assigned_tasks": [
     "TIRE-RR",
     "T-1"
@@ -701,6 +701,27 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T14:50:21+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T14:50:21+00:00",
+   "kind": "test",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": "PASS: Lead independent build+run at Engine b2efc73 (+working tree identical): strict C++17 /W4 scratch project outside every worktree: 'ClutchTopFuel tests pas…"
+  },
+  {
+   "time": "2026-11-11T14:46:34+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "T-1",
+   "text": null
+  },
   {
    "time": "2026-11-11T14:44:39+00:00",
    "kind": "review",
@@ -1085,20 +1106,6 @@
    "agent": null,
    "task": "GNV-ENV-1",
    "text": "PASS: Capture-Progress reproduces 6 Blender + 6 Unreal fixed-camera images (synthetic); fixed 2 capture defects; de-hardcoded paths"
-  },
-  {
-   "time": "2026-11-11T13:24:44+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "UNIT-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T13:24:44+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "UNIT-1",
-   "text": "PASS: Oxcart_units ctest pass at 6b1c828 (rounding pinned, CR wording fixed); full 23/23 verified earlier on 1722d98"
   }
  ],
  "approvals": [],
