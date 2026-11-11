@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T10:30:51Z",
+ "generated": "2026-11-11T10:38:01Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -57,7 +57,7 @@
     "area:chrono",
     "area:geometry"
    ],
-   "updated": "2026-11-10T10:54:17Z",
+   "updated": "2026-11-11T10:32:43Z",
    "description": "Audit chassis origin, wheelbase, axle centres, tire dimensions, ride height, CG/inertia refs, bar mounting, collision geometry, aero force points, physics-to-visual transforms. Evidence pass found no fixed 9 cm; [redacted] Do not blindly subtract 9 cm.",
    "acceptance_criteria": [
     "docs/VEHICLE_GEOMETRY_CONTRACT.md; geometry debug visualisation; discrepancy root-caused and corrected"
@@ -78,7 +78,7 @@
    "labels": [
     "area:engine"
    ],
-   "updated": "2026-11-10T10:12:51Z",
+   "updated": "2026-11-11T10:32:57Z",
    "description": "Protected engine baseline; recover Stage 2.5-2.7 records; energy accounting; reproduce 6,686 vs 7,950 rpm (Stage 2.5 s4 fit-point inconsistency) and the 10,156-11,051 hp provenance (EngineLabs 2015); engine-only changes. Clutch protected: H2 lock-up ramp suspended pending owner approval. No tire/track/chassis/aero/exhaust/chute/timing/UI edits.",
    "acceptance_criteria": [
     "ENGINE_BASELINE_AND_PRESERVATION, TOPFUEL_STAGE2_7_ENGINE_SCOPE, ENGINE_ENERGY_ACCOUNTING, ENGINE_RPM_POWER_VALIDATION docs; unauthorised-file check clean"
@@ -99,7 +99,7 @@
    "labels": [
     "area:tire"
    ],
-   "updated": "2026-11-10T10:54:16Z",
+   "updated": "2026-11-11T10:32:40Z",
    "description": "Hybrid physics-informed lookup tire with dynamic states; standalone rig; existing model as baseline; first target one Top Fuel rear slick; review Stage 2.7 proposals B and F first (TIRE-RR).",
    "acceptance_criteria": [
     "Four tire docs; rig sweeps (load, torque, slip, pressure, temperature, combined)"
@@ -447,8 +447,8 @@
    ],
    "assigned_agent": "visuals",
    "priority": "unspecified",
-   "status": "Assigned",
-   "progress_pct": 5,
+   "status": "In Progress",
+   "progress_pct": 40,
    "progress_basis": "ESTIMATE from linked board task V-1"
   },
   {
@@ -480,7 +480,7 @@
    "labels": [
     "area:visual"
    ],
-   "updated": "2026-11-10T10:54:15Z",
+   "updated": "2026-11-11T10:32:45Z",
    "description": "Replace procedural tree visuals; keep SetTreeState/FOxcartTreeState and race-control logic.",
    "acceptance_criteria": [
     "Full staging sequence by day and night"
@@ -551,7 +551,7 @@
     "area:process",
     "type:bug"
    ],
-   "updated": "2026-11-10T09:41:54Z",
+   "updated": "2026-11-11T10:32:46Z",
    "description": "Tools/Art/*.py, Tools/AssetPipeline/Import*.py defaults, BUILD_AND_PLAYTEST.md; possibly tracked __pycache__.",
    "acceptance_criteria": [
     "Scripts run from <path> worktrees"
@@ -601,7 +601,7 @@
     "area:tire",
     "type:research"
    ],
-   "updated": "2026-11-10T10:04:24Z",
+   "updated": "2026-11-11T10:32:42Z",
    "description": "Owner: Tire agent. Review Tire.cpp:84,155,248 for sign dependence of wrinkle under windup; review together with S27-F. Note Top Fuel constant is 0.14 (Pro Mod 0.055).",
    "acceptance_criteria": [],
    "dependencies": [

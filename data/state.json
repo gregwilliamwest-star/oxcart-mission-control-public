@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T10:30:51Z",
+ "generated": "2026-11-11T10:38:01Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -10,7 +10,7 @@
    "title": "Mission Control first functional release",
    "description": "Localhost read-only dashboard: Kanban, registered agents, worktrees/branches, commits, tests, reviews, approvals.",
    "status": "In Progress",
-   "priority": "unspecified",
+   "priority": "P1",
    "progress_pct": 40,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "mission-control",
@@ -30,9 +30,9 @@
    "id": "ENG-27",
    "title": "Stage 2.7: continue diagnostics; lock-up ramp as isolated experiment",
    "description": "Resume Stage 2.7 without touching tire/chassis; H2 lock-up ramp experiment only; no ET tuning.",
-   "status": "Review",
-   "priority": "unspecified",
-   "progress_pct": 80,
+   "status": "Done",
+   "priority": "P1",
+   "progress_pct": 100,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "engine",
    "branch": "feature/integrated-physics-cont",
@@ -46,16 +46,16 @@
     "Experiment documented with diagnostics"
    ],
    "last_test": "PASS: Baseline 22/22 ctest pass; engine_energy_audit byte-identical to stored baseline. Docs only.",
-   "last_review": null,
+   "last_review": "Accept: Accept as RESEARCH. Scope clean (one new doc, no code). Corrections: cite Nhra2026.h:64 for the 7,950 rpm fit; 0.48 eta_ind repeats Stage 2.5 (not new); the 0.90 driveline efficiency (Vehicle…",
    "issue": null
   },
   {
    "id": "TIRE-RR",
    "title": "Review tire rolling-radius / wrinkle / growth; recommendations",
    "description": "Evidence-based report: effect of radius change on launch and clutch interpretation. No parameter changes.",
-   "status": "Review",
-   "priority": "unspecified",
-   "progress_pct": 80,
+   "status": "Assigned",
+   "priority": "P2",
+   "progress_pct": 5,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "tire",
    "branch": "feature/tire-radius-review",
@@ -65,16 +65,16 @@
     "Revs per 1,000 ft check"
    ],
    "last_test": "PASS: Build-Native: 22/22 CTest passed on review branch (docs only; no source changed). Editor build/PIE not run: no Unreal code changed.",
-   "last_review": null,
+   "last_review": "Revise: Revise (minor): arithmetic slips in 3.4, growth time 3.7 vs 3.96 s, R_roll vs R0 hub-height error in section 8; code facts and the 104.3 revs recompute confirmed; docs only, no production cha…",
    "issue": null
   },
   {
    "id": "CAR-LT",
    "title": "Review CG height, weight distribution, load transfer vs real Top Fuel",
    "description": "Compare 29% front / 0.45 m CG against documented configurations. No parameter changes without approval.",
-   "status": "Review",
-   "priority": "unspecified",
-   "progress_pct": 80,
+   "status": "Assigned",
+   "priority": "P2",
+   "progress_pct": 5,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "car",
    "branch": "feature/car-loadtransfer-review",
@@ -84,7 +84,7 @@
     "Proposed corrections with justification"
    ],
    "last_test": "PASS: Build-Native: 22/22 ctest pass (baseline, no code changed); probe reproduces 4.288 s / 4.398 s",
-   "last_review": null,
+   "last_review": "Revise: Revise (moderate): sections describe the legacy 0.58 m car not the 2026 spec (R 0.4649); 9 cm claim unsupported; numbers recompute and labelling honest; docs only",
    "issue": null
   },
   {
@@ -92,7 +92,7 @@
    "title": "Indianapolis photorealistic starting-line milestone",
    "description": "Baseline screenshots, source-backed reference inventory, PBR pavement, markings, barriers, lighting; no traction/tire changes.",
    "status": "Blocked",
-   "priority": "unspecified",
+   "priority": "P3",
    "progress_pct": null,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "indy",
@@ -112,7 +112,7 @@
    "title": "Christmas tree visual overhaul",
    "description": "Researched geometry, lenses, emissive lighting; keep SetTreeState / FOxcartTreeState unchanged.",
    "status": "Review",
-   "priority": "unspecified",
+   "priority": "P1",
    "progress_pct": 80,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "tree",
@@ -122,8 +122,8 @@
     "Full staging sequence demo",
     "Close-up screenshots"
    ],
-   "last_test": "PASS: Native ctest 22/22; editor build OK; oxcart.tree.selftest PASS 175 checks. PIE playtest FAILS at 'turn-around' (600 s timeout) after a complete pass (ET 4.578 s); CLAUDE.md records this as pre-…",
-   "last_review": null,
+   "last_test": "PASS: Lead PIE on tree branch dea7fb3 in Lead scratch worktree: PLAYTEST PASSED, full procedure, ET 4.579 s, trap 335.6 mph (matches main e045f99); turn-around failure not reproduced; incremental Edi…",
+   "last_review": "Accept: Accept (scope clean, tree sequence correct, read-only on sim); merge held for Lead PIE on branch vs main; housekeeping: selftest comment, evidence logs",
    "issue": null
   },
   {
@@ -131,7 +131,7 @@
    "title": "Refine existing cockpit camera",
    "description": "[redacted] bounded pawn change request to Lead first.",
    "status": "Blocked",
-   "priority": "unspecified",
+   "priority": "P1",
    "progress_pct": null,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "camera",
@@ -151,7 +151,7 @@
    "title": "UMG/Slate garage vertical slice and design system",
    "description": "Working garage screen with the new visual system; preserve tuning functionality.",
    "status": "In Progress",
-   "priority": "unspecified",
+   "priority": "P0",
    "progress_pct": 40,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "ui",
@@ -171,7 +171,7 @@
    "title": "Centralized US-customary unit conversion and formatting",
    "description": "OxcartUnits helper + tests (mph, ft, in, lb, lb-ft, hp, psi, F, US gal, inHg); SI stays internal.",
    "status": "In Progress",
-   "priority": "unspecified",
+   "priority": "P0",
    "progress_pct": 40,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "units",
@@ -189,7 +189,7 @@
    "title": "Review/commit chute+shell WIP, then vehicle materials",
    "description": "Review and commit the 8 preserved uncommitted files on own branch; then PBR vehicle materials with before/after screenshots; physics untouched.",
    "status": "Blocked",
-   "priority": "unspecified",
+   "priority": "P4",
    "progress_pct": null,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "chute-visual",
@@ -210,7 +210,7 @@
    "title": "Soft-body crash deformation research",
    "description": "Recommend isolated prototype.",
    "status": "Review",
-   "priority": "unspecified",
+   "priority": "P3",
    "progress_pct": 80,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "softbody",
@@ -228,7 +228,7 @@
    "title": "Owner decisions on Stage 2.7 proposals A-G",
    "description": "Owner approval and sourcing for physical-property changes.",
    "status": "Blocked",
-   "priority": "unspecified",
+   "priority": "P0",
    "progress_pct": null,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "lead",
@@ -245,9 +245,9 @@
    "id": "V-1",
    "title": "Photorealism: inspect existing 2K materials, improved representative track section",
    "description": "Inspect existing materials, baseline screenshots, improved representative section, then evaluate higher-res sources. OWNER APPROVED 2026-11-11: edit OxcartTrackArt.cpp to visually separate traction compound from deposited rubber (rendering only; SimMap/physics unchanged); before/after screenshots and regression evidence required.",
-   "status": "Assigned",
-   "priority": "unspecified",
-   "progress_pct": 5,
+   "status": "In Progress",
+   "priority": "P1",
+   "progress_pct": 40,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "visuals",
    "branch": "feature/photorealism",
@@ -268,7 +268,7 @@
    "title": "Gainesville Raceway environment + reusable dragstrip pipeline (parent; issue #37)",
    "description": "Owner amendment 2026-11-11 (supersedes the Indianapolis environment assignment). Isolated from Indianapolis (IND-1 untouched, no cherry-picks). Stages S1-S7 are child tasks; Lead review after Stage 1 and after Stage 3.",
    "status": "In Progress",
-   "priority": "unspecified",
+   "priority": "P1",
    "progress_pct": 15,
    "progress_basis": "ESTIMATE: mean of child stage task estimates",
    "assigned_agent": "gainesville-env",
@@ -316,7 +316,7 @@
    "title": "Stage 2 geographic reconstruction + reference register (issue #39)",
    "description": "Child of GNV-ENV-1. Isolated from Indianapolis (IND-1 untouched, no cherry-picks).",
    "status": "Assigned",
-   "priority": "unspecified",
+   "priority": "P1",
    "progress_pct": 5,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "gainesville-env",
@@ -337,7 +337,7 @@
    "title": "Stage 3 starting line + first 660 ft vertical slice (issue #40)",
    "description": "Child of GNV-ENV-1. Isolated from Indianapolis (IND-1 untouched, no cherry-picks).",
    "status": "Backlog",
-   "priority": "unspecified",
+   "priority": "P2",
    "progress_pct": 0,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "gainesville-env",
@@ -357,7 +357,7 @@
    "title": "Stage 4 complete facility (issue #41)",
    "description": "Child of GNV-ENV-1. Isolated from Indianapolis (IND-1 untouched, no cherry-picks).",
    "status": "Backlog",
-   "priority": "unspecified",
+   "priority": "P3",
    "progress_pct": 0,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "gainesville-env",
@@ -377,7 +377,7 @@
    "title": "Stage 5 Unreal integration (DragStrip_Gainesville) (issue #42)",
    "description": "Child of GNV-ENV-1. Isolated from Indianapolis (IND-1 untouched, no cherry-picks).",
    "status": "Backlog",
-   "priority": "unspecified",
+   "priority": "P3",
    "progress_pct": 0,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "gainesville-env",
@@ -397,7 +397,7 @@
    "title": "Stage 6 optimisation and QA (issue #43)",
    "description": "Child of GNV-ENV-1. Isolated from Indianapolis (IND-1 untouched, no cherry-picks).",
    "status": "Backlog",
-   "priority": "unspecified",
+   "priority": "P3",
    "progress_pct": 0,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "gainesville-env",
@@ -417,7 +417,7 @@
    "title": "Stage 7 reusable pipeline validation (synthetic track) (issue #44)",
    "description": "Child of GNV-ENV-1. Isolated from Indianapolis (IND-1 untouched, no cherry-picks).",
    "status": "Backlog",
-   "priority": "unspecified",
+   "priority": "P3",
    "progress_pct": 0,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "gainesville-env",
@@ -461,13 +461,11 @@
   {
    "id": "engine",
    "role": "A Engine and Clutch",
-   "status": "Waiting for input",
+   "status": "Stale",
    "last_heartbeat": "2026-11-11T10:25:00+00:00",
    "current_task": "ENG-27",
    "note": "Blocked: git restore SampleReplays denied by permission classifier; need owner confirmation",
-   "assigned_tasks": [
-    "ENG-27"
-   ],
+   "assigned_tasks": [],
    "branch": "feature/integrated-physics-cont"
   },
   {
@@ -546,9 +544,9 @@
    "id": "ui",
    "role": "H UI/UX (UMG/Slate)",
    "status": "Running",
-   "last_heartbeat": "2026-11-11T10:25:00+00:00",
+   "last_heartbeat": "2026-11-11T10:30:00+00:00",
    "current_task": "UI-1",
-   "note": "Reading brief + review; merging units branch, revising garage per Lead REVISE",
+   "note": "Model+tests rewritten (units helper, display steps); native build running; next Slate widget revisions + pawn wiring",
    "assigned_tasks": [
     "UI-1"
    ],
@@ -557,7 +555,7 @@
   {
    "id": "units",
    "role": "I Imperial Units",
-   "status": "Idle",
+   "status": "Stale",
    "last_heartbeat": "2026-11-11T10:25:00+00:00",
    "current_task": "UNIT-1",
    "note": "UNIT-1 handed off",
@@ -592,9 +590,9 @@
    "id": "visuals",
    "role": "Visual Fidelity / Photorealism",
    "status": "Idle",
-   "last_heartbeat": "2026-11-11T10:25:00+00:00",
+   "last_heartbeat": "2026-11-11T10:30:00+00:00",
    "current_task": "V-1",
-   "note": "C++ SimMap2 split written; next lane master rebuild + AFTER captures",
+   "note": "lane master rebuilt, editor builds; capturing AFTER shots",
    "assigned_tasks": [
     "V-1"
    ],
@@ -603,7 +601,7 @@
   {
    "id": "gainesville-env",
    "role": "Gainesville Raceway environment + reusable dragstrip pipeline (lead of stream)",
-   "status": "Running",
+   "status": "Stale",
    "last_heartbeat": "2026-11-11T10:25:00+00:00",
    "current_task": "GNV-ENV-1",
    "note": "Re-running Run-Stage1.ps1 to verify committed evidence",
@@ -620,6 +618,118 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-11T10:37:12+00:00",
+   "kind": "progress",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:37:07+00:00",
+   "kind": "test",
+   "agent": "lead",
+   "task": "TREE-1",
+   "text": "PASS: Lead PIE on tree branch dea7fb3 in Lead scratch worktree: PLAYTEST PASSED, full procedure, ET 4.579 s, trap 335.6 mph (matches main e045f99); turn-around…"
+  },
+  {
+   "time": "2026-11-11T10:36:08+00:00",
+   "kind": "progress",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:34:53+00:00",
+   "kind": "progress",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:33:28+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "ENG-27",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:32:33+00:00",
+   "kind": "progress",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:32:28+00:00",
+   "kind": "review",
+   "agent": "independent reviewer (Lead-dispatched)",
+   "task": "TREE-1",
+   "text": "Accept: Accept (scope clean, tree sequence correct, read-only on sim); merge held for Lead PIE on branch vs main; housekeeping: selftest comment, evidence logs"
+  },
+  {
+   "time": "2026-11-11T10:32:28+00:00",
+   "kind": "review",
+   "agent": "independent reviewer (Lead-dispatched)",
+   "task": "CAR-LT",
+   "text": "Revise: Revise (moderate): sections describe the legacy 0.58 m car not the 2026 spec (R 0.4649); 9 cm claim unsupported; numbers recompute and labelling honest…"
+  },
+  {
+   "time": "2026-11-11T10:32:28+00:00",
+   "kind": "review",
+   "agent": "independent reviewer (Lead-dispatched)",
+   "task": "TIRE-RR",
+   "text": "Revise: Revise (minor): arithmetic slips in 3.4, growth time 3.7 vs 3.96 s, R_roll vs R0 hub-height error in section 8; code facts and the 104.3 revs recompute…"
+  },
+  {
+   "time": "2026-11-11T10:32:27+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "TREE-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:32:27+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "CAR-LT",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:32:27+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "TIRE-RR",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:31:25+00:00",
+   "kind": "progress",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:31:21+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": "ENG-27",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:31:21+00:00",
+   "kind": "task",
+   "agent": null,
+   "task": "ENG-27",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T10:31:20+00:00",
+   "kind": "review",
+   "agent": "independent reviewer (Lead-dispatched)",
+   "task": "ENG-27",
+   "text": "Accept: Accept as RESEARCH. Scope clean (one new doc, no code). Corrections: cite Nhra2026.h:64 for the 7,950 rpm fit; 0.48 eta_ind repeats Stage 2.5 (not new)…"
+  },
   {
    "time": "2026-11-11T10:29:27+00:00",
    "kind": "task",
@@ -927,118 +1037,6 @@
    "agent": null,
    "task": "CAR-LT",
    "text": null
-  },
-  {
-   "time": "2026-11-10T10:53:18+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-10T10:53:18+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-10T10:53:17+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-10T10:53:17+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-10T10:53:17+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-10T10:53:17+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-10T10:52:02+00:00",
-   "kind": "test",
-   "agent": "lead",
-   "task": "C-1",
-   "text": "FAIL: cand asset-tire hunk 3360a09: 9/22 ctest FAIL (DynamicsTests, integrated, failure_engine, failure_structure, topfuel2026 + stage15/25/26/26b) - not produ…"
-  },
-  {
-   "time": "2026-11-10T10:52:02+00:00",
-   "kind": "test",
-   "agent": "lead",
-   "task": "C-1",
-   "text": "PASS: cand mission-control merge clean, self-tests 5/5"
-  },
-  {
-   "time": "2026-11-10T10:52:02+00:00",
-   "kind": "test",
-   "agent": "lead",
-   "task": "C-1",
-   "text": "PASS: cand indy 1614980: editor build OK, PIE PASS ET 4.578 (headless)"
-  },
-  {
-   "time": "2026-11-10T10:52:01+00:00",
-   "kind": "test",
-   "agent": "lead",
-   "task": "C-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-10T10:26:36+00:00",
-   "kind": "test",
-   "agent": "lead",
-   "task": "C-1",
-   "text": "PASS: PIE on main e045f99 (headless, scripted): full procedure PASS; ET 4.579 s, 1320 ft 337.0 mph, 60ft 0.901, 330ft 2.207, 660ft 3.141, 1000ft 3.918; maxLat…"
-  },
-  {
-   "time": "2026-11-10T10:25:39+00:00",
-   "kind": "note",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-10T10:25:39+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-10T10:25:33+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "UNIT-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-10T10:25:33+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "UNIT-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-10T10:25:33+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "UNIT-1",
-   "text": "PASS: Build-Native 22/22 ctest pass (unchanged baseline); test_units standalone MSVC build passes (not in ctest until Lead CMake CR)"
   }
  ],
  "approvals": [],
@@ -1051,24 +1049,24 @@
    "GNV-S7"
   ],
   "Assigned": [
-   "V-1",
+   "TIRE-RR",
+   "CAR-LT",
    "GNV-S2"
   ],
   "In Progress": [
    "MC-1",
    "UI-1",
    "UNIT-1",
+   "V-1",
    "GNV-ENV-1"
   ],
   "Review": [
-   "ENG-27",
-   "TIRE-RR",
-   "CAR-LT",
    "TREE-1",
    "SB-1"
   ],
   "Ready to Merge": [],
   "Done": [
+   "ENG-27",
    "GNV-S1"
   ],
   "Blocked": [
