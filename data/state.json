@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T11:46:42Z",
+ "generated": "2026-11-12T11:53:53Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -809,9 +809,9 @@
    "status": null,
    "process_state": "Alive",
    "connection_state": "Connected",
-   "last_heartbeat": "2026-11-12T11:40:00+00:00",
-   "current_task": "EWT-5",
-   "note": "PIE PASS on /Game/Oxcart/Maps/EWT_Smoke (ET 4.579 trap 337 mph, full procedure, replay). Now cleanup + existing-maps check",
+   "last_heartbeat": "2026-11-12T11:50:00+00:00",
+   "current_task": "EWT-6",
+   "note": "ready to commit: Tools/EnglishtownPipeline/** ; data/englishtown_reference.json data/asset_manifest.json ; docs/englishtown/*.md ; docs/req…",
    "assigned_tasks": [
     "EWT-1",
     "EWT-2",
@@ -824,6 +824,20 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-12T11:52:25+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-12T11:50:53+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "englishtown-prep",
+   "text": null
+  },
   {
    "time": "2026-11-12T11:35:13+00:00",
    "kind": "message",
@@ -1106,34 +1120,6 @@
   },
   {
    "time": "2026-11-11T18:04:58+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T18:04:57+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T18:03:00+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:58:22+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:58:22+00:00",
    "kind": "message",
    "agent": "lead",
    "task": null,
