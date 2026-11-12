@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T16:59:05Z",
+ "generated": "2026-11-12T17:06:15Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -858,10 +858,10 @@
    "role": "Englishtown (Old Bridge) historic environment: PREPARATION specialist (Sonnet 5.5); Fable builds later",
    "status": null,
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-12T16:55:00+00:00",
    "current_task": "EWT-BUILD",
-   "note": "build 10 committed 9523851 : lane surface reworked from owner's real-track photos (full-width black, sheen, yellow edge lines, white centre…",
+   "note": "build 11: owner supplied two Englishtown tower photos; rebuilding tower shape + sign boards, wall joints, start-only banners",
    "assigned_tasks": [
     "EWT-1",
     "EWT-2",
