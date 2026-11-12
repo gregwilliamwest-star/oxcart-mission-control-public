@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T12:08:14Z",
+ "generated": "2026-11-12T12:15:25Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -650,7 +650,7 @@
    "role": "C Tire and Track Physics",
    "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-12T12:00:00+00:00",
    "current_task": "T-1",
    "note": "Pushed feature/tire-radius-review to origin at ac46a4f (new remote branch, own branch only; main untouched, no PR opened). Idle; will answe…",
@@ -808,10 +808,10 @@
    "role": "Englishtown (Old Bridge) historic environment: PREPARATION specialist (Sonnet 5.5); Fable builds later",
    "status": null,
    "process_state": "Alive",
-   "connection_state": "Connected",
-   "last_heartbeat": "2026-11-12T12:00:00+00:00",
-   "current_task": "EWT-5",
-   "note": "Recover test PASS (checkpoint tag, restore branch, revert, delete) logged; Poly Haven asphalt set hash-verified -> imported -> material ->…",
+   "connection_state": "Stale",
+   "last_heartbeat": "2026-11-12T12:05:00+00:00",
+   "current_task": "EWT-6",
+   "note": "ready to commit: (1)-(4) done. Files: Tools/EnglishtownPipeline/unreal/smoke_build.py, Run-Smoke.ps1, unreal/gs_probe.py; docs/englishtown/…",
    "assigned_tasks": [
     "EWT-1",
     "EWT-2",
@@ -824,6 +824,27 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-12T12:14:13+00:00",
+   "kind": "review",
+   "agent": "lead",
+   "task": "CL-1-power",
+   "text": "Accept: Independently verified: 24/24; flag OFF benchmark identical to main; legacy 4.532 at all rates; flag ON converged 120-960 Hz: ET 4.465-4.466, trap 340.…"
+  },
+  {
+   "time": "2026-11-12T12:09:50+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-12T12:09:40+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
   {
    "time": "2026-11-12T12:06:47+00:00",
    "kind": "message",
@@ -1116,13 +1137,6 @@
    "kind": "handoff",
    "agent": null,
    "task": "CL-1-CR2",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T18:12:23+00:00",
-   "kind": "task",
-   "agent": null,
-   "task": "CAM-1",
    "text": null
   }
  ],
