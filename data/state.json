@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T18:27:12Z",
+ "generated": "2026-11-12T18:34:24Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -859,9 +859,9 @@
    "status": null,
    "process_state": "Alive",
    "connection_state": "Stale",
-   "last_heartbeat": "2026-11-12T18:10:00+00:00",
+   "last_heartbeat": "2026-11-12T18:25:00+00:00",
    "current_task": "EWT-BUILD",
-   "note": "[redacted] ",
+   "note": "committed 7f1acf9 : Nanite usage flag on level materials (trees were default material in -game); request item 7 filed. [redacted] Not pushe…",
    "assigned_tasks": [
     "EWT-1",
     "EWT-2",
