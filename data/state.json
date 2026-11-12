@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T12:01:03Z",
+ "generated": "2026-11-12T12:08:14Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -622,7 +622,7 @@
    "role": "A Engine and Clutch",
    "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Stale",
+   "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-12T11:35:00+00:00",
    "current_task": "READY TO COMMIT: CL-1 scorecard power tune (feature/clutch-physical-coupling)",
    "note": "READY TO COMMIT (Stage A convergence fix): Build-Native 24/24, benchmark 5.737/253.2 and 4.288/366.7 unchanged flag OFF. Flag ON converged:…",
@@ -650,10 +650,10 @@
    "role": "C Tire and Track Physics",
    "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-12T10:55:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-12T12:00:00+00:00",
    "current_task": "T-1",
-   "note": "All 5 items done at ac46a4f (feature/tire-radius-review, not pushed). (2) hub flag recorded as deferred/not needed for public feel. (3) 8b:…",
+   "note": "Pushed feature/tire-radius-review to origin at ac46a4f (new remote branch, own branch only; main untouched, no PR opened). Idle; will answe…",
    "assigned_tasks": [
     "TIRE-RR",
     "T-1"
@@ -810,8 +810,8 @@
    "process_state": "Alive",
    "connection_state": "Connected",
    "last_heartbeat": "2026-11-12T12:00:00+00:00",
-   "current_task": "EWT-4",
-   "note": "Committed: 27391a6 LFS rule, 45ba4de plugins (MRQ now present in probe; GeometryScript loaded, 275 symbols), 942aa90 main work. Now Recover…",
+   "current_task": "EWT-5",
+   "note": "Recover test PASS (checkpoint tag, restore branch, revert, delete) logged; Poly Haven asphalt set hash-verified -> imported -> material ->…",
    "assigned_tasks": [
     "EWT-1",
     "EWT-2",
@@ -824,6 +824,20 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-12T12:06:47+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-12T12:05:02+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
   {
    "time": "2026-11-12T11:59:54+00:00",
    "kind": "message",
@@ -1110,13 +1124,6 @@
    "agent": null,
    "task": "CAM-1",
    "text": null
-  },
-  {
-   "time": "2026-11-11T18:12:23+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "CAM-1",
-   "text": "PASS: Build-Native 24/24, Build-Editor ok, Playtest-Pie PASS (headless; no camera visuals seen). Uncommitted, awaiting Lead ack"
   }
  ],
  "approvals": [],
