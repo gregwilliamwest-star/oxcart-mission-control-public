@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T18:44:37Z",
+ "generated": "2026-11-12T18:51:48Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -858,10 +858,10 @@
    "role": "Englishtown (Old Bridge) historic environment: PREPARATION specialist (Sonnet 5.5); Fable builds later",
    "status": null,
    "process_state": "Alive",
-   "connection_state": "Stale",
-   "last_heartbeat": "2026-11-12T18:25:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-12T18:50:00+00:00",
    "current_task": "EWT-BUILD",
-   "note": "committed 7f1acf9 : Nanite usage flag on level materials (trees were default material in -game); request item 7 filed. [redacted] Not pushe…",
+   "note": "owner stopped for the night. Branch feature/englishtown-environment at 7f1acf9, tree clean, not pushed. Builds 9-12 not re-run through PIE/…",
    "assigned_tasks": [
     "EWT-1",
     "EWT-2",
