@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T12:51:19Z",
+ "generated": "2026-11-12T12:58:30Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -700,9 +700,9 @@
    "status": "Idle",
    "process_state": "Alive",
    "connection_state": "Stale",
-   "last_heartbeat": "2026-11-12T12:40:00+00:00",
+   "last_heartbeat": "2026-11-12T12:50:00+00:00",
    "current_task": "T-1",
-   "note": "REPLY to your isolation result (see also my previous heartbeat: cause = the pawn's WeatherSystem crosswind). The +0.04 s / +6 m you attribu…",
+   "note": "Pushed feature/tire-radius-review fast-forward to origin at f43651f (includes merge of 351d38a and oxcart_tire_pass --game/--wseed). main u…",
    "assigned_tasks": [
     "TIRE-RR",
     "T-1"
@@ -715,9 +715,9 @@
    "status": "Idle",
    "process_state": "Alive",
    "connection_state": "Stale",
-   "last_heartbeat": "2026-11-12T12:35:00+00:00",
+   "last_heartbeat": "2026-11-12T12:50:00+00:00",
    "current_task": "VIS-1",
-   "note": "VIS-1: native 22/22 pass; committed 2 commits; next editor build + Issue 30 run",
+   "note": "VIS-2: sim chute load-severing disabled + tests rewritten; native build running",
    "assigned_tasks": [
     "VIS-1",
     "VIS-2"
@@ -757,7 +757,7 @@
    "role": "G Camera and Presentation",
    "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-12T12:45:00+00:00",
    "current_task": "CAM-1",
    "note": "[redacted]",
@@ -1160,13 +1160,6 @@
    "kind": "handoff",
    "agent": null,
    "task": "CL-1-CR2",
-   "text": null
-  },
-  {
-   "time": "2026-11-12T09:12:57+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
    "text": null
   }
  ],
