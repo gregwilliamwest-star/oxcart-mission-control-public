@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-11T17:56:14Z",
+ "generated": "2026-11-12T11:32:21Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -45,7 +45,7 @@
     "Timestep convergence preserved",
     "Experiment documented with diagnostics"
    ],
-   "last_test": "PASS: Lead verified Engine commit 02bfb2c (docs only): single file docs/TOPFUEL_2026_STAGE2_7_ENG27_FITPOINT.md; nothing staged; 8 SampleReplays still deleted+unstaged and in no commit; build.stale-c…",
+   "last_test": null,
    "last_review": null,
    "issue": null
   },
@@ -84,7 +84,7 @@
     "Proposed corrections with justification"
    ],
    "last_test": null,
-   "last_review": "Accept: Hub-height verification (docs only): file:line citations re-checked (Nhra2026.cpp:18, Vehicle.cpp:194/201/202/611-612/621-624/643, Tire.cpp:20-22), arithmetic re-derived (95 mm drop, 0.048 vs…",
+   "last_review": "Accept: Follow-ups done (docs only): open decision stated plainly (hub 0.37 m vs R_roll 0.53-0.57 m cannot both be physical) and a scratch-only sensitivity plan. Hold the sweep until Tire's interface…",
    "issue": null
   },
   {
@@ -103,7 +103,7 @@
    "acceptance_criteria": [
     "See directive section 6 criteria"
    ],
-   "last_test": "PASS: Build-Editor Succeeded; Tour-Screenshots completed (44 shots incl. new 41_drivers_eye). Native tests/PIE not run: no sim code changed",
+   "last_test": null,
    "last_review": null,
    "issue": null
   },
@@ -122,7 +122,7 @@
     "Full staging sequence demo",
     "Close-up screenshots"
    ],
-   "last_test": "PASS: Lead PIE on tree branch dea7fb3 in Lead scratch worktree: PLAYTEST PASSED, full procedure, ET 4.579 s, trap 335.6 mph (matches main e045f99); turn-around failure not reproduced; incremental Edi…",
+   "last_test": null,
    "last_review": "Accept: v3 diff is 2 constants (lens step 0.44->0.36, groove ring 0.50->0.58) in OxcartTrackTree.cpp only; selftest 175/0, Editor build OK; night close-up shows distinct groove ring, lit lens not blo…",
    "issue": null
   },
@@ -130,9 +130,9 @@
    "id": "CAM-1",
    "title": "Refine existing cockpit camera",
    "description": "[redacted] bounded pawn change request to Lead first.",
-   "status": "Blocked",
+   "status": "Review",
    "priority": "P1",
-   "progress_pct": null,
+   "progress_pct": 80,
    "progress_basis": "ESTIMATE derived from board status (not measured)",
    "assigned_agent": "camera",
    "branch": "feature/camera-cockpit",
@@ -142,8 +142,8 @@
    "acceptance_criteria": [
     "Staging, launch, braking, shutdown validated"
    ],
-   "last_test": null,
-   "last_review": null,
+   "last_test": "PASS: Build-Native 24/24, Build-Editor ok, Playtest-Pie PASS (headless; no camera visuals seen). Uncommitted, awaiting Lead ack",
+   "last_review": "Accept: Uncommitted diff reviewed (CockpitView.{h,cpp}, test, CMake own block, pawn hunks 18 lines): matches CR; pure function of SessionFrame (f.t), replay-jump and paused-replay handled, bounded bo…",
    "issue": null
   },
   {
@@ -181,7 +181,7 @@
     "Round-trip and rounding tests pass"
    ],
    "last_test": "PASS: Lead independent build+run of Tests/test_units.cpp at 6b1c828 (units follow-up: pins RoundTo binary-double rounding 1.005/2.675, CR wording fixed; docs/test only, pushed to its own branch): str…",
-   "last_review": "Accept: Accept (hand review of 1722d98): all earlier findings fixed, scope = 5 files incl. [redacted] Not verified by reviewer: build/ctest; Lead running Build-Native. [redacted] pin 1.005 rounding",
+   "last_review": null,
    "issue": 21
   },
   {
@@ -285,7 +285,7 @@
     "Stage 1 visual QA: inspect the actual rendered image and record at least one identified deficiency and the correction made (before/after images and a short note); 'an image was generated' is not sufficient",
     "Stage 2 gate: documented real-world coordinate system for Gainesville Raceway covering track orientation (bearing), starting-line position, lane geometry and major facility landmarks, each marked VERIFIED or ESTIMATE with source; Lead verifies this before Sta…"
    ],
-   "last_test": "PASS: Stage3 chunk1: own level DragStrip_GainesvilleRaceway builds via Run-Level; PIE (-nullrhi, logic only) PASSED: 660ft 3.141s/276.6mph, 1320ft 4.578s/337mph. No rendered PIE, no photoreal detail…",
+   "last_test": "PASS: Stage3 chunk2: detail pass, Unreal capture 7 shots with shared MIs, PIE nullrhi PASS legacy physics 660ft 3.141s/276.5mph. [redacted]",
    "last_review": null,
    "issue": 37
   },
@@ -481,6 +481,111 @@
    "last_test": "PASS: Pressure distribution ESTIMATED (no data): near-uniform trapezoid, l_b=sqrt(EI/pwR)=1-3 cm for EI 1-10 Nm2; slip for 60%/90% usage 0.83x/1.34x of parabolic (EI5); peak force and small-slip stif…",
    "last_review": "Accept: Accept Phase 1 + R-15 as numerical-correctness evidence: new files only (no Source changes), deterministic, 7E replay matches the car's own tire (R_kin min 0.3910 m), four-radius identity clo…",
    "issue": 6
+  },
+  {
+   "id": "EWT-1",
+   "title": "Historic reference specification: Old Bridge Township Raceway Park (Englishtown NJ), circa 2017",
+   "description": "Sourced/estimated/unknown reference spec (orientation, lengths, widths, elevation, surfaces, equipment, tower, grandstands, paddock, shutdown, return road, surroundings) with coordinate frame; docs/englishtown/REFERENCE_SPEC.md + data/englishtown_reference.json",
+   "status": "In Progress",
+   "priority": "P3",
+   "progress_pct": 40,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "englishtown-prep",
+   "branch": "feature/englishtown-environment",
+   "dependencies": [],
+   "acceptance_criteria": [
+    "Every significant number SOURCED/ESTIMATE/UNKNOWN with source or method",
+    "No fictional substitution",
+    "Lead independent review"
+   ],
+   "last_test": null,
+   "last_review": null,
+   "issue": null
+  },
+  {
+   "id": "EWT-2",
+   "title": "Unreal 5.8 + Blender automation capability discovery and smoke tests",
+   "description": "Verify actual availability of MCP/toolsets, Python, Editor Scripting, PCG, Geometry Script, Modeling Tools, Movie Render Queue, Fab, headless Blender, import, screenshot capture, image comparison; real smoke logs",
+   "status": "Todo",
+   "priority": "P3",
+   "progress_pct": null,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "englishtown-prep",
+   "branch": "feature/englishtown-environment",
+   "dependencies": [],
+   "acceptance_criteria": [
+    "Each tool: present/enabled/works with evidence",
+    "Logs reproducible from commands"
+   ],
+   "last_test": null,
+   "last_review": null,
+   "issue": null
+  },
+  {
+   "id": "EWT-4",
+   "title": "Autonomous, resumable construction pipeline (Tools/EnglishtownPipeline)",
+   "description": "Config-driven pipeline: Blender -> FBX -> Unreal import -> level DragStrip_EnglishtownHistoric2017 via AOxcartTrackActor -> screenshots -> reference comparison -> PIE/perf validation -> checkpoints and recovery",
+   "status": "Todo",
+   "priority": "P3",
+   "progress_pct": null,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "englishtown-prep",
+   "branch": "feature/englishtown-environment",
+   "dependencies": [
+    "EWT-1",
+    "EWT-2"
+   ],
+   "acceptance_criteria": [
+    "Idempotent steps with state.json",
+    "Recover.ps1 restores last good checkpoint",
+    "No other level touched"
+   ],
+   "last_test": null,
+   "last_review": null,
+   "issue": null
+  },
+  {
+   "id": "EWT-5",
+   "title": "Programmatic smoke build (evidence)",
+   "description": "Tiny scene built end to end by script with real logs/screenshots/score and PIE pass; scratch assets removed; existing maps byte-identical",
+   "status": "Todo",
+   "priority": "P3",
+   "progress_pct": null,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "englishtown-prep",
+   "branch": "feature/englishtown-environment",
+   "dependencies": [
+    "EWT-1",
+    "EWT-2"
+   ],
+   "acceptance_criteria": [
+    "Reproducible commands",
+    "Existing DragStrip*.umap unchanged"
+   ],
+   "last_test": null,
+   "last_review": null,
+   "issue": null
+  },
+  {
+   "id": "EWT-6",
+   "title": "Fable package inputs",
+   "description": "Requirements checklist, visual standard and rubric, gameplay/perf acceptance tests with measured targets, checkpoint/recovery, budget and stopping conditions, risk register",
+   "status": "Todo",
+   "priority": "P3",
+   "progress_pct": null,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "englishtown-prep",
+   "branch": "feature/englishtown-environment",
+   "dependencies": [
+    "EWT-1",
+    "EWT-2"
+   ],
+   "acceptance_criteria": [
+    "Complete enough for the Lead to write the Fable prompt"
+   ],
+   "last_test": null,
+   "last_review": null,
+   "issue": null
   }
  ],
  "agents": [
@@ -517,10 +622,10 @@
    "role": "A Engine and Clutch",
    "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Connected",
-   "last_heartbeat": "2026-11-11T17:50:00+00:00",
-   "current_task": "CL-1-CR2",
-   "note": "READY TO COMMIT: docs/requests/CL-1-CR2.md rev 2 only (docs, explicit pathspec, own branch, no push).",
+   "connection_state": "Stale",
+   "last_heartbeat": "2026-11-12T11:20:00+00:00",
+   "current_task": "CL-1 scorecard: power tune 11,400 hp + fuel program, Build-Native running",
+   "note": "READY TO COMMIT (Stage A convergence fix): Build-Native 24/24, benchmark 5.737/253.2 and 4.288/366.7 unchanged flag OFF. Flag ON converged:…",
    "assigned_tasks": [
     "CL-1"
    ],
@@ -531,7 +636,7 @@
    "role": "B Car Physics",
    "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-11T17:50:00+00:00",
    "current_task": "CAR-LT",
    "note": "CAR-LT follow-ups done, 270b8ed pushed; awaiting Lead",
@@ -543,12 +648,12 @@
   {
    "id": "tire",
    "role": "C Tire and Track Physics",
-   "status": "Running",
+   "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Stale",
-   "last_heartbeat": "2026-11-11T17:45:00+00:00",
+   "connection_state": "Disconnected",
+   "last_heartbeat": "2026-11-12T10:55:00+00:00",
    "current_task": "T-1",
-   "note": "Inbox read (3 msgs). Plan: experimental tire only, rig-isolated. A (now): four-radii + hub-height/force-arm note (CAR-LT: hub from R0, arm…",
+   "note": "All 5 items done at ac46a4f (feature/tire-radius-review, not pushed). (2) hub flag recorded as deferred/not needed for public feel. (3) 8b:…",
    "assigned_tasks": [
     "TIRE-RR",
     "T-1"
@@ -574,8 +679,8 @@
    "role": "E Indianapolis Venue",
    "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Connected",
-   "last_heartbeat": "2026-11-11T17:50:00+00:00",
+   "connection_state": "Disconnected",
+   "last_heartbeat": "2026-11-12T09:00:00+00:00",
    "current_task": "IND-1",
    "note": "paused; checking inbox only",
    "assigned_tasks": [
@@ -588,10 +693,10 @@
    "role": "F Christmas Tree",
    "status": "Completed",
    "process_state": "Alive",
-   "connection_state": "Connected",
-   "last_heartbeat": "2026-11-11T17:50:00+00:00",
+   "connection_state": "Disconnected",
+   "last_heartbeat": "2026-11-12T09:00:00+00:00",
    "current_task": "TREE-1",
-   "note": "[redacted] TREE-1 v3 f6148d6 awaiting integration.",
+   "note": "[redacted] tree results are legacy physics, no physics dependency. Will merge and re-run selftest/Editor build when announced.",
    "assigned_tasks": [
     "TREE-1"
    ],
@@ -600,12 +705,12 @@
   {
    "id": "camera",
    "role": "G Camera and Presentation",
-   "status": "Running",
+   "status": "Waiting for input",
    "process_state": "Alive",
-   "connection_state": "Connected",
-   "last_heartbeat": "2026-11-11T17:55:00+00:00",
+   "connection_state": "Disconnected",
+   "last_heartbeat": "2026-11-12T09:00:00+00:00",
    "current_task": "CAM-1",
-   "note": "implementing CAM-1 per Lead GO (stacked on ui-garage); new files written, running Build-Native",
+   "note": "committed 805cecf+5b96506, pushed; cond (1) confirmed single ApplyFrame per tick; CAM-1-CR2 (cockpit screenshot flag) needs Lead approval f…",
    "assigned_tasks": [
     "CAM-1"
    ],
@@ -616,10 +721,10 @@
    "role": "H UI/UX (UMG/Slate)",
    "status": "Blocked",
    "process_state": "Alive",
-   "connection_state": "Connected",
-   "last_heartbeat": "2026-11-11T17:50:00+00:00",
+   "connection_state": "Disconnected",
+   "last_heartbeat": "2026-11-12T09:00:00+00:00",
    "current_task": "UI-1",
-   "note": "ack: eea48ff accepted; [redacted] Remaining: person-run 1920x1080/2560x1080 + mouse/keyboard/gamepad + rollout check; no pawn changes pendi…",
+   "note": "[redacted] LocalPlaceholder stays out of my commits); will merge feature/physics-experimental when announced and re-run native tests/PIE/sc…",
    "assigned_tasks": [
     "UI-1"
    ],
@@ -628,12 +733,12 @@
   {
    "id": "units",
    "role": "I Imperial Units",
-   "status": "Completed",
+   "status": "Idle",
    "process_state": "Alive",
    "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-11T13:20:00+00:00",
+   "last_heartbeat": "2026-11-12T09:00:00+00:00",
    "current_task": "UNIT-1",
-   "note": "UNIT-1 follow-up pushed 6b1c828",
+   "note": "Ack Lead: UNIT-1 results are legacy-physics (header+tests, no physics dependency). Will merge feature/physics-experimental when announced a…",
    "assigned_tasks": [
     "UNIT-1"
    ],
@@ -682,12 +787,12 @@
   {
    "id": "gainesville-env",
    "role": "Gainesville Raceway environment + reusable dragstrip pipeline (lead of stream)",
-   "status": "Running",
+   "status": "Waiting for input",
    "process_state": "Alive",
-   "connection_state": "Connected",
-   "last_heartbeat": "2026-11-11T17:50:00+00:00",
+   "connection_state": "Disconnected",
+   "last_heartbeat": "2026-11-12T09:20:00+00:00",
    "current_task": "GNV-S3",
-   "note": "ack: overlay z options + rendered tour; [redacted]",
+   "note": "chunk2 f239814 pushed; interim review requested",
    "assigned_tasks": [
     "GNV-ENV-1",
     "GNV-S3",
@@ -697,427 +802,390 @@
     "GNV-S7"
    ],
    "branch": "feature/gainesville-environment"
+  },
+  {
+   "id": "englishtown-prep",
+   "role": "Englishtown (Old Bridge) historic environment: PREPARATION specialist (Sonnet 5.5); Fable builds later",
+   "status": null,
+   "process_state": "Alive",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-12T11:30:00+00:00",
+   "current_task": "EWT-2",
+   "note": "UE python smoke #1 failed: worktree has no Binaries (module unbuilt); running Tools\\Build-Editor.ps1 in my worktree (long compile)",
+   "assigned_tasks": [
+    "EWT-1",
+    "EWT-2",
+    "EWT-3",
+    "EWT-4",
+    "EWT-5",
+    "EWT-6"
+   ],
+   "branch": "feature/englishtown-environment"
   }
  ],
  "events": [
   {
-   "time": "2026-11-11T17:55:22+00:00",
+   "time": "2026-11-12T11:17:36+00:00",
    "kind": "message",
    "agent": "lead",
    "task": null,
    "text": null
   },
   {
-   "time": "2026-11-11T17:55:22+00:00",
+   "time": "2026-11-12T11:17:36+00:00",
+   "kind": "review",
+   "agent": "lead",
+   "task": "T-1-CR2",
+   "text": "Accept: Gate B identity PASSED, independently verified: Build-Native 24/24, flag OFF benchmark identical to main (4.288/366.7, 5.737/253.2), Build-Editor OK; s…"
+  },
+  {
+   "time": "2026-11-12T10:51:10+00:00",
    "kind": "message",
    "agent": "lead",
    "task": null,
    "text": null
   },
   {
-   "time": "2026-11-11T17:55:22+00:00",
+   "time": "2026-11-12T10:51:10+00:00",
    "kind": "message",
    "agent": "lead",
    "task": null,
    "text": null
   },
   {
-   "time": "2026-11-11T17:55:01+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "CL-1-CR2",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:54:12+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "CAR-LT",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:51:49+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:51:49+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:51:48+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:51:48+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:51:48+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:51:48+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:51:48+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:51:48+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:50:57+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "CL-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:49:18+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:49:18+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:49:18+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:37:52+00:00",
+   "time": "2026-11-12T10:41:23+00:00",
    "kind": "note",
    "agent": "lead",
-   "task": "CL-1",
+   "task": "EWT-1",
    "text": null
   },
   {
-   "time": "2026-11-11T17:37:52+00:00",
+   "time": "2026-11-12T10:31:48+00:00",
    "kind": "message",
    "agent": "lead",
    "task": null,
    "text": null
   },
   {
-   "time": "2026-11-11T17:37:52+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:15:31+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:15:31+00:00",
-   "kind": "review",
-   "agent": "lead",
-   "task": "CL-1-CR2",
-   "text": "Revise: CR2 draft is sound in structure (flag default Legacy, single owners, WOT from pedal, proof obligations) but needs: rebase of line refs/baseline numbers…"
-  },
-  {
-   "time": "2026-11-11T17:12:20+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:12:20+00:00",
-   "kind": "review",
-   "agent": "lead",
-   "task": "CL-1",
-   "text": "Accept: Study + public-data stage: independent strict build passes (clutch tests); scope Engine-owned files only; SampleReplays untouched; no push. Accept as r…"
-  },
-  {
-   "time": "2026-11-11T17:02:44+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:02:44+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:02:44+00:00",
-   "kind": "review",
-   "agent": "lead",
-   "task": "CAR-LT",
-   "text": "Accept: Hub-height verification (docs only): file:line citations re-checked (Nhra2026.cpp:18, Vehicle.cpp:194/201/202/611-612/621-624/643, Tire.cpp:20-22), ari…"
-  },
-  {
-   "time": "2026-11-11T17:00:53+00:00",
+   "time": "2026-11-12T10:31:09+00:00",
    "kind": "note",
    "agent": "lead",
-   "task": "CAM-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:00:53+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T16:16:53+00:00",
-   "kind": "handoff",
-   "agent": null,
    "task": "T-1",
    "text": null
   },
   {
-   "time": "2026-11-11T16:16:52+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "T-1",
-   "text": "PASS: Pressure distribution ESTIMATED (no data): near-uniform trapezoid, l_b=sqrt(EI/pwR)=1-3 cm for EI 1-10 Nm2; slip for 60%/90% usage 0.83x/1.34x of parabol…"
-  },
-  {
-   "time": "2026-11-11T16:15:21+00:00",
+   "time": "2026-11-12T10:31:09+00:00",
    "kind": "message",
    "agent": "lead",
    "task": null,
    "text": null
   },
   {
-   "time": "2026-11-11T16:15:21+00:00",
+   "time": "2026-11-12T09:49:25+00:00",
    "kind": "message",
    "agent": "lead",
    "task": null,
    "text": null
   },
   {
-   "time": "2026-11-11T16:15:21+00:00",
+   "time": "2026-11-12T09:38:07+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-12T09:38:07+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-12T09:38:07+00:00",
    "kind": "review",
    "agent": "lead",
-   "task": "UI-1",
-   "text": "Accept: Pawn hunks match UI-1-CR (+ amendment 1 doc present before edit): EndPlay Hide, Slate garage in OpenGarage/CloseGarage, GarageRollOut, TickGarage early…"
+   "task": "CL-1-StageA",
+   "text": "Accept: Gate A PASSED, independently verified: 24/24; flag OFF benchmark identical to main (4.288/366.7, 5.737/253.2); Build-Editor OK; flag ON converged 120-9…"
   },
   {
-   "time": "2026-11-11T16:13:14+00:00",
-   "kind": "note",
-   "agent": "lead",
-   "task": "GNV-S3",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T16:13:14+00:00",
+   "time": "2026-11-12T09:35:20+00:00",
    "kind": "message",
    "agent": "lead",
    "task": null,
    "text": null
   },
   {
-   "time": "2026-11-11T16:11:39+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "CL-1",
+   "time": "2026-11-12T09:35:20+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
    "text": null
   },
   {
-   "time": "2026-11-11T16:11:39+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "CL-1",
-   "text": "PASS: 24 test groups pass (scratch build, mutation-checked); public rig R0/R1/R2 run; defaults bit-identical (study outputs unchanged)."
+   "time": "2026-11-12T09:30:52+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
   },
   {
-   "time": "2026-11-11T16:08:40+00:00",
+   "time": "2026-11-12T09:30:52+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-12T09:30:52+00:00",
+   "kind": "review",
+   "agent": "lead",
+   "task": "GNV-S3-chunk2",
+   "text": null
+  },
+  {
+   "time": "2026-11-12T09:20:51+00:00",
    "kind": "handoff",
    "agent": null,
    "task": "GNV-ENV-1",
    "text": null
   },
   {
-   "time": "2026-11-11T16:08:39+00:00",
+   "time": "2026-11-12T09:20:51+00:00",
    "kind": "test",
    "agent": null,
    "task": "GNV-ENV-1",
-   "text": "PASS: Stage3 chunk1: own level DragStrip_GainesvilleRaceway builds via Run-Level; PIE (-nullrhi, logic only) PASSED: 660ft 3.141s/276.6mph, 1320ft 4.578s/337mp…"
-  },
-  {
-   "time": "2026-11-11T16:08:08+00:00",
-   "kind": "note",
-   "agent": "lead",
-   "task": "V-1",
    "text": null
   },
   {
-   "time": "2026-11-11T16:08:08+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T16:04:58+00:00",
+   "time": "2026-11-12T09:20:34+00:00",
    "kind": "handoff",
    "agent": null,
-   "task": "visuals",
+   "task": "CL-1-CR2",
    "text": null
   },
   {
-   "time": "2026-11-11T16:04:39+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "T-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T16:04:39+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "T-1",
-   "text": "PASS: item 4 + experimental integrator: BDF2 order 2.32, decay error -0.49% at h=1/960 (BE +40%); shake amplitude BDF2 0.3% spread vs BE 48%; legacy tire shake…"
-  },
-  {
-   "time": "2026-11-11T16:01:41+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T16:01:40+00:00",
-   "kind": "review",
-   "agent": "lead",
-   "task": "TREE-1",
-   "text": "Accept: v3 diff is 2 constants (lens step 0.44->0.36, groove ring 0.50->0.58) in OxcartTrackTree.cpp only; selftest 175/0, Editor build OK; night close-up show…"
-  },
-  {
-   "time": "2026-11-11T15:59:01+00:00",
-   "kind": "handoff",
-   "agent": "tree",
-   "task": "TREE-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T15:58:25+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "T-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T15:58:24+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "T-1",
-   "text": "PASS: R-16 tread string: tension rises by Fx along patch; compression iff Fx>2pwR; criterion 1.30/1.12/0.98/0.87 at 6/7/8/9 psi for 22 kN/tire; boundary condit…"
-  },
-  {
-   "time": "2026-11-11T15:55:51+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "T-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T15:55:50+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "T-1",
-   "text": "PASS: R-12..R-14 stepped torque full-rate: road-clamped torsion mode (peak 80.0 ms vs 82.4 predicted; overshoot 1.93 vs 1.89); apparent axle radius 2.3 in at 5…"
-  },
-  {
-   "time": "2026-11-11T15:52:55+00:00",
-   "kind": "note",
-   "agent": "lead",
-   "task": "CAM-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T15:52:55+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T15:52:09+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "T-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T15:52:09+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "T-1",
-   "text": "PASS: R-18/R-19: ring solve; speed independence 6.6e-16 (load) 2.7e-12 (pressure) 0-150 m/s; naive variant +70% at 150 m/s; hub identity 1e-16; test_tire_rig 2…"
-  },
-  {
-   "time": "2026-11-11T15:50:31+00:00",
-   "kind": "review",
-   "agent": "lead",
-   "task": "V-1",
-   "text": "Revise: Code side verified (display-only, 22/22, PIE pass). Feature not demonstrated on populated SimMap; body check, frame-time, and SimMap R meaning change d…"
-  },
-  {
-   "time": "2026-11-11T15:50:23+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": "V-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T15:39:19+00:00",
-   "kind": "task",
+   "time": "2026-11-12T09:12:57+00:00",
+   "kind": "progress",
    "agent": "gainesville-env",
-   "task": "GNV-S3",
+   "task": "GNV-ENV-1",
    "text": null
   },
   {
-   "time": "2026-11-11T15:39:19+00:00",
+   "time": "2026-11-12T09:11:47+00:00",
+   "kind": "progress",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-12T09:09:17+00:00",
+   "kind": "progress",
+   "agent": "gainesville-env",
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-12T09:01:16+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "CAM-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-12T08:54:32+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-12T08:54:32+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-12T08:54:32+00:00",
+   "kind": "review",
+   "agent": "lead",
+   "task": "CAR-LT",
+   "text": "Accept: Follow-ups done (docs only): open decision stated plainly (hub 0.37 m vs R_roll 0.53-0.57 m cannot both be physical) and a scratch-only sensitivity pla…"
+  },
+  {
+   "time": "2026-11-12T08:54:20+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-12T08:54:20+00:00",
+   "kind": "review",
+   "agent": "lead",
+   "task": "CAM-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T18:41:02+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T18:41:02+00:00",
+   "kind": "review",
+   "agent": "lead",
+   "task": "CL-1-StageA",
+   "text": "Revise: Gate A item 1 VERIFIED independently (flag OFF byte-identical: 24/24 tests, benchmark 4.288/366.7 + Pro Mod 5.737, Build-Editor OK; flag-ON pass ET 4.5…"
+  },
+  {
+   "time": "2026-11-11T18:31:58+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T18:31:58+00:00",
+   "kind": "note",
+   "agent": "lead",
+   "task": "CL-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T18:31:26+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "CL-1-CR2",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T18:30:25+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T18:25:32+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "CL-1-CR2",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T18:12:23+00:00",
    "kind": "task",
    "agent": null,
-   "task": "GNV-S2",
+   "task": "CAM-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T18:12:23+00:00",
+   "kind": "test",
+   "agent": null,
+   "task": "CAM-1",
+   "text": "PASS: Build-Native 24/24, Build-Editor ok, Playtest-Pie PASS (headless; no camera visuals seen). Uncommitted, awaiting Lead ack"
+  },
+  {
+   "time": "2026-11-11T18:04:58+00:00",
+   "kind": "note",
+   "agent": "lead",
+   "task": "PHYS",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T18:04:58+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T18:04:57+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T18:03:00+00:00",
+   "kind": "handoff",
+   "agent": null,
+   "task": "GNV-ENV-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:58:22+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:58:22+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:58:22+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:58:22+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:58:22+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:58:21+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:58:21+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:58:21+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:58:21+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-11T17:58:21+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
    "text": null
   }
  ],
@@ -1139,11 +1207,13 @@
    "V-1",
    "GNV-ENV-1",
    "GNV-S3",
-   "T-1"
+   "T-1",
+   "EWT-1"
   ],
   "Review": [
    "CAR-LT",
    "TREE-1",
+   "CAM-1",
    "SB-1",
    "CL-1"
   ],
@@ -1156,7 +1226,6 @@
    "GNV-S2"
   ],
   "Blocked": [
-   "CAM-1",
    "VIS-1",
    "DEC-27"
   ]
