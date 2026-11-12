@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T17:58:29Z",
+ "generated": "2026-11-12T18:05:39Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -858,10 +858,10 @@
    "role": "Englishtown (Old Bridge) historic environment: PREPARATION specialist (Sonnet 5.5); Fable builds later",
    "status": null,
    "process_state": "Alive",
-   "connection_state": "Stale",
-   "last_heartbeat": "2026-11-12T17:50:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-12T18:00:00+00:00",
    "current_task": "EWT-BUILD",
-   "note": "build 12: owner feedback - tower plan was wrong (straight slab); rebuilding as 3-part bracket plan from ortho, recessed glass; lane seams r…",
+   "note": "build 12 committed b64a4b4 : tower plan corrected to 3-part bracket from ortho (was straight slab), recessed glass, lane seams removed, com…",
    "assigned_tasks": [
     "EWT-1",
     "EWT-2",
@@ -1070,13 +1070,6 @@
    "agent": "lead",
    "task": null,
    "text": null
-  },
-  {
-   "time": "2026-11-12T11:17:36+00:00",
-   "kind": "review",
-   "agent": "lead",
-   "task": "T-1-CR2",
-   "text": "Accept: Gate B identity PASSED, independently verified: Build-Native 24/24, flag OFF benchmark identical to main (4.288/366.7, 5.737/253.2), Build-Editor OK; s…"
   }
  ],
  "approvals": [],
