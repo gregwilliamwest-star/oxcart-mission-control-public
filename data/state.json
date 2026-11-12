@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T16:51:55Z",
+ "generated": "2026-11-12T16:59:05Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -859,9 +859,9 @@
    "status": null,
    "process_state": "Alive",
    "connection_state": "Connected",
-   "last_heartbeat": "2026-11-12T16:45:00+00:00",
+   "last_heartbeat": "2026-11-12T16:55:00+00:00",
    "current_task": "EWT-BUILD",
-   "note": "build 10: owner supplied real-track surface photos; reworking lane surface (full-width black, sheen, yellow edge lines, white centre strip,…",
+   "note": "build 10 committed 9523851 : lane surface reworked from owner's real-track photos (full-width black, sheen, yellow edge lines, white centre…",
    "assigned_tasks": [
     "EWT-1",
     "EWT-2",
