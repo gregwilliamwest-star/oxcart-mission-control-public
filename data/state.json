@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T18:12:50Z",
+ "generated": "2026-11-12T18:20:01Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -859,9 +859,9 @@
    "status": null,
    "process_state": "Alive",
    "connection_state": "Stale",
-   "last_heartbeat": "2026-11-12T18:00:00+00:00",
+   "last_heartbeat": "2026-11-12T18:10:00+00:00",
    "current_task": "EWT-BUILD",
-   "note": "build 12 committed b64a4b4 : tower plan corrected to 3-part bracket from ortho (was straight slab), recessed glass, lane seams removed, com…",
+   "note": "[redacted] ",
    "assigned_tasks": [
     "EWT-1",
     "EWT-2",
@@ -1059,13 +1059,6 @@
   },
   {
    "time": "2026-11-12T11:35:13+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-12T11:17:36+00:00",
    "kind": "message",
    "agent": "lead",
    "task": null,
