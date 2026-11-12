@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T14:16:25Z",
+ "generated": "2026-11-12T14:23:35Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -757,10 +757,10 @@
    "role": "G Camera and Presentation",
    "status": "Waiting for input",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-12T13:10:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-12T14:20:00+00:00",
    "current_task": "CAM-1",
-   "note": "CR2 implemented; [redacted] pushed",
+   "note": "CAM-1-CR3 (steering wheel + working dash) written, needs Lead decision: Visual-owned shell + pawn files",
    "assigned_tasks": [
     "CAM-1"
    ],
@@ -858,10 +858,10 @@
    "role": "Englishtown (Old Bridge) historic environment: PREPARATION specialist (Sonnet 5.5); Fable builds later",
    "status": null,
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-12T13:45:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-12T14:20:00+00:00",
    "current_task": "EWT-BUILD",
-   "note": "CHECKPOINT a9c4b9d: sun + sky light Movable in build_facility_level.py, level rebuilt/resaved (build 6); your ini line was already committe…",
+   "note": "Owner request: realistic racing surface (rubber build-up, traction compound, burnout area, water boxes, paint). NOTE for Lead: this paints…",
    "assigned_tasks": [
     "EWT-1",
     "EWT-2",
@@ -1083,13 +1083,6 @@
    "kind": "message",
    "agent": "lead",
    "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-12T10:41:23+00:00",
-   "kind": "note",
-   "agent": "lead",
-   "task": "EWT-1",
    "text": null
   }
  ],
