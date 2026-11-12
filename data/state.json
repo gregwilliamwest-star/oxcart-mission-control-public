@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T13:12:53Z",
+ "generated": "2026-11-12T13:20:04Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -714,7 +714,7 @@
    "role": "D Parachute and Vehicle Visuals",
    "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-12T13:05:00+00:00",
    "current_task": "VIS-1",
    "note": "VIS-2 committed on feature/topfuel-visual-fix; report to Lead",
@@ -755,12 +755,12 @@
   {
    "id": "camera",
    "role": "G Camera and Presentation",
-   "status": "Running",
+   "status": "Waiting for input",
    "process_state": "Alive",
    "connection_state": "Stale",
-   "last_heartbeat": "2026-11-12T12:45:00+00:00",
+   "last_heartbeat": "2026-11-12T13:10:00+00:00",
    "current_task": "CAM-1",
-   "note": "[redacted]",
+   "note": "CR2 implemented; [redacted] pushed",
    "assigned_tasks": [
     "CAM-1"
    ],
@@ -875,6 +875,13 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-12T13:13:04+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
   {
    "time": "2026-11-12T13:01:08+00:00",
    "kind": "message",
@@ -1098,20 +1105,6 @@
    "agent": "lead",
    "task": null,
    "text": null
-  },
-  {
-   "time": "2026-11-12T09:38:07+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-12T09:38:07+00:00",
-   "kind": "review",
-   "agent": "lead",
-   "task": "CL-1-StageA",
-   "text": "Accept: Gate A PASSED, independently verified: 24/24; flag OFF benchmark identical to main (4.288/366.7, 5.737/253.2); Build-Editor OK; flag ON converged 120-9…"
   }
  ],
  "approvals": [],
