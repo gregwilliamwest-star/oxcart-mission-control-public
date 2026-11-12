@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T14:37:56Z",
+ "generated": "2026-11-12T14:45:06Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -858,10 +858,10 @@
    "role": "Englishtown (Old Bridge) historic environment: PREPARATION specialist (Sonnet 5.5); Fable builds later",
    "status": null,
    "process_state": "Alive",
-   "connection_state": "Stale",
-   "last_heartbeat": "2026-11-12T14:30:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-12T14:40:00+00:00",
    "current_task": "EWT-BUILD",
-   "note": "CHECKPOINT e0b6996 (tag ewt-checkpoint/facility-v8): racing surface mask (rubber grooves, compound, wet water boxes, paint), standalone PAS…",
+   "note": "CHECKPOINT f2e9e4a: build 9 start-area specifics (generic hardware + mask detail, BEST GUESS, not from photos). NOT re-tested on build 9; l…",
    "assigned_tasks": [
     "EWT-1",
     "EWT-2",
@@ -1077,20 +1077,6 @@
    "agent": "lead",
    "task": "T-1-CR2",
    "text": "Accept: Gate B identity PASSED, independently verified: Build-Native 24/24, flag OFF benchmark identical to main (4.288/366.7, 5.737/253.2), Build-Editor OK; s…"
-  },
-  {
-   "time": "2026-11-12T10:51:10+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-12T10:51:10+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
   }
  ],
  "approvals": [],
