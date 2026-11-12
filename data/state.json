@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T11:53:53Z",
+ "generated": "2026-11-12T12:01:03Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -162,7 +162,7 @@
    "acceptance_criteria": [
     "Garage usable with mouse, keyboard, gamepad"
    ],
-   "last_test": "PASS: Build-Native 23/23, Build-Editor Succeeded (incl. SOxcartGarage), PIE (headless) pass by prior session; Slate garage NOT seen on screen",
+   "last_test": null,
    "last_review": "Accept: Pawn hunks match UI-1-CR (+ amendment 1 doc present before edit): EndPlay Hide, Slate garage in OpenGarage/CloseGarage, GarageRollOut, TickGarage early-return, OxcartGarage Exec. Canvas garag…",
    "issue": 18
   },
@@ -809,9 +809,9 @@
    "status": null,
    "process_state": "Alive",
    "connection_state": "Connected",
-   "last_heartbeat": "2026-11-12T11:50:00+00:00",
-   "current_task": "EWT-6",
-   "note": "ready to commit: Tools/EnglishtownPipeline/** ; data/englishtown_reference.json data/asset_manifest.json ; docs/englishtown/*.md ; docs/req…",
+   "last_heartbeat": "2026-11-12T12:00:00+00:00",
+   "current_task": "EWT-4",
+   "note": "Committed: 27391a6 LFS rule, 45ba4de plugins (MRQ now present in probe; GeometryScript loaded, 275 symbols), 942aa90 main work. Now Recover…",
    "assigned_tasks": [
     "EWT-1",
     "EWT-2",
@@ -824,6 +824,13 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-12T11:59:54+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
   {
    "time": "2026-11-12T11:52:25+00:00",
    "kind": "message",
@@ -1110,20 +1117,6 @@
    "agent": null,
    "task": "CAM-1",
    "text": "PASS: Build-Native 24/24, Build-Editor ok, Playtest-Pie PASS (headless; no camera visuals seen). Uncommitted, awaiting Lead ack"
-  },
-  {
-   "time": "2026-11-11T18:04:58+00:00",
-   "kind": "note",
-   "agent": "lead",
-   "task": "PHYS",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T18:04:58+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
   }
  ],
  "approvals": [],
