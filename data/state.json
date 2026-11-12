@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T13:05:41Z",
+ "generated": "2026-11-12T13:12:53Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -671,7 +671,7 @@
    "role": "A Engine and Clutch",
    "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-12T13:00:00+00:00",
    "current_task": "CL-1 Stage A final delivered (70cef5c); waiting for no-wind game result",
    "note": "READY TO COMMIT (Stage A convergence fix): Build-Native 24/24, benchmark 5.737/253.2 and 4.288/366.7 unchanged flag OFF. Flag ON converged:…",
@@ -714,10 +714,10 @@
    "role": "D Parachute and Vehicle Visuals",
    "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Stale",
-   "last_heartbeat": "2026-11-12T12:55:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-12T13:05:00+00:00",
    "current_task": "VIS-1",
-   "note": "VIS-2: pilot sequence port, longer main line, bar split+rotation coded; building editor",
+   "note": "VIS-2 committed on feature/topfuel-visual-fix; report to Lead",
    "assigned_tasks": [
     "VIS-1",
     "VIS-2"
@@ -858,7 +858,7 @@
    "role": "Englishtown (Old Bridge) historic environment: PREPARATION specialist (Sonnet 5.5); Fable builds later",
    "status": null,
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-12T13:00:00+00:00",
    "current_task": "EWT-BUILD",
    "note": "RESUMED on owner instruction: v3 capture, compare, perf, report, commit",
@@ -1112,20 +1112,6 @@
    "agent": "lead",
    "task": "CL-1-StageA",
    "text": "Accept: Gate A PASSED, independently verified: 24/24; flag OFF benchmark identical to main (4.288/366.7, 5.737/253.2); Build-Editor OK; flag ON converged 120-9…"
-  },
-  {
-   "time": "2026-11-12T09:35:20+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-12T09:35:20+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
   }
  ],
  "approvals": [],
