@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T12:44:07Z",
+ "generated": "2026-11-12T12:51:19Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -699,10 +699,10 @@
    "role": "C Tire and Track Physics",
    "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-12T12:40:00+00:00",
    "current_task": "T-1",
-   "note": "GAME-PATH CAUSE FOUND, reproduced natively (commit on feature/tire-radius-review, local, not pushed; tool: oxcart_tire_pass <legacy|phys> […",
+   "note": "REPLY to your isolation result (see also my previous heartbeat: cause = the pawn's WeatherSystem crosswind). The +0.04 s / +6 m you attribu…",
    "assigned_tasks": [
     "TIRE-RR",
     "T-1"
@@ -714,7 +714,7 @@
    "role": "D Parachute and Vehicle Visuals",
    "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-12T12:35:00+00:00",
    "current_task": "VIS-1",
    "note": "VIS-1: native 22/22 pass; committed 2 commits; next editor build + Issue 30 run",
@@ -755,12 +755,12 @@
   {
    "id": "camera",
    "role": "G Camera and Presentation",
-   "status": "Waiting for input",
+   "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-12T09:00:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-12T12:45:00+00:00",
    "current_task": "CAM-1",
-   "note": "committed 805cecf+5b96506, pushed; cond (1) confirmed single ApplyFrame per tick; CAM-1-CR2 (cockpit screenshot flag) needs Lead approval f…",
+   "note": "[redacted]",
    "assigned_tasks": [
     "CAM-1"
    ],
@@ -875,6 +875,27 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-12T12:51:11+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-12T12:51:11+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-12T12:45:52+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
   {
    "time": "2026-11-12T12:39:33+00:00",
    "kind": "message",
@@ -1146,27 +1167,6 @@
    "kind": "progress",
    "agent": "gainesville-env",
    "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-12T09:11:47+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-12T09:09:17+00:00",
-   "kind": "progress",
-   "agent": "gainesville-env",
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-12T09:01:16+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "CAM-1",
    "text": null
   }
  ],
