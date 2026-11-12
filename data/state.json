@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T12:58:30Z",
+ "generated": "2026-11-12T13:05:41Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -669,11 +669,11 @@
   {
    "id": "engine",
    "role": "A Engine and Clutch",
-   "status": "Running",
+   "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-12T11:35:00+00:00",
-   "current_task": "READY TO COMMIT: CL-1 scorecard power tune (feature/clutch-physical-coupling)",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-12T13:00:00+00:00",
+   "current_task": "CL-1 Stage A final delivered (70cef5c); waiting for no-wind game result",
    "note": "READY TO COMMIT (Stage A convergence fix): Build-Native 24/24, benchmark 5.737/253.2 and 4.288/366.7 unchanged flag OFF. Flag ON converged:…",
    "assigned_tasks": [
     "CL-1"
@@ -715,9 +715,9 @@
    "status": "Idle",
    "process_state": "Alive",
    "connection_state": "Stale",
-   "last_heartbeat": "2026-11-12T12:50:00+00:00",
+   "last_heartbeat": "2026-11-12T12:55:00+00:00",
    "current_task": "VIS-1",
-   "note": "VIS-2: sim chute load-severing disabled + tests rewritten; native build running",
+   "note": "VIS-2: pilot sequence port, longer main line, bar split+rotation coded; building editor",
    "assigned_tasks": [
     "VIS-1",
     "VIS-2"
@@ -858,10 +858,10 @@
    "role": "Englishtown (Old Bridge) historic environment: PREPARATION specialist (Sonnet 5.5); Fable builds later",
    "status": null,
    "process_state": "Alive",
-   "connection_state": "Stale",
-   "last_heartbeat": "2026-11-12T12:35:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-12T13:00:00+00:00",
    "current_task": "EWT-BUILD",
-   "note": "DragStrip_EnglishtownHistoric2017 built headless (37 mesh groups, 341k tris, 8282 trees, 37 materials from hash-checked CC0 textures, track…",
+   "note": "RESUMED on owner instruction: v3 capture, compare, perf, report, commit",
    "assigned_tasks": [
     "EWT-1",
     "EWT-2",
@@ -875,6 +875,13 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-12T13:01:08+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
   {
    "time": "2026-11-12T12:51:11+00:00",
    "kind": "message",
@@ -1118,48 +1125,6 @@
    "kind": "message",
    "agent": "lead",
    "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-12T09:30:52+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-12T09:30:52+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-12T09:30:52+00:00",
-   "kind": "review",
-   "agent": "lead",
-   "task": "GNV-S3-chunk2",
-   "text": null
-  },
-  {
-   "time": "2026-11-12T09:20:51+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-12T09:20:51+00:00",
-   "kind": "test",
-   "agent": null,
-   "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-12T09:20:34+00:00",
-   "kind": "handoff",
-   "agent": null,
-   "task": "CL-1-CR2",
    "text": null
   }
  ],
