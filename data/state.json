@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T14:30:46Z",
+ "generated": "2026-11-12T14:37:56Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -859,9 +859,9 @@
    "status": null,
    "process_state": "Alive",
    "connection_state": "Stale",
-   "last_heartbeat": "2026-11-12T14:20:00+00:00",
+   "last_heartbeat": "2026-11-12T14:30:00+00:00",
    "current_task": "EWT-BUILD",
-   "note": "Owner request: realistic racing surface (rubber build-up, traction compound, burnout area, water boxes, paint). NOTE for Lead: this paints…",
+   "note": "CHECKPOINT e0b6996 (tag ewt-checkpoint/facility-v8): racing surface mask (rubber grooves, compound, wet water boxes, paint), standalone PAS…",
    "assigned_tasks": [
     "EWT-1",
     "EWT-2",
@@ -875,6 +875,13 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-12T14:32:11+00:00",
+   "kind": "review",
+   "agent": "lead",
+   "task": "CL-1-robust",
+   "text": "Accept: Independently verified: 24/24; flag OFF identical to main; legacy 4.532; flag ON converged 120-960 Hz ET 4.502-4.503, trap 341.0, lock-up 3.31-3.35 s (…"
+  },
   {
    "time": "2026-11-12T13:32:06+00:00",
    "kind": "message",
