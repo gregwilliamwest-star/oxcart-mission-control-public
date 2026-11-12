@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T18:20:01Z",
+ "generated": "2026-11-12T18:27:12Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -875,6 +875,13 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-12T18:23:29+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
   {
    "time": "2026-11-12T14:32:11+00:00",
    "kind": "review",
