@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T18:05:39Z",
+ "generated": "2026-11-12T18:12:50Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -858,7 +858,7 @@
    "role": "Englishtown (Old Bridge) historic environment: PREPARATION specialist (Sonnet 5.5); Fable builds later",
    "status": null,
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-12T18:00:00+00:00",
    "current_task": "EWT-BUILD",
    "note": "build 12 committed b64a4b4 : tower plan corrected to 3-part bracket from ortho (was straight slab), recessed glass, lane seams removed, com…",
