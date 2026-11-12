@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T11:39:31Z",
+ "generated": "2026-11-12T11:46:42Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -622,7 +622,7 @@
    "role": "A Engine and Clutch",
    "status": "Running",
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-12T11:35:00+00:00",
    "current_task": "READY TO COMMIT: CL-1 scorecard power tune (feature/clutch-physical-coupling)",
    "note": "READY TO COMMIT (Stage A convergence fix): Build-Native 24/24, benchmark 5.737/253.2 and 4.288/366.7 unchanged flag OFF. Flag ON converged:…",
@@ -809,9 +809,9 @@
    "status": null,
    "process_state": "Alive",
    "connection_state": "Connected",
-   "last_heartbeat": "2026-11-12T11:35:00+00:00",
+   "last_heartbeat": "2026-11-12T11:40:00+00:00",
    "current_task": "EWT-5",
-   "note": "named-camera capture PASS (3 real UE shots), baseline-vs-after RMSE ~0.002 (noise floor), imgdiff separates different images (0.217). Now P…",
+   "note": "PIE PASS on /Game/Oxcart/Maps/EWT_Smoke (ET 4.579 trap 337 mph, full procedure, replay). Now cleanup + existing-maps check",
    "assigned_tasks": [
     "EWT-1",
     "EWT-2",
@@ -1123,13 +1123,6 @@
    "kind": "handoff",
    "agent": null,
    "task": "GNV-ENV-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T17:58:22+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
    "text": null
   },
   {
