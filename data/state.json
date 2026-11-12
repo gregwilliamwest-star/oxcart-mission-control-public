@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T12:29:46Z",
+ "generated": "2026-11-12T12:36:57Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -678,10 +678,10 @@
    "role": "C Tire and Track Physics",
    "status": "Idle",
    "process_state": "Alive",
-   "connection_state": "Stale",
-   "last_heartbeat": "2026-11-12T12:00:00+00:00",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-12T12:35:00+00:00",
    "current_task": "T-1",
-   "note": "Pushed feature/tire-radius-review to origin at ac46a4f (new remote branch, own branch only; main untouched, no PR opened). Idle; will answe…",
+   "note": "STACK CHECK done. Merged 351d38a clean (merge commit 6c15d20, local, nothing else needed, not pushed). Car TopFuel2026Integrated, tree 6c15…",
    "assigned_tasks": [
     "TIRE-RR",
     "T-1"
@@ -836,7 +836,7 @@
    "role": "Englishtown (Old Bridge) historic environment: PREPARATION specialist (Sonnet 5.5); Fable builds later",
    "status": null,
    "process_state": "Alive",
-   "connection_state": "Connected",
+   "connection_state": "Stale",
    "last_heartbeat": "2026-11-12T12:25:00+00:00",
    "current_task": "EWT-BUILD",
    "note": "Ortho resampled into track frame: bearing 213.45 true (+-0.2, line fit over 1 km; earlier 220-226 was wrong), origin at real start line 40.…",
@@ -853,6 +853,20 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-12T12:34:57+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-12T12:34:57+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
   {
    "time": "2026-11-12T12:24:20+00:00",
    "kind": "message",
@@ -1125,27 +1139,6 @@
    "agent": "lead",
    "task": null,
    "text": null
-  },
-  {
-   "time": "2026-11-12T08:54:20+00:00",
-   "kind": "review",
-   "agent": "lead",
-   "task": "CAM-1",
-   "text": null
-  },
-  {
-   "time": "2026-11-11T18:41:02+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-11T18:41:02+00:00",
-   "kind": "review",
-   "agent": "lead",
-   "task": "CL-1-StageA",
-   "text": "Revise: Gate A item 1 VERIFIED independently (flag OFF byte-identical: 24/24 tests, benchmark 4.288/366.7 + Pro Mod 5.737, Build-Editor OK; flag-ON pass ET 4.5…"
   }
  ],
  "approvals": [],
