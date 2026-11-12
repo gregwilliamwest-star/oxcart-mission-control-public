@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-12T12:36:57Z",
+ "generated": "2026-11-12T12:44:07Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -614,6 +614,27 @@
    "last_test": null,
    "last_review": null,
    "issue": null
+  },
+  {
+   "id": "VIS-2",
+   "title": "Ride height lift removal + wheelie bar angle; chute only severs by fire; longer shroud line; restore square pilot chutes",
+   "description": "Owner directive 2026-11-12 (parachute work unpaused). See docs/board/briefs/chute-visual.md VIS-2.",
+   "status": "In Progress",
+   "priority": "P1",
+   "progress_pct": 40,
+   "progress_basis": "ESTIMATE derived from board status (not measured)",
+   "assigned_agent": "chute-visual",
+   "branch": "feature/topfuel-visual-fix",
+   "dependencies": [],
+   "acceptance_criteria": [
+    "Body lift 0 and bar angled to the sim bar gap",
+    "No non-fire chute severing (tests incl. long ground drag)",
+    "Longer sourced shroud line",
+    "Square pilot chutes shown and deploying, with sources"
+   ],
+   "last_test": null,
+   "last_review": null,
+   "issue": null
   }
  ],
  "agents": [
@@ -679,9 +700,9 @@
    "status": "Idle",
    "process_state": "Alive",
    "connection_state": "Connected",
-   "last_heartbeat": "2026-11-12T12:35:00+00:00",
+   "last_heartbeat": "2026-11-12T12:40:00+00:00",
    "current_task": "T-1",
-   "note": "STACK CHECK done. Merged 351d38a clean (merge commit 6c15d20, local, nothing else needed, not pushed). Car TopFuel2026Integrated, tree 6c15…",
+   "note": "GAME-PATH CAUSE FOUND, reproduced natively (commit on feature/tire-radius-review, local, not pushed; tool: oxcart_tire_pass <legacy|phys> […",
    "assigned_tasks": [
     "TIRE-RR",
     "T-1"
@@ -692,13 +713,14 @@
    "id": "chute-visual",
    "role": "D Parachute and Vehicle Visuals",
    "status": "Idle",
-   "process_state": "Exited",
-   "connection_state": "Disconnected",
-   "last_heartbeat": "2026-11-10T10:20:00+00:00",
+   "process_state": "Alive",
+   "connection_state": "Connected",
+   "last_heartbeat": "2026-11-12T12:35:00+00:00",
    "current_task": "VIS-1",
    "note": "VIS-1: native 22/22 pass; committed 2 commits; next editor build + Issue 30 run",
    "assigned_tasks": [
-    "VIS-1"
+    "VIS-1",
+    "VIS-2"
    ],
    "branch": "feature/topfuel-visual-fix"
   },
@@ -837,9 +859,9 @@
    "status": null,
    "process_state": "Alive",
    "connection_state": "Stale",
-   "last_heartbeat": "2026-11-12T12:25:00+00:00",
+   "last_heartbeat": "2026-11-12T12:35:00+00:00",
    "current_task": "EWT-BUILD",
-   "note": "Ortho resampled into track frame: bearing 213.45 true (+-0.2, line fit over 1 km; earlier 220-226 was wrong), origin at real start line 40.…",
+   "note": "DragStrip_EnglishtownHistoric2017 built headless (37 mesh groups, 341k tris, 8282 trees, 37 materials from hash-checked CC0 textures, track…",
    "assigned_tasks": [
     "EWT-1",
     "EWT-2",
@@ -853,6 +875,41 @@
   }
  ],
  "events": [
+  {
+   "time": "2026-11-12T12:39:33+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-12T12:39:33+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
+  {
+   "time": "2026-11-12T12:39:06+00:00",
+   "kind": "register",
+   "agent": "chute-visual",
+   "task": "VIS-1",
+   "text": null
+  },
+  {
+   "time": "2026-11-12T12:38:50+00:00",
+   "kind": "note",
+   "agent": "lead",
+   "task": "VIS-2",
+   "text": null
+  },
+  {
+   "time": "2026-11-12T12:38:28+00:00",
+   "kind": "message",
+   "agent": "lead",
+   "task": null,
+   "text": null
+  },
   {
    "time": "2026-11-12T12:34:57+00:00",
    "kind": "message",
@@ -1111,34 +1168,6 @@
    "agent": null,
    "task": "CAM-1",
    "text": null
-  },
-  {
-   "time": "2026-11-12T08:54:32+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-12T08:54:32+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
-  },
-  {
-   "time": "2026-11-12T08:54:32+00:00",
-   "kind": "review",
-   "agent": "lead",
-   "task": "CAR-LT",
-   "text": "Accept: Follow-ups done (docs only): open decision stated plainly (hub 0.37 m vs R_roll 0.53-0.57 m cannot both be physical) and a scratch-only sensitivity pla…"
-  },
-  {
-   "time": "2026-11-12T08:54:20+00:00",
-   "kind": "message",
-   "agent": "lead",
-   "task": null,
-   "text": null
   }
  ],
  "approvals": [],
@@ -1161,7 +1190,8 @@
    "GNV-S3",
    "T-1",
    "EWT-1",
-   "EWT-BUILD"
+   "EWT-BUILD",
+   "VIS-2"
   ],
   "Review": [
    "CAR-LT",
