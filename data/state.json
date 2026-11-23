@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-23T20:14:21Z",
+ "generated": "2026-11-23T20:21:33Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -650,7 +650,7 @@
    "assigned_tasks": [
     "DEC-27"
    ],
-   "branch": null
+   "branch": "integration/consolidate-20261109"
   },
   {
    "id": "mission-control",
@@ -664,13 +664,13 @@
    "assigned_tasks": [
     "MC-1"
    ],
-   "branch": null
+   "branch": "feature/mission-control"
   },
   {
    "id": "engine",
    "role": "A Engine and Clutch",
    "status": "Idle",
-   "process_state": "Unknown",
+   "process_state": "Exited",
    "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-15T12:10:00+00:00",
    "current_task": "all committed (HEAD 34e248d); idle until pinged",
@@ -678,13 +678,13 @@
    "assigned_tasks": [
     "CL-1"
    ],
-   "branch": null
+   "branch": "feature/integrated-physics-cont"
   },
   {
    "id": "car",
    "role": "B Car Physics",
    "status": "Waiting for input",
-   "process_state": "Unknown",
+   "process_state": "Exited",
    "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-15T12:30:00+00:00",
    "current_task": "CAR-LT",
@@ -692,13 +692,13 @@
    "assigned_tasks": [
     "CAR-LT"
    ],
-   "branch": null
+   "branch": "feature/car-walls"
   },
   {
    "id": "tire",
    "role": "C Tire and Track Physics",
    "status": "Waiting for input",
-   "process_state": "Unknown",
+   "process_state": "Exited",
    "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-13T20:15:00+00:00",
    "current_task": "T-3 material (9c9b96b, 60f2dec) and TIRE_TRACK_WEATHER overview (9332489) committed; awaiting Lead",
@@ -707,13 +707,13 @@
     "TIRE-RR",
     "T-1"
    ],
-   "branch": null
+   "branch": "feature/tire-deform-material"
   },
   {
    "id": "chute-visual",
    "role": "D Parachute and Vehicle Visuals",
    "status": "Idle",
-   "process_state": "Unknown",
+   "process_state": "Exited",
    "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-13T18:45:00+00:00",
    "current_task": "VIS-1",
@@ -722,13 +722,13 @@
     "VIS-1",
     "VIS-2"
    ],
-   "branch": null
+   "branch": "feature/topfuel-visual-fix"
   },
   {
    "id": "indy",
    "role": "E Indianapolis Venue",
    "status": "Idle",
-   "process_state": "Unknown",
+   "process_state": "Exited",
    "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-15T11:50:00+00:00",
    "current_task": "IND-1",
@@ -736,13 +736,13 @@
    "assigned_tasks": [
     "IND-1"
    ],
-   "branch": null
+   "branch": "feature/indy-starting-line"
   },
   {
    "id": "tree",
    "role": "F Christmas Tree",
    "status": "Completed",
-   "process_state": "Unknown",
+   "process_state": "Exited",
    "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-15T12:10:00+00:00",
    "current_task": "TREE-1",
@@ -750,13 +750,13 @@
    "assigned_tasks": [
     "TREE-1"
    ],
-   "branch": null
+   "branch": "feature/tree-visuals"
   },
   {
    "id": "camera",
    "role": "G Camera and Presentation",
    "status": "Waiting for input",
-   "process_state": "Unknown",
+   "process_state": "Exited",
    "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-13T19:20:00+00:00",
    "current_task": "CAM-1",
@@ -764,13 +764,13 @@
    "assigned_tasks": [
     "CAM-1"
    ],
-   "branch": null
+   "branch": "feature/camera-cockpit"
   },
   {
    "id": "ui",
    "role": "H UI/UX (UMG/Slate)",
    "status": "Blocked",
-   "process_state": "Unknown",
+   "process_state": "Exited",
    "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-15T12:15:00+00:00",
    "current_task": "UI-1",
@@ -778,13 +778,13 @@
    "assigned_tasks": [
     "UI-1"
    ],
-   "branch": null
+   "branch": "feature/ui-garage"
   },
   {
    "id": "units",
    "role": "I Imperial Units",
    "status": "Completed",
-   "process_state": "Unknown",
+   "process_state": "Exited",
    "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-15T11:55:00+00:00",
    "current_task": "UNIT-1",
@@ -792,7 +792,7 @@
    "assigned_tasks": [
     "UNIT-1"
    ],
-   "branch": null
+   "branch": "feature/units-imperial"
   },
   {
    "id": "softbody",
@@ -824,7 +824,7 @@
    "id": "visuals",
    "role": "Visual Fidelity / Photorealism",
    "status": "Running",
-   "process_state": "Unknown",
+   "process_state": "Exited",
    "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-13T18:50:00+00:00",
    "current_task": "V-1",
@@ -832,13 +832,13 @@
    "assigned_tasks": [
     "V-1"
    ],
-   "branch": null
+   "branch": "feature/photorealism"
   },
   {
    "id": "gainesville-env",
    "role": "Gainesville Raceway environment + reusable dragstrip pipeline (lead of stream)",
    "status": "Waiting for input",
-   "process_state": "Unknown",
+   "process_state": "Exited",
    "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-13T15:10:00+00:00",
    "current_task": "GNV-S3",
@@ -851,7 +851,7 @@
     "GNV-S6",
     "GNV-S7"
    ],
-   "branch": null
+   "branch": "feature/gainesville-environment"
   },
   {
    "id": "englishtown-prep",
@@ -871,7 +871,7 @@
     "EWT-6",
     "EWT-BUILD"
    ],
-   "branch": null
+   "branch": "feature/englishtown-environment"
   }
  ],
  "events": [
