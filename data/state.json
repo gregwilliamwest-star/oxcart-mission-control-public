@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-11-27T15:02:33Z",
+ "generated": "2026-11-27T15:09:44Z",
  "project": "Oxcart Mission Control (public read-only snapshot)",
  "note": "Static, allowlisted, sanitised, one-way snapshot of the development board and GitHub issues. Not an authority; refreshed about every minute while the dev machine is on.",
  "stale_after_minutes": 15,
@@ -684,7 +684,7 @@
    "id": "car",
    "role": "B Car Physics",
    "status": "Waiting for input",
-   "process_state": "Exited",
+   "process_state": "Unknown",
    "connection_state": "Disconnected",
    "last_heartbeat": "2026-11-15T12:30:00+00:00",
    "current_task": "CAR-LT",
